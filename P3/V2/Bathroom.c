@@ -50,7 +50,8 @@ long enter(int g)
 			{
 				while(brStatus() == 1)
 				{
-					sched_yield();
+					//sched_yield();
+					pthread_cond_wait(&brGlobal->mVacant, &brGlobal->lock);
 				}
 				brGlobal->fCount++;
 				brGlobal->totalUsages++;
@@ -72,7 +73,7 @@ long enter(int g)
 				{
 					// wait if not
 					//sched_yield();
-					pthread_cond_wait(&brGlobal->vacant, &brGlobal->lock);
+					pthread_cond_wait(&brGlobal->fVacant, &brGlobal->lock);
 				}
 				
 				gettimeofday(&endTime, NULL); // timestamp to keep track of when it stops waiting
@@ -88,8 +89,8 @@ long enter(int g)
 			brGlobal->totalUsages++;
 			break;
 	}
-	elapsedTime = endTime.tv_usec - startTime.tv_usec; // record elapsed time
 	pthread_mutex_unlock(&brGlobal->lock);
+	elapsedTime = abs(endTime.tv_usec - startTime.tv_usec); // record elapsed time
 	return elapsedTime;
 }
 
@@ -101,11 +102,11 @@ void leave()
 	{
 		case 1: // male
 			brGlobal->mCount--;
-			pthread_cond_broadcast(&brGlobal->vacant);
+			pthread_cond_broadcast(&brGlobal->mVacant);
 			break;
 		case 0: // female
 			brGlobal->fCount--;
-			pthread_cond_broadcast(&brGlobal->vacant);
+			pthread_cond_broadcast(&brGlobal->fVacant);
 			break;
 	}
 	pthread_mutex_unlock(&brGlobal->vacant);
@@ -123,6 +124,8 @@ void initialize()
 	brGlobal->occupiedTime = 0;
 	pthread_mutex_init(&brGlobal->lock, NULL); // these two might not be necessary
 	pthread_mutex_init(&brGlobal->vacant, NULL);
+	pthread_cond_init(&brGlobal->fVacant, NULL);
+	pthread_cond_init(&brGlobal->fVacant, NULL);
 }
 
 /* Prints out all statistics and exits

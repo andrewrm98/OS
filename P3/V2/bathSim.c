@@ -106,7 +106,7 @@ void *individual(void* arguments)
 		usleep(args->arrival);
 		//printf("INDIV: Thread[%d] Arrival Time Value: %lf MS\n", args->threadNum+1, args->arrival);
 		qTime = enter(args->gender);
-		printf("thread %i, %ld\n", args->threadNum+1,qTime);
+		//printf("thread %i, %ld\n", args->threadNum+1,qTime);
 		usleep(args->stay);
 		//printf("INDIV: Thread[%d] Stay Time Value: %lf MS\n", args->threadNum+1, args->stay);
 		leave();
@@ -127,6 +127,7 @@ void *individual(void* arguments)
 	printf("Thread #%i Completed!\n", args->threadNum+1);
 	printStats(args->gender, args->threadNum, args->lCount, minQueue, aveQueue, maxQueue);
 	pthread_mutex_unlock(&args->printLock);
+	//free(args);
 
 	return 0;
 }

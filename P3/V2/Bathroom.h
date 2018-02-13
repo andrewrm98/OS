@@ -46,6 +46,8 @@ struct br
 	//int avePeople;
 	pthread_mutex_t lock;
 	pthread_mutex_t vacant;
+	pthread_cond_t fVacant;
+	pthread_cond_t mVacant;
 };
 
 //enum gender {male = 1, female = 0};
