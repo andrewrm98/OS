@@ -71,7 +71,8 @@ long enter(int g)
 				while(brStatus() == 0)
 				{
 					// wait if not
-					sched_yield();
+					//sched_yield();
+					pthread_cond_wait(&brGlobal->vacant, &brGlobal->lock);
 				}
 				
 				gettimeofday(&endTime, NULL); // timestamp to keep track of when it stops waiting
@@ -100,9 +101,11 @@ void leave()
 	{
 		case 1: // male
 			brGlobal->mCount--;
+			pthread_cond_broadcast(&brGlobal->vacant);
 			break;
 		case 0: // female
 			brGlobal->fCount--;
+			pthread_cond_broadcast(&brGlobal->vacant);
 			break;
 	}
 	pthread_mutex_unlock(&brGlobal->vacant);
