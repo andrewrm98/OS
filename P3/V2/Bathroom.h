@@ -51,7 +51,7 @@ struct br
 //enum gender {male = 1, female = 0};
 
 //struct br * brGlobal;
-void enter(int g);
+long enter(int g);
 void leave();
 void initialize();
 void finalize();

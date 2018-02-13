@@ -10,9 +10,12 @@
 #include <pthread.h>
 #include <math.h>
 #include <sys/types.h>
+#include <time.h>
+#include <sys/time.h>
 
 struct br *brGlobal;
 int totalCount = 1; // keep track of which order threads finish
+struct timeval clockTime; // struct to access gettimeofday
 
 // function to return status of bathroom
 static int brStatus()
@@ -29,8 +32,10 @@ static int brStatus()
 }
 
 // lock and unlock the "lock" mutex for the enter fn
-void enter(int g)
+long enter(int g)
 {
+	int startTime, elapsedTime, endTime = 0;
+	
 	pthread_mutex_lock(&brGlobal->lock);
 	switch(brStatus())
 	{
@@ -59,11 +64,18 @@ void enter(int g)
 			}
 			else if(g == 1)
 			{
+				gettimeofday(&clockTime, NULL); // start time to show how long it waits
+				startTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+
 				while(brStatus() == 0)
 				{
 					// wait if not
 					sched_yield();
 				}
+				
+				gettimeofday(&clockTime, NULL); // timestamp to keep track of when it stops waiting
+				endTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+				
 				// became male occupied
 				brGlobal->mCount++;
 				brGlobal->totalUsages++;
@@ -74,7 +86,9 @@ void enter(int g)
 			brGlobal->totalUsages++;
 			break;
 	}
+	elapsedTime = abs(endTime - startTime); // record elapsed time
 	pthread_mutex_unlock(&brGlobal->lock);
+	return elapsedTime;
 }
 
 // lock and unlock the vacant mutex for the leave fn

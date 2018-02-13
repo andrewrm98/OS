@@ -5,13 +5,12 @@
  *	use Box-Muller transform to create random numvers with a normal distribution
  */
 #include "Bathroom.h"
-#include <time.h>
 #ifndef M_PI
 #define M_PI = #define M_PI 3.14159265358979323846
 #endif
 
 int god = 0;
-struct timeval clockTime; // struct to access gettimeofday
+
 
 /**************************************************************** STRUCTS **********************************************************************/
 
@@ -57,7 +56,6 @@ double normalRand(double mean)
   return randNum * (mean/2) + mean;
 }
 
-
 /***************************************************** INDIVIDUAL (THREAD SIMULATOR) *************************************************************/
 
 /* individual
@@ -69,15 +67,13 @@ double normalRand(double mean)
  */
 void *individual(void* arguments)
 {
-	//int startTime, elapsedTime, endTime = 0;
-	//gettimeofday(&clockTime, NULL); // get time before function starts
-	//startTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
-
 	struct argstruct *args = arguments;
-	long minQueue = 0; //min time in a queue
-	long aveQueue = 0; //avg time in queue
-	long maxQueue = 0; // maxqueue in queue
- 
+	long total = 0;
+	long qTime = 0;
+	long aveQueue = 0;
+	long maxQueue = 0;
+	long minQueue = 999999999; 
+
 	/* Should wait for all threads to be created, is this too slow? (prolly not) */
 	pthread_mutex_lock(&args->lock);
 	int try = 0;
@@ -106,27 +102,30 @@ void *individual(void* arguments)
 	/* Loop through the lCount times and simulate entering and leaving a bathroom */
 	for(int i = 0; i<args->lCount; i++)
 	{
-		usleep(args->arrival);
+		usleep(1000*args->arrival);
 		//printf("INDIV: Thread[%d] Before enter\n", args->threadNum+1);
-		enter(args->gender);
+		qTime = enter(args->gender);
 		//printf("INDIV: Thread[%d] after enter\n", args->threadNum+1);
-		usleep(args->stay);
+		usleep(1000*args->stay);
 		//printf("INDIV: Thread[%d] Before leave\n", args->threadNum+1);
 		leave();
 		//printf("INDIV: Thread[%d] After leave\n", args->threadNum+1);
+		if (qTime < minQueue)
+		{
+			minQueue = qTime;
+		}
+		else if (qTime > maxQueue)
+		{
+			maxQueue = qTime;
+		}
+		total += qTime;
 	}
-	//printf("INDIV: Thread[%d] Completed! Printing Stats\n", args->threadNum+1);
-
+	aveQueue = total/args->lCount;
 	/* print statistics (do not want more than one thread printing at once so lock) */
 	pthread_mutex_lock(&args->printLock);
 	printf("Thread #%i Completed!\n", args->threadNum+1);
 	printStats(args->gender, args->threadNum, args->lCount, minQueue, aveQueue, maxQueue);
 	pthread_mutex_unlock(&args->printLock);
-
-	//gettimeofday(&clockTime, NULL); // get time after child process ends
-
-	//endTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
-	//elapsedTime = endTime - startTime; // record elapsed time
 
 	return 0;
 }
