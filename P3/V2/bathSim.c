@@ -67,7 +67,6 @@ double normalRand(double mean)
  */
 void *individual(void* arguments)
 {
-	srand(time(NULL));
 	struct argstruct *args = arguments;
 	long total = 0;
 	long qTime = 0;
@@ -106,7 +105,7 @@ void *individual(void* arguments)
 		usleep(args->arrival);
 		//printf("INDIV: Thread[%d] Arrival Time Value: %lf MS\n", args->threadNum+1, args->arrival);
 		qTime = enter(args->gender);
-		//printf("thread %i, %ld\n", args->threadNum+1,qTime);
+		printf("thread %i, %ld\n", args->threadNum+1,qTime);
 		usleep(args->stay);
 		//printf("INDIV: Thread[%d] Stay Time Value: %lf MS\n", args->threadNum+1, args->stay);
 		leave();
@@ -136,6 +135,7 @@ void *individual(void* arguments)
 
 int main(int argc, char* argv[])
 {
+  srand(time(NULL));
   /************************************************************* VARIABLES *********************************************************************/
   /* check if valid inputs */
   assert(argc == 5);

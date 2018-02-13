@@ -35,10 +35,11 @@ double stayRand(double meanStay){
 
 int main()
 {
+	srand(time(NULL));
 	printf("~~~~~~~~~~~~~~~LETS TEST SOME SHIT~~~~~~~~~~~~~~~\n");
 	// test the initialize function
 	initialize();
-
+/*
 	printf("\ninitialize of brGlobal completed...\n");
 	printf("BRGLOBAL INFO -> GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
 
@@ -63,24 +64,24 @@ int main()
 	enter(1);
 	printf("GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
 	
-	leave(1);
+	leave();
 	printf("GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
 	
-	leave(1);
+	leave();
 	printf("GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
 	
-	leave(1);
+	leave();
 	printf("GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
 	
 	enter(0);
 	printf("GF: %i, MC: %i, FC: %i, TU, %i\n", getGender(), getMCount(), getFCount(), getTotalU());
-
+*/
 	//test random functions
 	printf("\n~~~TESTING LOOPRAND FUNCTION~~~\n");
-	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 1, loopRand(1));
-	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 2, loopRand(2));
-	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 3, loopRand(3));
-	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 4, loopRand(4));
+	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
+	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
+	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
+	printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
     printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
     printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));
     printf("Successfully ran loopRand function with input: [%d] and output: [%i]\n", 5, loopRand(5));

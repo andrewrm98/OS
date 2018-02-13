@@ -147,9 +147,9 @@ void printStats(int gender, int threadNum, int lCount, long minTime, long aveTim
   printf("This is the %ith thread to have completed\n", totalCount);
   gender == 1 ? printf("Gender: Male\n") : printf("Gender: Female\n");
   printf("Loop count: %d\n", lCount);
-  printf("Min time spent in queue: %ld\n", minTime);
-  printf("Ave time spent in queue: %ld\n", aveTime);
-  printf("Max time spent in queue: %ld\n", maxTime);
+  printf("Min time spent in queue: %ld ms\n", minTime);
+  printf("Ave time spent in queue: %ld ms\n", aveTime);
+  printf("Max time spent in queue: %ld ms\n", maxTime);
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("\n");
   totalCount++;
