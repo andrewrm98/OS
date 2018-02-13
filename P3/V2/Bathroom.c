@@ -34,7 +34,7 @@ static int brStatus()
 // lock and unlock the "lock" mutex for the enter fn
 long enter(int g)
 {
-	struct timeval startTime, elapsedTime;
+	struct timeval startTime, endTime;
 	long elapsedTime = 0;
 	
 	pthread_mutex_lock(&brGlobal->lock);
@@ -87,8 +87,8 @@ long enter(int g)
 			brGlobal->totalUsages++;
 			break;
 	}
+	elapsedTime = endTime.tv_usec - startTime.tv_usec; // record elapsed time
 	pthread_mutex_unlock(&brGlobal->lock);
-	elapsedTime = abs(endTime.tv_usec - startTime.tv_usec); // record elapsed time
 	return elapsedTime;
 }
 

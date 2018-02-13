@@ -67,6 +67,7 @@ double normalRand(double mean)
  */
 void *individual(void* arguments)
 {
+	srand(time(NULL));
 	struct argstruct *args = arguments;
 	long total = 0;
 	long qTime = 0;
@@ -84,8 +85,6 @@ void *individual(void* arguments)
 		sched_yield();
 		pthread_mutex_unlock(&args->lock);
 	}
-	/* try is so that while the threads are waiting for other threads to be created, 
-	 *it can at least assign random variables to speed it up slightly */
 	if(try == 0)
 	{
 		try++;
@@ -98,16 +97,18 @@ void *individual(void* arguments)
 		//printf("random arrival time: %lf\n", args->stay);
 	}
 	pthread_mutex_unlock(&args->lock);
+	/* try is so that while the threads are waiting for other threads to be created, 
+	 *it can at least assign random variables to speed it up slightly */
 
 	/* Loop through the lCount times and simulate entering and leaving a bathroom */
 	for(int i = 0; i<args->lCount; i++)
 	{
-		usleep(1000*args->arrival);
-		//printf("INDIV: Thread[%d] Before enter\n", args->threadNum+1);
+		usleep(args->arrival);
+		//printf("INDIV: Thread[%d] Arrival Time Value: %lf MS\n", args->threadNum+1, args->arrival);
 		qTime = enter(args->gender);
-		//printf("INDIV: Thread[%d] after enter\n", args->threadNum+1);
-		usleep(1000*args->stay);
-		//printf("INDIV: Thread[%d] Before leave\n", args->threadNum+1);
+		printf("thread %i, %ld\n", args->threadNum+1,qTime);
+		usleep(args->stay);
+		//printf("INDIV: Thread[%d] Stay Time Value: %lf MS\n", args->threadNum+1, args->stay);
 		leave();
 		//printf("INDIV: Thread[%d] After leave\n", args->threadNum+1);
 		if (qTime < minQueue)
