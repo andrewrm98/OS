@@ -45,13 +45,13 @@ struct br
 	//int averageQL;
 	//int avePeople;
 	pthread_mutex_t lock;
-	pthread_cond_t vacant;
+	pthread_mutex_t vacant;
 };
 
 //enum gender {male = 1, female = 0};
 
 //struct br * brGlobal;
-int enter(int g);
+void enter(int g);
 void leave();
 void initialize();
 void finalize();
