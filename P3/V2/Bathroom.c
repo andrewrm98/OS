@@ -24,51 +24,57 @@
 
 int enter(int g)
 {
-	pthread_mutex_lock(&brGlobal->lock);
-	if(brGlobal->gender == -1) // check if the bathroom is vacant, if so enter
+	while(1)
 	{
-		brGlobal->gender = g; // set gender flag
-		assert(brGlobal->mCount == 0 && brGlobal->fCount == 0);
-		brGlobal->totalUsages++;
-		switch(g)
+		pthread_mutex_lock(&brGlobal->lock);
+		if(brGlobal->gender == -1) // check if the bathroom is vacant, if so enter
 		{
-			case 0:
-				brGlobal->fCount++; // increment female count
-				break;
-			case 1:
-				brGlobal->mCount++; // increment male count
-				break;
-			default:
-				return -1; // invalid gender
-				break;
+			brGlobal->gender = g; // set gender flag
+			assert(brGlobal->mCount == 0 && brGlobal->fCount == 0);
+			brGlobal->totalUsages++;
+			switch(g)
+			{
+				case 0:
+					brGlobal->fCount++; // increment female count
+					break;
+				case 1:
+					brGlobal->mCount++; // increment male count
+					break;
+				default:
+					return -1; // invalid gender
+					break;
+			}
+			return 1; // success
 		}
-		return 1; // success
-	}
-	else if(brGlobal->gender == g) // correct gender so enter
-	{
-		brGlobal->totalUsages++;
-		switch(g)
+		else if(brGlobal->gender == g) // correct gender so enter
 		{
-			case 0:
-				assert(brGlobal->mCount == 0);
-				brGlobal->fCount++; // increment female count
-				break;
-			case 1:
-				assert(brGlobal->fCount == 0);
-				brGlobal->mCount++; // increment male count
-				break;
-			default:
-				return -1; // invalid gender
-				break;
+			brGlobal->totalUsages++;
+			switch(g)
+			{
+				case 0:
+					assert(brGlobal->mCount == 0);
+					brGlobal->fCount++; // increment female count
+					break;
+				case 1:
+					assert(brGlobal->fCount == 0);
+					brGlobal->mCount++; // increment male count
+					break;
+				default:
+					return -1; // invalid gender
+					break;
+			}
+			return 1; // success
 		}
-		return 1; // success
+		else // would be inappropriate to enter at this time, begin waiting
+		{
+			while(brGlobal->gender != -1)
+			{
+				pthread_cond_wait(&brGlobal->vacant, &brGlobal->lock);
+			}
+			continue;
+		}
+		pthread_mutex_unlock(&brGlobal->lock);
 	}
-	else // would be inappropriate to enter at this time, begin waiting
-	{
-		pthread_cond_wait(&brGlobal->vacant, &brGlobal->lock);
-		return 0; // failure
-	}
-	pthread_mutex_unlock(&brGlobal->lock);
 }
 
 /* leave
