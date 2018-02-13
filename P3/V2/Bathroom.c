@@ -12,6 +12,7 @@
 #include <sys/types.h>
 
 struct br *brGlobal;
+int totalCount = 1; // keep track of which order threads finish
 
 // function to return status of bathroom
 static int brStatus()
@@ -69,7 +70,7 @@ void enter(int g)
 			}
 			break;
 		case -1: // empty case
-			g == 1 ? brGlobal->mCount++ : brGlobal->fCount++; //wtf is this
+			g == 1 ? brGlobal->mCount++ : brGlobal->fCount++;
 			brGlobal->totalUsages++;
 			break;
 	}
@@ -95,8 +96,8 @@ void leave()
 
 void initialize()
 {
-  brGlobal = (struct br *)malloc(sizeof(struct br));
-	brGlobal->gender = -1;
+ 	brGlobal = (struct br *)malloc(sizeof(struct br));
+ 	brGlobal->gender = -1;
 	brGlobal->mCount = 0;
 	brGlobal->fCount = 0;
 	brGlobal->totalUsages = 0;
@@ -110,7 +111,7 @@ void initialize()
  */
 void finalize()
 {
-	printf("\n************ END OF PROGRAM STATS ************\n");
+	printf("\n************* END OF PROGRAM STATS ************\n");
 	printf("\nTotal Usages: %d\nVacant Time: %ld\nOccupied Time: %ld\n", brGlobal->totalUsages, brGlobal->vacantTime, brGlobal->occupiedTime);
 }
 /* Prints out statistics for each individiaul thread before it exits
@@ -122,13 +123,15 @@ void finalize()
 void printStats(int gender, int threadNum, int lCount, long minTime, long aveTime, long maxTime)
 {
   printf("\n~~~~~~~~~~~~~ THREAD [%d] STATISTICS~~~~~~~~~~~\n", threadNum+1);
-  printf("Gender (0 for female and 1 for male): %d\n", gender);
+  printf("This is the %ith thread to have completed\n", totalCount);
+  gender == 1 ? printf("Gender: Male\n") : printf("Gender: Female\n");
   printf("Loop count: %d\n", lCount);
   printf("Min time spent in queue: %ld\n", minTime);
   printf("Ave time spent in queue: %ld\n", aveTime);
   printf("Max time spent in queue: %ld\n", maxTime);
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("\n");
+  totalCount++;
 }
 
 /* returns the gender */

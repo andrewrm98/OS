@@ -5,11 +5,14 @@
  *	use Box-Muller transform to create random numvers with a normal distribution
  */
 #include "Bathroom.h"
+#include <time.h>
 #ifndef M_PI
 #define M_PI = #define M_PI 3.14159265358979323846
 #endif
 
 int god = 0;
+struct timeval clockTime; // struct to access gettimeofday
+
 /**************************************************************** STRUCTS **********************************************************************/
 
 struct argstruct
@@ -40,7 +43,7 @@ int loopRand(int meanLoopCount)
   else
   {
   	//printf("LOOPRAND: %i\n", (int)randNum+meanLoopCount);
-  	return (int)randNum + meanLoopCount;
+  	return (int)(randNum + meanLoopCount);
   }
 }
 
@@ -66,10 +69,14 @@ double normalRand(double mean)
  */
 void *individual(void* arguments)
 {
+	//int startTime, elapsedTime, endTime = 0;
+	//gettimeofday(&clockTime, NULL); // get time before function starts
+	//startTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+
 	struct argstruct *args = arguments;
-	long minQueue = 0;
-	long aveQueue = 0;
-	long maxQueue = 0;
+	long minQueue = 0; //min time in a queue
+	long aveQueue = 0; //avg time in queue
+	long maxQueue = 0; // maxqueue in queue
  
 	/* Should wait for all threads to be created, is this too slow? (prolly not) */
 	pthread_mutex_lock(&args->lock);
@@ -90,7 +97,9 @@ void *individual(void* arguments)
 		//printf("INDIVIDUAL: assigning random values...\n");
 		args->lCount = loopRand(args->lCount);
 		args->arrival = normalRand(args->arrival);
+		//printf("random arrival time: %lf\n", args->arrival);
 		args->stay = normalRand(args->stay);
+		//printf("random arrival time: %lf\n", args->stay);
 	}
 	pthread_mutex_unlock(&args->lock);
 
@@ -113,6 +122,12 @@ void *individual(void* arguments)
 	printf("Thread #%i Completed!\n", args->threadNum+1);
 	printStats(args->gender, args->threadNum, args->lCount, minQueue, aveQueue, maxQueue);
 	pthread_mutex_unlock(&args->printLock);
+
+	//gettimeofday(&clockTime, NULL); // get time after child process ends
+
+	//endTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+	//elapsedTime = endTime - startTime; // record elapsed time
+
 	return 0;
 }
 
