@@ -34,7 +34,8 @@ static int brStatus()
 // lock and unlock the "lock" mutex for the enter fn
 long enter(int g)
 {
-	int startTime, elapsedTime, endTime = 0;
+	struct timeval startTime, elapsedTime;
+	long elapsedTime = 0;
 	
 	pthread_mutex_lock(&brGlobal->lock);
 	switch(brStatus())
@@ -64,8 +65,8 @@ long enter(int g)
 			}
 			else if(g == 1)
 			{
-				gettimeofday(&clockTime, NULL); // start time to show how long it waits
-				startTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+				gettimeofday(&startTime, NULL); // start time to show how long it waits
+				//startTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
 
 				while(brStatus() == 0)
 				{
@@ -73,8 +74,8 @@ long enter(int g)
 					sched_yield();
 				}
 				
-				gettimeofday(&clockTime, NULL); // timestamp to keep track of when it stops waiting
-				endTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
+				gettimeofday(&endTime, NULL); // timestamp to keep track of when it stops waiting
+				//endTime = (clockTime.tv_sec * 1000) + (clockTime.tv_usec / 1000); // convert to ms
 				
 				// became male occupied
 				brGlobal->mCount++;
@@ -86,8 +87,8 @@ long enter(int g)
 			brGlobal->totalUsages++;
 			break;
 	}
-	elapsedTime = abs(endTime - startTime); // record elapsed time
 	pthread_mutex_unlock(&brGlobal->lock);
+	elapsedTime = abs(endTime.tv_usec - startTime.tv_usec); // record elapsed time
 	return elapsedTime;
 }
 
