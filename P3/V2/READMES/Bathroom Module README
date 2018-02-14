@@ -1,0 +1,40 @@
+Andrew Morrison
+Peter Christakos
+
+Bathroom.c
+Operating Systems
+
+****************************** ReadMe *************************************
+
+Struct:
+	struct br
+		holds all the global bathroom information
+
+Functions:
+	brStatus - 
+		checks the male and female count and returns the type of the bathroom. 1 for male, 0 for female, and -1 for vacant. This is used as an extra check to make sure there are no other genders in the bahroom as it uses assert statements to verify this before it returns.
+
+	enter - 
+		A mutex lock around nearly the entire function prevents any race condition (same lock as leave).
+		uses brStatus to check the global bathroom gender. If the gender matches the current thread then it increments the gender count, the total count, and then leaves. If the gender does not match, then the thread uses pthread_cond_wait to wait on the OPPOSITE GENDER CONDITION (we did not know this at first, and it was causing issues for a while). For example, a female would have pthread_cond_wait(&brGlobal->mVacant, &brGlobal->lock);. While it is waiting, gettimeofday() is used to keep track of the length of the queue time. In the case that the bathroom is empty when enter is called, then it is handled seperately. First, gettimeofday() is used again to end the vacant time and add it to the total vacant time, and then start the occupied time (as the bathroom was empty but is now occupied). The return value of enter is the queue time for that iteration.
+
+	leave - 
+		A mutex lock around nearly the entire function prevents any race condition (same lock as enter).
+		uses brStatus to check the global bathroom gender. If the gender is male then it decrements the male count, or the same process for a female. If after the decrement occurs the bathroom is empty, then it broadcasts for the opposite gender to enter the bathroom. then gettimeofday() is used to end the occupied time and add it to the total occupied time and vacant start time is started (as the bathroom was just occupied but now is vacant).
+
+
+	initialize - 
+		initializes the global bathroom struct
+
+	finalize - 
+		prints the statistics for the master thread, this includes: total vacant time, total occuipied time, and total usages of the bathroom
+
+	printStats - 
+		prints the statistics for each individual therads, this includes: min time spent in queue, max time spent in queue, ave time spent in queue, gender, thread number, loop count
+
+****************************** Issues *************************************
+The vacant time seems to be off sometimes... It may be correct, but is usually a little lower than expected.
+
+We had a few issues with race conditions, but we fixed it by using condition variables.
+
+****************************** End *************************************

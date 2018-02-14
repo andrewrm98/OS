@@ -1,0 +1,31 @@
+Andrew Morrison
+Peter Christakos
+
+BathSim.c
+Operating Systems
+
+****************************** ReadMe *************************************
+
+Structs:
+	argStruct
+		holds the thread information and the global locks
+
+Functions:
+	loopRand - 
+		generates a normal distribution random loop count integer using drand48()
+
+	normalRand - 
+		generates a normal distribution random double for arrival and stay times using drand48()
+
+	individual - 
+		Assigns random numbers. Then, makes sure all threads begin together (a signal from main and a wait in individual will ensure this). Then it sleeps for the arrival time using usleep, calls enter, sleeps the stay time using usleep, and finally calls leave. After this, the stats are printed (they are locked around with printLock). qTime is assigned the return value of enter and is used to keep track of the min, ave, and max queue times.
+
+	main - 
+		creates some local variables, initializes all threads and locks as well as calls initialize() for the global bathroom struct. Then an array of argStructs where each person's arguments is an index of the array. Each individual() call is passed an element of the array since pthread_create() only allows for one argument to be passed to the function. pthread_join is called for every thread so that they all exit cleanly. Finally, finalize is called and the master threads prints out its statistics before exiting cleanly.
+
+****************************** Issues *************************************
+For some odd reason, the z value for normalRand must be divided by 10 in order to prevent deadlock... It seems to work perfectly fine as long as this condition is met.
+
+The total vacant time can be a little strange sometimes.
+
+****************************** End *************************************
