@@ -121,12 +121,9 @@ void leave()
 				long temp = abs(((1000*brGlobal->occupiedEndTime.tv_sec)-(1000*brGlobal->occupiedStartTime.tv_sec)) + ((brGlobal->occupiedEndTime.tv_usec/1000)-(brGlobal->occupiedStartTime.tv_usec/1000)));
 				if(temp>0 && temp<10000)
 				{
-					//printf("temp: %ld", temp);
-					//printf("empty bathroom\n");
 					brGlobal->occupiedTime += temp;
 					assert(brGlobal->fCount == 0 && brGlobal->mCount == 0);
 				}
-				//sched_yield();
 			}
 			break;
 		case 0: // female
@@ -191,22 +188,4 @@ void printStats(int gender, int threadNum, int lCount, long minTime, long aveTim
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("\n");
   totalCount++;
-}
-
-/* returns the gender */
-int getGender()
-{
-  return brGlobal->gender;
-}
-int getMCount()
-{
-	return brGlobal->mCount;
-}
-int getFCount()
-{
-	return brGlobal->fCount;
-}
-int getTotalU()
-{
-	return brGlobal->totalUsages;
 }

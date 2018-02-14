@@ -61,10 +61,6 @@ long enter(int g);
 void leave();
 void initialize();
 void finalize();
-int getGender();
-int getMCount();
-int getFCount();
-int getTotalU();
 void printStats(int gender, int threadNum, int lCount, long minTime, long aveTime, long maxTime);
 
 #endif /* BATHROOM_SEEN */
