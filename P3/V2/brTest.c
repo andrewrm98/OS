@@ -15,7 +15,7 @@ int loopRand(int meanLoopCount)
   double a = drand48();
   double b = drand48();
   double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b));
-  if ((int)(randNum + meanLoopCount) <= 0)
+  if ((int)(randNum * (meanLoopCount/2 ) + meanLoopCount) <= 0)
   {
   	return 1;
   }

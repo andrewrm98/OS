@@ -1,0 +1,4597 @@
+Threads Initialized!
+Thread #1 Created!
+Thread #2 Created!
+Thread #3 Created!
+Thread #4 Created!
+Thread #5 Created!
+Thread #6 Created!
+Thread #7 Created!
+Thread #8 Created!
+Thread #9 Created!
+Thread #10 Created!
+Thread #11 Created!
+Thread #12 Created!
+Thread #13 Created!
+Thread #14 Created!
+Thread #15 Created!
+Thread #16 Created!
+Thread #17 Created!
+Thread #18 Created!
+Thread #19 Created!
+Thread #20 Created!
+Thread #21 Created!
+Thread #22 Created!
+Thread #23 Created!
+Thread #24 Created!
+Thread #25 Created!
+Thread #26 Created!
+Thread #27 Created!
+Thread #28 Created!
+Thread #29 Created!
+Thread #30 Created!
+Thread #31 Created!
+Thread #32 Created!
+Thread #33 Created!
+Thread #34 Created!
+Thread #35 Created!
+Thread #36 Created!
+Thread #37 Created!
+Thread #38 Created!
+Thread #39 Created!
+Thread #40 Created!
+Thread #41 Created!
+Thread #42 Created!
+Thread #43 Created!
+Thread #44 Created!
+Thread #45 Created!
+Thread #46 Created!
+Thread #47 Created!
+Thread #48 Created!
+Thread #49 Created!
+Thread #50 Created!
+Thread #51 Created!
+Thread #52 Created!
+Thread #53 Created!
+Thread #54 Created!
+Thread #55 Created!
+Thread #56 Created!
+Thread #57 Created!
+Thread #58 Created!
+Thread #59 Created!
+Thread #60 Created!
+Thread #61 Created!
+Thread #62 Created!
+Thread #63 Created!
+Thread #64 Created!
+Thread #65 Created!
+Thread #66 Created!
+Thread #67 Created!
+Thread #68 Created!
+Thread #69 Created!
+Thread #70 Created!
+Thread #71 Created!
+Thread #72 Created!
+Thread #73 Created!
+Thread #74 Created!
+Thread #75 Created!
+Thread #76 Created!
+Thread #77 Created!
+Thread #78 Created!
+Thread #79 Created!
+Thread #80 Created!
+Thread #81 Created!
+Thread #82 Created!
+Thread #83 Created!
+Thread #84 Created!
+Thread #85 Created!
+Thread #86 Created!
+Thread #87 Created!
+Thread #88 Created!
+Thread #89 Created!
+Thread #90 Created!
+Thread #91 Created!
+Thread #92 Created!
+Thread #93 Created!
+Thread #94 Created!
+Thread #95 Created!
+Thread #96 Created!
+Thread #97 Created!
+Thread #98 Created!
+Thread #99 Created!
+Thread #100 Created!
+Thread #101 Created!
+Thread #102 Created!
+Thread #103 Created!
+Thread #104 Created!
+Thread #105 Created!
+Thread #106 Created!
+Thread #107 Created!
+Thread #108 Created!
+Thread #109 Created!
+Thread #110 Created!
+Thread #111 Created!
+Thread #112 Created!
+Thread #113 Created!
+Thread #114 Created!
+Thread #115 Created!
+Thread #116 Created!
+Thread #117 Created!
+Thread #118 Created!
+Thread #119 Created!
+Thread #120 Created!
+Thread #121 Created!
+Thread #122 Created!
+Thread #123 Created!
+Thread #124 Created!
+Thread #125 Created!
+Thread #126 Created!
+Thread #127 Created!
+Thread #128 Created!
+Thread #129 Created!
+Thread #130 Created!
+Thread #131 Created!
+Thread #132 Created!
+Thread #133 Created!
+Thread #134 Created!
+Thread #135 Created!
+Thread #136 Created!
+Thread #137 Created!
+Thread #138 Created!
+Thread #139 Created!
+Thread #140 Created!
+Thread #141 Created!
+Thread #142 Created!
+Thread #143 Created!
+Thread #144 Created!
+Thread #145 Created!
+Thread #146 Created!
+Thread #147 Created!
+Thread #148 Created!
+Thread #149 Created!
+Thread #150 Created!
+Thread #151 Created!
+Thread #152 Created!
+Thread #153 Created!
+Thread #154 Created!
+Thread #155 Created!
+Thread #156 Created!
+Thread #157 Created!
+Thread #158 Created!
+Thread #159 Created!
+Thread #160 Created!
+Thread #161 Created!
+Thread #162 Created!
+Thread #163 Created!
+Thread #164 Created!
+Thread #165 Created!
+Thread #166 Created!
+Thread #167 Created!
+Thread #168 Created!
+Thread #169 Created!
+Thread #170 Created!
+Thread #171 Created!
+Thread #172 Created!
+Thread #173 Created!
+Thread #174 Created!
+Thread #175 Created!
+Thread #176 Created!
+Thread #177 Created!
+Thread #178 Created!
+Thread #179 Created!
+Thread #180 Created!
+Thread #181 Created!
+Thread #182 Created!
+Thread #183 Created!
+Thread #184 Created!
+Thread #185 Created!
+Thread #186 Created!
+Thread #187 Created!
+Thread #188 Created!
+Thread #189 Created!
+Thread #190 Created!
+Thread #191 Created!
+Thread #192 Created!
+Thread #193 Created!
+Thread #194 Created!
+Thread #195 Created!
+Thread #196 Created!
+Thread #197 Created!
+Thread #198 Created!
+Thread #199 Created!
+Thread #200 Created!
+Thread #201 Created!
+Thread #202 Created!
+Thread #203 Created!
+Thread #204 Created!
+Thread #205 Created!
+Thread #206 Created!
+Thread #207 Created!
+Thread #208 Created!
+Thread #209 Created!
+Thread #210 Created!
+Thread #211 Created!
+Thread #212 Created!
+Thread #213 Created!
+Thread #214 Created!
+Thread #215 Created!
+Thread #216 Created!
+Thread #217 Created!
+Thread #218 Created!
+Thread #219 Created!
+Thread #220 Created!
+Thread #221 Created!
+Thread #222 Created!
+Thread #223 Created!
+Thread #224 Created!
+Thread #225 Created!
+Thread #226 Created!
+Thread #227 Created!
+Thread #228 Created!
+Thread #229 Created!
+Thread #230 Created!
+Thread #231 Created!
+Thread #232 Created!
+Thread #233 Created!
+Thread #234 Created!
+Thread #235 Created!
+Thread #236 Created!
+Thread #237 Created!
+Thread #238 Created!
+Thread #239 Created!
+Thread #240 Created!
+Thread #241 Created!
+Thread #242 Created!
+Thread #243 Created!
+Thread #244 Created!
+Thread #245 Created!
+Thread #246 Created!
+Thread #247 Created!
+Thread #248 Created!
+Thread #249 Created!
+Thread #250 Created!
+Thread #251 Created!
+Thread #252 Created!
+Thread #253 Created!
+Thread #254 Created!
+Thread #255 Created!
+Thread #256 Created!
+Thread #257 Created!
+Thread #258 Created!
+Thread #259 Created!
+Thread #260 Created!
+Thread #261 Created!
+Thread #262 Created!
+Thread #263 Created!
+Thread #264 Created!
+Thread #265 Created!
+Thread #266 Created!
+Thread #267 Created!
+Thread #268 Created!
+Thread #269 Created!
+Thread #270 Created!
+Thread #271 Created!
+Thread #272 Created!
+Thread #273 Created!
+Thread #274 Created!
+Thread #275 Created!
+Thread #276 Created!
+Thread #277 Created!
+Thread #278 Created!
+Thread #279 Created!
+Thread #280 Created!
+Thread #281 Created!
+Thread #282 Created!
+Thread #283 Created!
+Thread #284 Created!
+Thread #285 Created!
+Thread #286 Created!
+Thread #287 Created!
+Thread #288 Created!
+Thread #289 Created!
+Thread #290 Created!
+Thread #291 Created!
+Thread #292 Created!
+Thread #293 Created!
+Thread #294 Created!
+Thread #295 Created!
+Thread #296 Created!
+Thread #297 Created!
+Thread #298 Created!
+Thread #299 Created!
+Thread #300 Created!
+Thread #301 Created!
+Thread #302 Created!
+Thread #303 Created!
+Thread #304 Created!
+Thread #305 Created!
+Thread #306 Created!
+Thread #307 Created!
+Thread #308 Created!
+Thread #309 Created!
+Thread #310 Created!
+Thread #311 Created!
+Thread #312 Created!
+Thread #313 Created!
+Thread #314 Created!
+Thread #315 Created!
+Thread #316 Created!
+Thread #317 Created!
+Thread #318 Created!
+Thread #319 Created!
+Thread #320 Created!
+Thread #321 Created!
+Thread #322 Created!
+Thread #323 Created!
+Thread #324 Created!
+Thread #325 Created!
+Thread #326 Created!
+Thread #327 Created!
+Thread #328 Created!
+Thread #329 Created!
+Thread #330 Created!
+Thread #331 Created!
+Thread #332 Created!
+Thread #333 Created!
+Thread #334 Created!
+Thread #335 Created!
+Thread #336 Created!
+Thread #337 Created!
+Thread #338 Created!
+Thread #339 Created!
+Thread #340 Created!
+Thread #341 Created!
+Thread #342 Created!
+Thread #343 Created!
+Thread #344 Created!
+Thread #345 Created!
+Thread #346 Created!
+Thread #347 Created!
+Thread #348 Created!
+Thread #349 Created!
+Thread #350 Created!
+Thread #351 Created!
+Thread #352 Created!
+Thread #353 Created!
+Thread #354 Created!
+Thread #355 Created!
+Thread #356 Created!
+Thread #357 Created!
+Thread #358 Created!
+Thread #359 Created!
+Thread #360 Created!
+Thread #361 Created!
+Thread #362 Created!
+Thread #363 Created!
+Thread #364 Created!
+Thread #365 Created!
+Thread #366 Created!
+Thread #367 Created!
+Thread #368 Created!
+Thread #369 Created!
+Thread #370 Created!
+Thread #371 Created!
+Thread #372 Created!
+Thread #373 Created!
+Thread #374 Created!
+Thread #375 Created!
+Thread #376 Created!
+Thread #377 Created!
+Thread #378 Created!
+Thread #379 Created!
+Thread #380 Created!
+Thread #381 Created!
+Thread #382 Created!
+Thread #383 Created!
+Thread #192 Completed!
+
+~~~~~~~~~~~~~ THREAD [192] STATISTICS~~~~~~~~~~~
+This is Thread #1 to have completed
+This Thread's Gender: Male
+Loop count: 1
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #354 Completed!
+
+~~~~~~~~~~~~~ THREAD [354] STATISTICS~~~~~~~~~~~
+This is Thread #2 to have completed
+This Thread's Gender: Male
+Loop count: 1
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #306 Completed!
+
+~~~~~~~~~~~~~ THREAD [306] STATISTICS~~~~~~~~~~~
+This is Thread #3 to have completed
+This Thread's Gender: Male
+Loop count: 1
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #251 Completed!
+
+~~~~~~~~~~~~~ THREAD [251] STATISTICS~~~~~~~~~~~
+This is Thread #4 to have completed
+This Thread's Gender: Male
+Loop count: 721
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #218 Completed!
+
+~~~~~~~~~~~~~ THREAD [218] STATISTICS~~~~~~~~~~~
+This is Thread #5 to have completed
+This Thread's Gender: Male
+Loop count: 2822
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #334 Completed!
+
+~~~~~~~~~~~~~ THREAD [334] STATISTICS~~~~~~~~~~~
+This is Thread #6 to have completed
+This Thread's Gender: Male
+Loop count: 2888
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #90 Completed!
+
+~~~~~~~~~~~~~ THREAD [90] STATISTICS~~~~~~~~~~~
+This is Thread #7 to have completed
+This Thread's Gender: Male
+Loop count: 3085
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #370 Completed!
+
+~~~~~~~~~~~~~ THREAD [370] STATISTICS~~~~~~~~~~~
+This is Thread #8 to have completed
+This Thread's Gender: Male
+Loop count: 3505
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #222 Completed!
+
+~~~~~~~~~~~~~ THREAD [222] STATISTICS~~~~~~~~~~~
+This is Thread #9 to have completed
+This Thread's Gender: Male
+Loop count: 3614
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #311 Completed!
+
+~~~~~~~~~~~~~ THREAD [311] STATISTICS~~~~~~~~~~~
+This is Thread #10 to have completed
+This Thread's Gender: Male
+Loop count: 6073
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #274 Completed!
+
+~~~~~~~~~~~~~ THREAD [274] STATISTICS~~~~~~~~~~~
+This is Thread #11 to have completed
+This Thread's Gender: Male
+Loop count: 6776
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #9 Completed!
+
+~~~~~~~~~~~~~ THREAD [9] STATISTICS~~~~~~~~~~~
+This is Thread #12 to have completed
+This Thread's Gender: Male
+Loop count: 7381
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #249 Completed!
+
+~~~~~~~~~~~~~ THREAD [249] STATISTICS~~~~~~~~~~~
+This is Thread #13 to have completed
+This Thread's Gender: Male
+Loop count: 7509
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #159 Completed!
+
+~~~~~~~~~~~~~ THREAD [159] STATISTICS~~~~~~~~~~~
+This is Thread #14 to have completed
+This Thread's Gender: Male
+Loop count: 7511
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #335 Completed!
+
+~~~~~~~~~~~~~ THREAD [335] STATISTICS~~~~~~~~~~~
+This is Thread #15 to have completed
+This Thread's Gender: Male
+Loop count: 7576
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #134 Completed!
+
+~~~~~~~~~~~~~ THREAD [134] STATISTICS~~~~~~~~~~~
+This is Thread #16 to have completed
+This Thread's Gender: Male
+Loop count: 7891
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #156 Completed!
+
+~~~~~~~~~~~~~ THREAD [156] STATISTICS~~~~~~~~~~~
+This is Thread #17 to have completed
+This Thread's Gender: Male
+Loop count: 8313
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #130 Completed!
+
+~~~~~~~~~~~~~ THREAD [130] STATISTICS~~~~~~~~~~~
+This is Thread #18 to have completed
+This Thread's Gender: Male
+Loop count: 8843
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #10 Completed!
+
+~~~~~~~~~~~~~ THREAD [10] STATISTICS~~~~~~~~~~~
+This is Thread #19 to have completed
+This Thread's Gender: Male
+Loop count: 9200
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #165 Completed!
+
+~~~~~~~~~~~~~ THREAD [165] STATISTICS~~~~~~~~~~~
+This is Thread #20 to have completed
+This Thread's Gender: Male
+Loop count: 9184
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #188 Completed!
+
+~~~~~~~~~~~~~ THREAD [188] STATISTICS~~~~~~~~~~~
+This is Thread #21 to have completed
+This Thread's Gender: Male
+Loop count: 9960
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #128 Completed!
+
+~~~~~~~~~~~~~ THREAD [128] STATISTICS~~~~~~~~~~~
+This is Thread #22 to have completed
+This Thread's Gender: Male
+Loop count: 10334
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #327 Completed!
+
+~~~~~~~~~~~~~ THREAD [327] STATISTICS~~~~~~~~~~~
+This is Thread #23 to have completed
+This Thread's Gender: Male
+Loop count: 10482
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #381 Completed!
+
+~~~~~~~~~~~~~ THREAD [381] STATISTICS~~~~~~~~~~~
+This is Thread #24 to have completed
+This Thread's Gender: Male
+Loop count: 10849
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #117 Completed!
+
+~~~~~~~~~~~~~ THREAD [117] STATISTICS~~~~~~~~~~~
+This is Thread #25 to have completed
+This Thread's Gender: Male
+Loop count: 10999
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #186 Completed!
+
+~~~~~~~~~~~~~ THREAD [186] STATISTICS~~~~~~~~~~~
+This is Thread #26 to have completed
+This Thread's Gender: Male
+Loop count: 11457
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #309 Completed!
+
+~~~~~~~~~~~~~ THREAD [309] STATISTICS~~~~~~~~~~~
+This is Thread #27 to have completed
+This Thread's Gender: Male
+Loop count: 11531
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #70 Completed!
+
+~~~~~~~~~~~~~ THREAD [70] STATISTICS~~~~~~~~~~~
+This is Thread #28 to have completed
+This Thread's Gender: Male
+Loop count: 11575
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #72 Completed!
+
+~~~~~~~~~~~~~ THREAD [72] STATISTICS~~~~~~~~~~~
+This is Thread #29 to have completed
+This Thread's Gender: Male
+Loop count: 12112
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #5 Completed!
+
+~~~~~~~~~~~~~ THREAD [5] STATISTICS~~~~~~~~~~~
+This is Thread #30 to have completed
+This Thread's Gender: Male
+Loop count: 12194
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #42 Completed!
+
+~~~~~~~~~~~~~ THREAD [42] STATISTICS~~~~~~~~~~~
+This is Thread #31 to have completed
+This Thread's Gender: Male
+Loop count: 12358
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #337 Completed!
+
+~~~~~~~~~~~~~ THREAD [337] STATISTICS~~~~~~~~~~~
+This is Thread #32 to have completed
+This Thread's Gender: Male
+Loop count: 12228
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #240 Completed!
+
+~~~~~~~~~~~~~ THREAD [240] STATISTICS~~~~~~~~~~~
+This is Thread #33 to have completed
+This Thread's Gender: Male
+Loop count: 12347
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #205 Completed!
+
+~~~~~~~~~~~~~ THREAD [205] STATISTICS~~~~~~~~~~~
+This is Thread #34 to have completed
+This Thread's Gender: Male
+Loop count: 12308
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #224 Completed!
+
+~~~~~~~~~~~~~ THREAD [224] STATISTICS~~~~~~~~~~~
+This is Thread #35 to have completed
+This Thread's Gender: Male
+Loop count: 12809
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #116 Completed!
+
+~~~~~~~~~~~~~ THREAD [116] STATISTICS~~~~~~~~~~~
+This is Thread #36 to have completed
+This Thread's Gender: Male
+Loop count: 12818
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #329 Completed!
+
+~~~~~~~~~~~~~ THREAD [329] STATISTICS~~~~~~~~~~~
+This is Thread #37 to have completed
+This Thread's Gender: Male
+Loop count: 12999
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #283 Completed!
+
+~~~~~~~~~~~~~ THREAD [283] STATISTICS~~~~~~~~~~~
+This is Thread #38 to have completed
+This Thread's Gender: Male
+Loop count: 13108
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #127 Completed!
+
+~~~~~~~~~~~~~ THREAD [127] STATISTICS~~~~~~~~~~~
+This is Thread #39 to have completed
+This Thread's Gender: Male
+Loop count: 13180
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #105 Completed!
+
+~~~~~~~~~~~~~ THREAD [105] STATISTICS~~~~~~~~~~~
+This is Thread #40 to have completed
+This Thread's Gender: Male
+Loop count: 13610
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #66 Completed!
+
+~~~~~~~~~~~~~ THREAD [66] STATISTICS~~~~~~~~~~~
+This is Thread #41 to have completed
+This Thread's Gender: Male
+Loop count: 13767
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #281 Completed!
+
+~~~~~~~~~~~~~ THREAD [281] STATISTICS~~~~~~~~~~~
+This is Thread #42 to have completed
+This Thread's Gender: Male
+Loop count: 13859
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #190 Completed!
+
+~~~~~~~~~~~~~ THREAD [190] STATISTICS~~~~~~~~~~~
+This is Thread #43 to have completed
+This Thread's Gender: Male
+Loop count: 14356
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #160 Completed!
+
+~~~~~~~~~~~~~ THREAD [160] STATISTICS~~~~~~~~~~~
+This is Thread #44 to have completed
+This Thread's Gender: Male
+Loop count: 14327
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #214 Completed!
+
+~~~~~~~~~~~~~ THREAD [214] STATISTICS~~~~~~~~~~~
+This is Thread #45 to have completed
+This Thread's Gender: Male
+Loop count: 14394
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #346 Completed!
+
+~~~~~~~~~~~~~ THREAD [346] STATISTICS~~~~~~~~~~~
+This is Thread #46 to have completed
+This Thread's Gender: Male
+Loop count: 14842
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #43 Completed!
+
+~~~~~~~~~~~~~ THREAD [43] STATISTICS~~~~~~~~~~~
+This is Thread #47 to have completed
+This Thread's Gender: Male
+Loop count: 14859
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #215 Completed!
+
+~~~~~~~~~~~~~ THREAD [215] STATISTICS~~~~~~~~~~~
+This is Thread #48 to have completed
+This Thread's Gender: Male
+Loop count: 14863
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #360 Completed!
+
+~~~~~~~~~~~~~ THREAD [360] STATISTICS~~~~~~~~~~~
+This is Thread #49 to have completed
+This Thread's Gender: Male
+Loop count: 14887
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #322 Completed!
+
+~~~~~~~~~~~~~ THREAD [322] STATISTICS~~~~~~~~~~~
+This is Thread #50 to have completed
+This Thread's Gender: Male
+Loop count: 14910
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #185 Completed!
+
+~~~~~~~~~~~~~ THREAD [185] STATISTICS~~~~~~~~~~~
+This is Thread #51 to have completed
+This Thread's Gender: Male
+Loop count: 15055
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #158 Completed!
+
+~~~~~~~~~~~~~ THREAD [158] STATISTICS~~~~~~~~~~~
+This is Thread #52 to have completed
+This Thread's Gender: Male
+Loop count: 15238
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #28 Completed!
+
+~~~~~~~~~~~~~ THREAD [28] STATISTICS~~~~~~~~~~~
+This is Thread #53 to have completed
+This Thread's Gender: Male
+Loop count: 15499
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #326 Completed!
+
+~~~~~~~~~~~~~ THREAD [326] STATISTICS~~~~~~~~~~~
+This is Thread #54 to have completed
+This Thread's Gender: Male
+Loop count: 15543
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #198 Completed!
+
+~~~~~~~~~~~~~ THREAD [198] STATISTICS~~~~~~~~~~~
+This is Thread #55 to have completed
+This Thread's Gender: Male
+Loop count: 15686
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #39 Completed!
+
+~~~~~~~~~~~~~ THREAD [39] STATISTICS~~~~~~~~~~~
+This is Thread #56 to have completed
+This Thread's Gender: Male
+Loop count: 15926
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #289 Completed!
+
+~~~~~~~~~~~~~ THREAD [289] STATISTICS~~~~~~~~~~~
+This is Thread #57 to have completed
+This Thread's Gender: Male
+Loop count: 16052
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #365 Completed!
+
+~~~~~~~~~~~~~ THREAD [365] STATISTICS~~~~~~~~~~~
+This is Thread #58 to have completed
+This Thread's Gender: Male
+Loop count: 16248
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #139 Completed!
+
+~~~~~~~~~~~~~ THREAD [139] STATISTICS~~~~~~~~~~~
+This is Thread #59 to have completed
+This Thread's Gender: Male
+Loop count: 16310
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #193 Completed!
+
+~~~~~~~~~~~~~ THREAD [193] STATISTICS~~~~~~~~~~~
+This is Thread #60 to have completed
+This Thread's Gender: Male
+Loop count: 16392
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #197 Completed!
+
+~~~~~~~~~~~~~ THREAD [197] STATISTICS~~~~~~~~~~~
+This is Thread #61 to have completed
+This Thread's Gender: Male
+Loop count: 16317
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #133 Completed!
+
+~~~~~~~~~~~~~ THREAD [133] STATISTICS~~~~~~~~~~~
+This is Thread #62 to have completed
+This Thread's Gender: Male
+Loop count: 16608
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #131 Completed!
+
+~~~~~~~~~~~~~ THREAD [131] STATISTICS~~~~~~~~~~~
+This is Thread #63 to have completed
+This Thread's Gender: Male
+Loop count: 16706
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #79 Completed!
+
+~~~~~~~~~~~~~ THREAD [79] STATISTICS~~~~~~~~~~~
+This is Thread #64 to have completed
+This Thread's Gender: Male
+Loop count: 16740
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #288 Completed!
+
+~~~~~~~~~~~~~ THREAD [288] STATISTICS~~~~~~~~~~~
+This is Thread #65 to have completed
+This Thread's Gender: Male
+Loop count: 16820
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #123 Completed!
+
+~~~~~~~~~~~~~ THREAD [123] STATISTICS~~~~~~~~~~~
+This is Thread #66 to have completed
+This Thread's Gender: Male
+Loop count: 16976
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #145 Completed!
+
+~~~~~~~~~~~~~ THREAD [145] STATISTICS~~~~~~~~~~~
+This is Thread #67 to have completed
+This Thread's Gender: Male
+Loop count: 17145
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #204 Completed!
+
+~~~~~~~~~~~~~ THREAD [204] STATISTICS~~~~~~~~~~~
+This is Thread #68 to have completed
+This Thread's Gender: Male
+Loop count: 17117
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #113 Completed!
+
+~~~~~~~~~~~~~ THREAD [113] STATISTICS~~~~~~~~~~~
+This is Thread #69 to have completed
+This Thread's Gender: Male
+Loop count: 17346
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #129 Completed!
+
+~~~~~~~~~~~~~ THREAD [129] STATISTICS~~~~~~~~~~~
+This is Thread #70 to have completed
+This Thread's Gender: Male
+Loop count: 17339
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #287 Completed!
+
+~~~~~~~~~~~~~ THREAD [287] STATISTICS~~~~~~~~~~~
+This is Thread #71 to have completed
+This Thread's Gender: Male
+Loop count: 17390
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #23 Completed!
+
+~~~~~~~~~~~~~ THREAD [23] STATISTICS~~~~~~~~~~~
+This is Thread #72 to have completed
+This Thread's Gender: Male
+Loop count: 17603
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #176 Completed!
+
+~~~~~~~~~~~~~ THREAD [176] STATISTICS~~~~~~~~~~~
+This is Thread #73 to have completed
+This Thread's Gender: Male
+Loop count: 17666
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #152 Completed!
+
+~~~~~~~~~~~~~ THREAD [152] STATISTICS~~~~~~~~~~~
+This is Thread #74 to have completed
+This Thread's Gender: Male
+Loop count: 17685
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #316 Completed!
+
+~~~~~~~~~~~~~ THREAD [316] STATISTICS~~~~~~~~~~~
+This is Thread #75 to have completed
+This Thread's Gender: Male
+Loop count: 17765
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #37 Completed!
+
+~~~~~~~~~~~~~ THREAD [37] STATISTICS~~~~~~~~~~~
+This is Thread #76 to have completed
+This Thread's Gender: Male
+Loop count: 17816
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #374 Completed!
+
+~~~~~~~~~~~~~ THREAD [374] STATISTICS~~~~~~~~~~~
+This is Thread #77 to have completed
+This Thread's Gender: Male
+Loop count: 17831
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #328 Completed!
+
+~~~~~~~~~~~~~ THREAD [328] STATISTICS~~~~~~~~~~~
+This is Thread #78 to have completed
+This Thread's Gender: Male
+Loop count: 17961
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #296 Completed!
+
+~~~~~~~~~~~~~ THREAD [296] STATISTICS~~~~~~~~~~~
+This is Thread #79 to have completed
+This Thread's Gender: Male
+Loop count: 17830
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #1 Completed!
+
+~~~~~~~~~~~~~ THREAD [1] STATISTICS~~~~~~~~~~~
+This is Thread #80 to have completed
+This Thread's Gender: Male
+Loop count: 18013
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #4 Completed!
+
+~~~~~~~~~~~~~ THREAD [4] STATISTICS~~~~~~~~~~~
+This is Thread #81 to have completed
+This Thread's Gender: Male
+Loop count: 18268
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #154 Completed!
+
+~~~~~~~~~~~~~ THREAD [154] STATISTICS~~~~~~~~~~~
+This is Thread #82 to have completed
+This Thread's Gender: Male
+Loop count: 18330
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #150 Completed!
+
+~~~~~~~~~~~~~ THREAD [150] STATISTICS~~~~~~~~~~~
+This is Thread #83 to have completed
+This Thread's Gender: Male
+Loop count: 18298
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #118 Completed!
+
+~~~~~~~~~~~~~ THREAD [118] STATISTICS~~~~~~~~~~~
+This is Thread #84 to have completed
+This Thread's Gender: Male
+Loop count: 18527
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #228 Completed!
+
+~~~~~~~~~~~~~ THREAD [228] STATISTICS~~~~~~~~~~~
+This is Thread #85 to have completed
+This Thread's Gender: Male
+Loop count: 18873
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #56 Completed!
+
+~~~~~~~~~~~~~ THREAD [56] STATISTICS~~~~~~~~~~~
+This is Thread #86 to have completed
+This Thread's Gender: Male
+Loop count: 18966
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #344 Completed!
+
+~~~~~~~~~~~~~ THREAD [344] STATISTICS~~~~~~~~~~~
+This is Thread #87 to have completed
+This Thread's Gender: Male
+Loop count: 19395
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #183 Completed!
+
+~~~~~~~~~~~~~ THREAD [183] STATISTICS~~~~~~~~~~~
+This is Thread #88 to have completed
+This Thread's Gender: Male
+Loop count: 19626
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #320 Completed!
+
+~~~~~~~~~~~~~ THREAD [320] STATISTICS~~~~~~~~~~~
+This is Thread #89 to have completed
+This Thread's Gender: Male
+Loop count: 19802
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #227 Completed!
+
+~~~~~~~~~~~~~ THREAD [227] STATISTICS~~~~~~~~~~~
+This is Thread #90 to have completed
+This Thread's Gender: Male
+Loop count: 19816
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #136 Completed!
+
+~~~~~~~~~~~~~ THREAD [136] STATISTICS~~~~~~~~~~~
+This is Thread #91 to have completed
+This Thread's Gender: Male
+Loop count: 20074
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #24 Completed!
+
+~~~~~~~~~~~~~ THREAD [24] STATISTICS~~~~~~~~~~~
+This is Thread #92 to have completed
+This Thread's Gender: Male
+Loop count: 19979
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #60 Completed!
+
+~~~~~~~~~~~~~ THREAD [60] STATISTICS~~~~~~~~~~~
+This is Thread #93 to have completed
+This Thread's Gender: Male
+Loop count: 20235
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #194 Completed!
+
+~~~~~~~~~~~~~ THREAD [194] STATISTICS~~~~~~~~~~~
+This is Thread #94 to have completed
+This Thread's Gender: Male
+Loop count: 20347
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #6 Completed!
+
+~~~~~~~~~~~~~ THREAD [6] STATISTICS~~~~~~~~~~~
+This is Thread #95 to have completed
+This Thread's Gender: Male
+Loop count: 20763
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #46 Completed!
+
+~~~~~~~~~~~~~ THREAD [46] STATISTICS~~~~~~~~~~~
+This is Thread #96 to have completed
+This Thread's Gender: Male
+Loop count: 20511
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #353 Completed!
+
+~~~~~~~~~~~~~ THREAD [353] STATISTICS~~~~~~~~~~~
+This is Thread #97 to have completed
+This Thread's Gender: Male
+Loop count: 20677
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #332 Completed!
+
+~~~~~~~~~~~~~ THREAD [332] STATISTICS~~~~~~~~~~~
+This is Thread #98 to have completed
+This Thread's Gender: Male
+Loop count: 20703
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #31 Completed!
+
+~~~~~~~~~~~~~ THREAD [31] STATISTICS~~~~~~~~~~~
+This is Thread #99 to have completed
+This Thread's Gender: Male
+Loop count: 21040
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #62 Completed!
+
+~~~~~~~~~~~~~ THREAD [62] STATISTICS~~~~~~~~~~~
+This is Thread #100 to have completed
+This Thread's Gender: Male
+Loop count: 20934
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #200 Completed!
+
+~~~~~~~~~~~~~ THREAD [200] STATISTICS~~~~~~~~~~~
+This is Thread #101 to have completed
+This Thread's Gender: Male
+Loop count: 21079
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #278 Completed!
+
+~~~~~~~~~~~~~ THREAD [278] STATISTICS~~~~~~~~~~~
+This is Thread #102 to have completed
+This Thread's Gender: Male
+Loop count: 21035
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #74 Completed!
+
+~~~~~~~~~~~~~ THREAD [74] STATISTICS~~~~~~~~~~~
+This is Thread #103 to have completed
+This Thread's Gender: Male
+Loop count: 21347
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #144 Completed!
+
+~~~~~~~~~~~~~ THREAD [144] STATISTICS~~~~~~~~~~~
+This is Thread #104 to have completed
+This Thread's Gender: Male
+Loop count: 21256
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #29 Completed!
+
+~~~~~~~~~~~~~ THREAD [29] STATISTICS~~~~~~~~~~~
+This is Thread #105 to have completed
+This Thread's Gender: Male
+Loop count: 21433
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #292 Completed!
+
+~~~~~~~~~~~~~ THREAD [292] STATISTICS~~~~~~~~~~~
+This is Thread #106 to have completed
+This Thread's Gender: Male
+Loop count: 21594
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #268 Completed!
+
+~~~~~~~~~~~~~ THREAD [268] STATISTICS~~~~~~~~~~~
+This is Thread #107 to have completed
+This Thread's Gender: Male
+Loop count: 21767
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #64 Completed!
+
+~~~~~~~~~~~~~ THREAD [64] STATISTICS~~~~~~~~~~~
+This is Thread #108 to have completed
+This Thread's Gender: Male
+Loop count: 21822
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #279 Completed!
+
+~~~~~~~~~~~~~ THREAD [279] STATISTICS~~~~~~~~~~~
+This is Thread #109 to have completed
+This Thread's Gender: Male
+Loop count: 22215
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #76 Completed!
+
+~~~~~~~~~~~~~ THREAD [76] STATISTICS~~~~~~~~~~~
+This is Thread #110 to have completed
+This Thread's Gender: Male
+Loop count: 22178
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #125 Completed!
+
+~~~~~~~~~~~~~ THREAD [125] STATISTICS~~~~~~~~~~~
+This is Thread #111 to have completed
+This Thread's Gender: Male
+Loop count: 22628
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #252 Completed!
+
+~~~~~~~~~~~~~ THREAD [252] STATISTICS~~~~~~~~~~~
+This is Thread #112 to have completed
+This Thread's Gender: Male
+Loop count: 22663
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #122 Completed!
+
+~~~~~~~~~~~~~ THREAD [122] STATISTICS~~~~~~~~~~~
+This is Thread #113 to have completed
+This Thread's Gender: Male
+Loop count: 22988
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #14 Completed!
+
+~~~~~~~~~~~~~ THREAD [14] STATISTICS~~~~~~~~~~~
+This is Thread #114 to have completed
+This Thread's Gender: Male
+Loop count: 23142
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #213 Completed!
+
+~~~~~~~~~~~~~ THREAD [213] STATISTICS~~~~~~~~~~~
+This is Thread #115 to have completed
+This Thread's Gender: Male
+Loop count: 23315
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #107 Completed!
+
+~~~~~~~~~~~~~ THREAD [107] STATISTICS~~~~~~~~~~~
+This is Thread #116 to have completed
+This Thread's Gender: Male
+Loop count: 23409
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #81 Completed!
+
+~~~~~~~~~~~~~ THREAD [81] STATISTICS~~~~~~~~~~~
+This is Thread #117 to have completed
+This Thread's Gender: Male
+Loop count: 23647
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #315 Completed!
+
+~~~~~~~~~~~~~ THREAD [315] STATISTICS~~~~~~~~~~~
+This is Thread #118 to have completed
+This Thread's Gender: Male
+Loop count: 23814
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #120 Completed!
+
+~~~~~~~~~~~~~ THREAD [120] STATISTICS~~~~~~~~~~~
+This is Thread #119 to have completed
+This Thread's Gender: Male
+Loop count: 23815
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #179 Completed!
+
+~~~~~~~~~~~~~ THREAD [179] STATISTICS~~~~~~~~~~~
+This is Thread #120 to have completed
+This Thread's Gender: Male
+Loop count: 23741
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #373 Completed!
+
+~~~~~~~~~~~~~ THREAD [373] STATISTICS~~~~~~~~~~~
+This is Thread #121 to have completed
+This Thread's Gender: Male
+Loop count: 23930
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #12 Completed!
+
+~~~~~~~~~~~~~ THREAD [12] STATISTICS~~~~~~~~~~~
+This is Thread #122 to have completed
+This Thread's Gender: Male
+Loop count: 24130
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #293 Completed!
+
+~~~~~~~~~~~~~ THREAD [293] STATISTICS~~~~~~~~~~~
+This is Thread #123 to have completed
+This Thread's Gender: Male
+Loop count: 24136
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #101 Completed!
+
+~~~~~~~~~~~~~ THREAD [101] STATISTICS~~~~~~~~~~~
+This is Thread #124 to have completed
+This Thread's Gender: Male
+Loop count: 24282
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #138 Completed!
+
+~~~~~~~~~~~~~ THREAD [138] STATISTICS~~~~~~~~~~~
+This is Thread #125 to have completed
+This Thread's Gender: Male
+Loop count: 24401
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #356 Completed!
+
+~~~~~~~~~~~~~ THREAD [356] STATISTICS~~~~~~~~~~~
+This is Thread #126 to have completed
+This Thread's Gender: Male
+Loop count: 24507
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #256 Completed!
+
+~~~~~~~~~~~~~ THREAD [256] STATISTICS~~~~~~~~~~~
+This is Thread #127 to have completed
+This Thread's Gender: Male
+Loop count: 24586
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #3 Completed!
+
+~~~~~~~~~~~~~ THREAD [3] STATISTICS~~~~~~~~~~~
+This is Thread #128 to have completed
+This Thread's Gender: Male
+Loop count: 24980
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #106 Completed!
+
+~~~~~~~~~~~~~ THREAD [106] STATISTICS~~~~~~~~~~~
+This is Thread #129 to have completed
+This Thread's Gender: Male
+Loop count: 25174
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #182 Completed!
+
+~~~~~~~~~~~~~ THREAD [182] STATISTICS~~~~~~~~~~~
+This is Thread #130 to have completed
+This Thread's Gender: Male
+Loop count: 25261
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #69 Completed!
+
+~~~~~~~~~~~~~ THREAD [69] STATISTICS~~~~~~~~~~~
+This is Thread #131 to have completed
+This Thread's Gender: Male
+Loop count: 25514
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #307 Completed!
+
+~~~~~~~~~~~~~ THREAD [307] STATISTICS~~~~~~~~~~~
+This is Thread #132 to have completed
+This Thread's Gender: Male
+Loop count: 25543
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #175 Completed!
+
+~~~~~~~~~~~~~ THREAD [175] STATISTICS~~~~~~~~~~~
+This is Thread #133 to have completed
+This Thread's Gender: Male
+Loop count: 25637
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #177 Completed!
+
+~~~~~~~~~~~~~ THREAD [177] STATISTICS~~~~~~~~~~~
+This is Thread #134 to have completed
+This Thread's Gender: Male
+Loop count: 25899
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #323 Completed!
+
+~~~~~~~~~~~~~ THREAD [323] STATISTICS~~~~~~~~~~~
+This is Thread #135 to have completed
+This Thread's Gender: Male
+Loop count: 26266
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #146 Completed!
+
+~~~~~~~~~~~~~ THREAD [146] STATISTICS~~~~~~~~~~~
+This is Thread #136 to have completed
+This Thread's Gender: Male
+Loop count: 26684
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #367 Completed!
+
+~~~~~~~~~~~~~ THREAD [367] STATISTICS~~~~~~~~~~~
+This is Thread #137 to have completed
+This Thread's Gender: Male
+Loop count: 26725
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #291 Completed!
+
+~~~~~~~~~~~~~ THREAD [291] STATISTICS~~~~~~~~~~~
+This is Thread #138 to have completed
+This Thread's Gender: Male
+Loop count: 26734
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #275 Completed!
+
+~~~~~~~~~~~~~ THREAD [275] STATISTICS~~~~~~~~~~~
+This is Thread #139 to have completed
+This Thread's Gender: Male
+Loop count: 27494
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #36 Completed!
+
+~~~~~~~~~~~~~ THREAD [36] STATISTICS~~~~~~~~~~~
+This is Thread #140 to have completed
+This Thread's Gender: Male
+Loop count: 27085
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #44 Completed!
+
+~~~~~~~~~~~~~ THREAD [44] STATISTICS~~~~~~~~~~~
+This is Thread #141 to have completed
+This Thread's Gender: Male
+Loop count: 27364
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #231 Completed!
+
+~~~~~~~~~~~~~ THREAD [231] STATISTICS~~~~~~~~~~~
+This is Thread #142 to have completed
+This Thread's Gender: Male
+Loop count: 27591
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #51 Completed!
+
+~~~~~~~~~~~~~ THREAD [51] STATISTICS~~~~~~~~~~~
+This is Thread #143 to have completed
+This Thread's Gender: Male
+Loop count: 28146
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #203 Completed!
+
+~~~~~~~~~~~~~ THREAD [203] STATISTICS~~~~~~~~~~~
+This is Thread #144 to have completed
+This Thread's Gender: Male
+Loop count: 27888
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #243 Completed!
+
+~~~~~~~~~~~~~ THREAD [243] STATISTICS~~~~~~~~~~~
+This is Thread #145 to have completed
+This Thread's Gender: Male
+Loop count: 27906
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #161 Completed!
+
+~~~~~~~~~~~~~ THREAD [161] STATISTICS~~~~~~~~~~~
+This is Thread #146 to have completed
+This Thread's Gender: Male
+Loop count: 28191
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #235 Completed!
+
+~~~~~~~~~~~~~ THREAD [235] STATISTICS~~~~~~~~~~~
+This is Thread #147 to have completed
+This Thread's Gender: Male
+Loop count: 29049
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #41 Completed!
+
+~~~~~~~~~~~~~ THREAD [41] STATISTICS~~~~~~~~~~~
+This is Thread #148 to have completed
+This Thread's Gender: Male
+Loop count: 29018
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #30 Completed!
+
+~~~~~~~~~~~~~ THREAD [30] STATISTICS~~~~~~~~~~~
+This is Thread #149 to have completed
+This Thread's Gender: Male
+Loop count: 29013
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #191 Completed!
+
+~~~~~~~~~~~~~ THREAD [191] STATISTICS~~~~~~~~~~~
+This is Thread #150 to have completed
+This Thread's Gender: Male
+Loop count: 29608
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #375 Completed!
+
+~~~~~~~~~~~~~ THREAD [375] STATISTICS~~~~~~~~~~~
+This is Thread #151 to have completed
+This Thread's Gender: Male
+Loop count: 29997
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #124 Completed!
+
+~~~~~~~~~~~~~ THREAD [124] STATISTICS~~~~~~~~~~~
+This is Thread #152 to have completed
+This Thread's Gender: Male
+Loop count: 29851
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #15 Completed!
+
+~~~~~~~~~~~~~ THREAD [15] STATISTICS~~~~~~~~~~~
+This is Thread #153 to have completed
+This Thread's Gender: Male
+Loop count: 30112
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #378 Completed!
+
+~~~~~~~~~~~~~ THREAD [378] STATISTICS~~~~~~~~~~~
+This is Thread #154 to have completed
+This Thread's Gender: Male
+Loop count: 29883
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #262 Completed!
+
+~~~~~~~~~~~~~ THREAD [262] STATISTICS~~~~~~~~~~~
+This is Thread #155 to have completed
+This Thread's Gender: Male
+Loop count: 30314
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #237 Completed!
+
+~~~~~~~~~~~~~ THREAD [237] STATISTICS~~~~~~~~~~~
+This is Thread #156 to have completed
+This Thread's Gender: Male
+Loop count: 30118
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #173 Completed!
+
+~~~~~~~~~~~~~ THREAD [173] STATISTICS~~~~~~~~~~~
+This is Thread #157 to have completed
+This Thread's Gender: Male
+Loop count: 30677
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #236 Completed!
+
+~~~~~~~~~~~~~ THREAD [236] STATISTICS~~~~~~~~~~~
+This is Thread #158 to have completed
+This Thread's Gender: Male
+Loop count: 30818
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #244 Completed!
+
+~~~~~~~~~~~~~ THREAD [244] STATISTICS~~~~~~~~~~~
+This is Thread #159 to have completed
+This Thread's Gender: Male
+Loop count: 30939
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #21 Completed!
+
+~~~~~~~~~~~~~ THREAD [21] STATISTICS~~~~~~~~~~~
+This is Thread #160 to have completed
+This Thread's Gender: Male
+Loop count: 31161
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #325 Completed!
+
+~~~~~~~~~~~~~ THREAD [325] STATISTICS~~~~~~~~~~~
+This is Thread #161 to have completed
+This Thread's Gender: Male
+Loop count: 31415
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #95 Completed!
+
+~~~~~~~~~~~~~ THREAD [95] STATISTICS~~~~~~~~~~~
+This is Thread #162 to have completed
+This Thread's Gender: Male
+Loop count: 31417
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #280 Completed!
+
+~~~~~~~~~~~~~ THREAD [280] STATISTICS~~~~~~~~~~~
+This is Thread #163 to have completed
+This Thread's Gender: Male
+Loop count: 32087
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #178 Completed!
+
+~~~~~~~~~~~~~ THREAD [178] STATISTICS~~~~~~~~~~~
+This is Thread #164 to have completed
+This Thread's Gender: Male
+Loop count: 31772
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #68 Completed!
+
+~~~~~~~~~~~~~ THREAD [68] STATISTICS~~~~~~~~~~~
+This is Thread #165 to have completed
+This Thread's Gender: Male
+Loop count: 32959
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #109 Completed!
+
+~~~~~~~~~~~~~ THREAD [109] STATISTICS~~~~~~~~~~~
+This is Thread #166 to have completed
+This Thread's Gender: Male
+Loop count: 32861
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #253 Completed!
+
+~~~~~~~~~~~~~ THREAD [253] STATISTICS~~~~~~~~~~~
+This is Thread #167 to have completed
+This Thread's Gender: Male
+Loop count: 34255
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #220 Completed!
+
+~~~~~~~~~~~~~ THREAD [220] STATISTICS~~~~~~~~~~~
+This is Thread #168 to have completed
+This Thread's Gender: Male
+Loop count: 33579
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #38 Completed!
+
+~~~~~~~~~~~~~ THREAD [38] STATISTICS~~~~~~~~~~~
+This is Thread #169 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115196 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #115 Completed!
+
+~~~~~~~~~~~~~ THREAD [115] STATISTICS~~~~~~~~~~~
+This is Thread #170 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115195 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #147 Completed!
+
+~~~~~~~~~~~~~ THREAD [147] STATISTICS~~~~~~~~~~~
+This is Thread #171 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115195 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #201 Completed!
+
+~~~~~~~~~~~~~ THREAD [201] STATISTICS~~~~~~~~~~~
+This is Thread #172 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115194 ms
+Ave time spent in queue: 115194 ms
+Max time spent in queue: 115194 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #371 Completed!
+
+~~~~~~~~~~~~~ THREAD [371] STATISTICS~~~~~~~~~~~
+This is Thread #173 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115191 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #187 Completed!
+
+~~~~~~~~~~~~~ THREAD [187] STATISTICS~~~~~~~~~~~
+This is Thread #174 to have completed
+This Thread's Gender: Female
+Loop count: 1
+Min time spent in queue: 115193 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #91 Completed!
+
+~~~~~~~~~~~~~ THREAD [91] STATISTICS~~~~~~~~~~~
+This is Thread #175 to have completed
+This Thread's Gender: Female
+Loop count: 493
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #13 Completed!
+
+~~~~~~~~~~~~~ THREAD [13] STATISTICS~~~~~~~~~~~
+This is Thread #176 to have completed
+This Thread's Gender: Female
+Loop count: 634
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #254 Completed!
+
+~~~~~~~~~~~~~ THREAD [254] STATISTICS~~~~~~~~~~~
+This is Thread #177 to have completed
+This Thread's Gender: Female
+Loop count: 1313
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #174 Completed!
+
+~~~~~~~~~~~~~ THREAD [174] STATISTICS~~~~~~~~~~~
+This is Thread #178 to have completed
+This Thread's Gender: Female
+Loop count: 1303
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #310 Completed!
+
+~~~~~~~~~~~~~ THREAD [310] STATISTICS~~~~~~~~~~~
+This is Thread #179 to have completed
+This Thread's Gender: Female
+Loop count: 1330
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #189 Completed!
+
+~~~~~~~~~~~~~ THREAD [189] STATISTICS~~~~~~~~~~~
+This is Thread #180 to have completed
+This Thread's Gender: Female
+Loop count: 1659
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115194 ms
+Max time spent in queue: 115194 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #372 Completed!
+
+~~~~~~~~~~~~~ THREAD [372] STATISTICS~~~~~~~~~~~
+This is Thread #181 to have completed
+This Thread's Gender: Female
+Loop count: 2288
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #271 Completed!
+
+~~~~~~~~~~~~~ THREAD [271] STATISTICS~~~~~~~~~~~
+This is Thread #182 to have completed
+This Thread's Gender: Female
+Loop count: 3145
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #112 Completed!
+
+~~~~~~~~~~~~~ THREAD [112] STATISTICS~~~~~~~~~~~
+This is Thread #183 to have completed
+This Thread's Gender: Female
+Loop count: 3582
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #103 Completed!
+
+~~~~~~~~~~~~~ THREAD [103] STATISTICS~~~~~~~~~~~
+This is Thread #184 to have completed
+This Thread's Gender: Female
+Loop count: 3886
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #149 Completed!
+
+~~~~~~~~~~~~~ THREAD [149] STATISTICS~~~~~~~~~~~
+This is Thread #185 to have completed
+This Thread's Gender: Female
+Loop count: 4005
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #303 Completed!
+
+~~~~~~~~~~~~~ THREAD [303] STATISTICS~~~~~~~~~~~
+This is Thread #186 to have completed
+This Thread's Gender: Female
+Loop count: 4864
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #96 Completed!
+
+~~~~~~~~~~~~~ THREAD [96] STATISTICS~~~~~~~~~~~
+This is Thread #187 to have completed
+This Thread's Gender: Female
+Loop count: 4900
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #206 Completed!
+
+~~~~~~~~~~~~~ THREAD [206] STATISTICS~~~~~~~~~~~
+This is Thread #188 to have completed
+This Thread's Gender: Female
+Loop count: 4875
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #166 Completed!
+
+~~~~~~~~~~~~~ THREAD [166] STATISTICS~~~~~~~~~~~
+This is Thread #189 to have completed
+This Thread's Gender: Female
+Loop count: 5880
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #148 Completed!
+
+~~~~~~~~~~~~~ THREAD [148] STATISTICS~~~~~~~~~~~
+This is Thread #190 to have completed
+This Thread's Gender: Female
+Loop count: 6045
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #132 Completed!
+
+~~~~~~~~~~~~~ THREAD [132] STATISTICS~~~~~~~~~~~
+This is Thread #191 to have completed
+This Thread's Gender: Female
+Loop count: 6598
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #250 Completed!
+
+~~~~~~~~~~~~~ THREAD [250] STATISTICS~~~~~~~~~~~
+This is Thread #192 to have completed
+This Thread's Gender: Female
+Loop count: 6777
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #379 Completed!
+
+~~~~~~~~~~~~~ THREAD [379] STATISTICS~~~~~~~~~~~
+This is Thread #193 to have completed
+This Thread's Gender: Female
+Loop count: 6961
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #257 Completed!
+
+~~~~~~~~~~~~~ THREAD [257] STATISTICS~~~~~~~~~~~
+This is Thread #194 to have completed
+This Thread's Gender: Female
+Loop count: 7140
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #137 Completed!
+
+~~~~~~~~~~~~~ THREAD [137] STATISTICS~~~~~~~~~~~
+This is Thread #195 to have completed
+This Thread's Gender: Female
+Loop count: 7301
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #141 Completed!
+
+~~~~~~~~~~~~~ THREAD [141] STATISTICS~~~~~~~~~~~
+This is Thread #196 to have completed
+This Thread's Gender: Female
+Loop count: 7335
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #27 Completed!
+
+~~~~~~~~~~~~~ THREAD [27] STATISTICS~~~~~~~~~~~
+This is Thread #197 to have completed
+This Thread's Gender: Female
+Loop count: 7778
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #108 Completed!
+
+~~~~~~~~~~~~~ THREAD [108] STATISTICS~~~~~~~~~~~
+This is Thread #198 to have completed
+This Thread's Gender: Female
+Loop count: 7829
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #151 Completed!
+
+~~~~~~~~~~~~~ THREAD [151] STATISTICS~~~~~~~~~~~
+This is Thread #199 to have completed
+This Thread's Gender: Female
+Loop count: 7929
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #273 Completed!
+
+~~~~~~~~~~~~~ THREAD [273] STATISTICS~~~~~~~~~~~
+This is Thread #200 to have completed
+This Thread's Gender: Female
+Loop count: 8384
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #40 Completed!
+
+~~~~~~~~~~~~~ THREAD [40] STATISTICS~~~~~~~~~~~
+This is Thread #201 to have completed
+This Thread's Gender: Female
+Loop count: 8654
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #338 Completed!
+
+~~~~~~~~~~~~~ THREAD [338] STATISTICS~~~~~~~~~~~
+This is Thread #202 to have completed
+This Thread's Gender: Female
+Loop count: 8676
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #225 Completed!
+
+~~~~~~~~~~~~~ THREAD [225] STATISTICS~~~~~~~~~~~
+This is Thread #203 to have completed
+This Thread's Gender: Female
+Loop count: 8606
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #26 Completed!
+
+~~~~~~~~~~~~~ THREAD [26] STATISTICS~~~~~~~~~~~
+This is Thread #204 to have completed
+This Thread's Gender: Female
+Loop count: 8660
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #369 Completed!
+
+~~~~~~~~~~~~~ THREAD [369] STATISTICS~~~~~~~~~~~
+This is Thread #205 to have completed
+This Thread's Gender: Female
+Loop count: 9132
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #299 Completed!
+
+~~~~~~~~~~~~~ THREAD [299] STATISTICS~~~~~~~~~~~
+This is Thread #206 to have completed
+This Thread's Gender: Female
+Loop count: 9125
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #89 Completed!
+
+~~~~~~~~~~~~~ THREAD [89] STATISTICS~~~~~~~~~~~
+This is Thread #207 to have completed
+This Thread's Gender: Female
+Loop count: 9061
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #98 Completed!
+
+~~~~~~~~~~~~~ THREAD [98] STATISTICS~~~~~~~~~~~
+This is Thread #208 to have completed
+This Thread's Gender: Female
+Loop count: 9274
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #155 Completed!
+
+~~~~~~~~~~~~~ THREAD [155] STATISTICS~~~~~~~~~~~
+This is Thread #209 to have completed
+This Thread's Gender: Female
+Loop count: 9621
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115194 ms
+Max time spent in queue: 115194 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #285 Completed!
+
+~~~~~~~~~~~~~ THREAD [285] STATISTICS~~~~~~~~~~~
+This is Thread #210 to have completed
+This Thread's Gender: Female
+Loop count: 10037
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #246 Completed!
+
+~~~~~~~~~~~~~ THREAD [246] STATISTICS~~~~~~~~~~~
+This is Thread #211 to have completed
+This Thread's Gender: Female
+Loop count: 10070
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #364 Completed!
+
+~~~~~~~~~~~~~ THREAD [364] STATISTICS~~~~~~~~~~~
+This is Thread #212 to have completed
+This Thread's Gender: Female
+Loop count: 10578
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #258 Completed!
+
+~~~~~~~~~~~~~ THREAD [258] STATISTICS~~~~~~~~~~~
+This is Thread #213 to have completed
+This Thread's Gender: Female
+Loop count: 10666
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #308 Completed!
+
+~~~~~~~~~~~~~ THREAD [308] STATISTICS~~~~~~~~~~~
+This is Thread #214 to have completed
+This Thread's Gender: Female
+Loop count: 11454
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #119 Completed!
+
+~~~~~~~~~~~~~ THREAD [119] STATISTICS~~~~~~~~~~~
+This is Thread #215 to have completed
+This Thread's Gender: Female
+Loop count: 11584
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #340 Completed!
+
+~~~~~~~~~~~~~ THREAD [340] STATISTICS~~~~~~~~~~~
+This is Thread #216 to have completed
+This Thread's Gender: Female
+Loop count: 11589
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #55 Completed!
+
+~~~~~~~~~~~~~ THREAD [55] STATISTICS~~~~~~~~~~~
+This is Thread #217 to have completed
+This Thread's Gender: Female
+Loop count: 11650
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #232 Completed!
+
+~~~~~~~~~~~~~ THREAD [232] STATISTICS~~~~~~~~~~~
+This is Thread #218 to have completed
+This Thread's Gender: Female
+Loop count: 11911
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #261 Completed!
+
+~~~~~~~~~~~~~ THREAD [261] STATISTICS~~~~~~~~~~~
+This is Thread #219 to have completed
+This Thread's Gender: Female
+Loop count: 11953
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #260 Completed!
+
+~~~~~~~~~~~~~ THREAD [260] STATISTICS~~~~~~~~~~~
+This is Thread #220 to have completed
+This Thread's Gender: Female
+Loop count: 12149
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #8 Completed!
+
+~~~~~~~~~~~~~ THREAD [8] STATISTICS~~~~~~~~~~~
+This is Thread #221 to have completed
+This Thread's Gender: Female
+Loop count: 12271
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #377 Completed!
+
+~~~~~~~~~~~~~ THREAD [377] STATISTICS~~~~~~~~~~~
+This is Thread #222 to have completed
+This Thread's Gender: Female
+Loop count: 12534
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #180 Completed!
+
+~~~~~~~~~~~~~ THREAD [180] STATISTICS~~~~~~~~~~~
+This is Thread #223 to have completed
+This Thread's Gender: Female
+Loop count: 12522
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #135 Completed!
+
+~~~~~~~~~~~~~ THREAD [135] STATISTICS~~~~~~~~~~~
+This is Thread #224 to have completed
+This Thread's Gender: Female
+Loop count: 12672
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #34 Completed!
+
+~~~~~~~~~~~~~ THREAD [34] STATISTICS~~~~~~~~~~~
+This is Thread #225 to have completed
+This Thread's Gender: Female
+Loop count: 12620
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #245 Completed!
+
+~~~~~~~~~~~~~ THREAD [245] STATISTICS~~~~~~~~~~~
+This is Thread #226 to have completed
+This Thread's Gender: Female
+Loop count: 12638
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #349 Completed!
+
+~~~~~~~~~~~~~ THREAD [349] STATISTICS~~~~~~~~~~~
+This is Thread #227 to have completed
+This Thread's Gender: Female
+Loop count: 12809
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #300 Completed!
+
+~~~~~~~~~~~~~ THREAD [300] STATISTICS~~~~~~~~~~~
+This is Thread #228 to have completed
+This Thread's Gender: Female
+Loop count: 13060
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #272 Completed!
+
+~~~~~~~~~~~~~ THREAD [272] STATISTICS~~~~~~~~~~~
+This is Thread #229 to have completed
+This Thread's Gender: Female
+Loop count: 12971
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #355 Completed!
+
+~~~~~~~~~~~~~ THREAD [355] STATISTICS~~~~~~~~~~~
+This is Thread #230 to have completed
+This Thread's Gender: Female
+Loop count: 13948
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #333 Completed!
+
+~~~~~~~~~~~~~ THREAD [333] STATISTICS~~~~~~~~~~~
+This is Thread #231 to have completed
+This Thread's Gender: Female
+Loop count: 13988
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #82 Completed!
+
+~~~~~~~~~~~~~ THREAD [82] STATISTICS~~~~~~~~~~~
+This is Thread #232 to have completed
+This Thread's Gender: Female
+Loop count: 14057
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #318 Completed!
+
+~~~~~~~~~~~~~ THREAD [318] STATISTICS~~~~~~~~~~~
+This is Thread #233 to have completed
+This Thread's Gender: Female
+Loop count: 14196
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #78 Completed!
+
+~~~~~~~~~~~~~ THREAD [78] STATISTICS~~~~~~~~~~~
+This is Thread #234 to have completed
+This Thread's Gender: Female
+Loop count: 14129
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #210 Completed!
+
+~~~~~~~~~~~~~ THREAD [210] STATISTICS~~~~~~~~~~~
+This is Thread #235 to have completed
+This Thread's Gender: Female
+Loop count: 14152
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #171 Completed!
+
+~~~~~~~~~~~~~ THREAD [171] STATISTICS~~~~~~~~~~~
+This is Thread #236 to have completed
+This Thread's Gender: Female
+Loop count: 14319
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #319 Completed!
+
+~~~~~~~~~~~~~ THREAD [319] STATISTICS~~~~~~~~~~~
+This is Thread #237 to have completed
+This Thread's Gender: Female
+Loop count: 14347
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #352 Completed!
+
+~~~~~~~~~~~~~ THREAD [352] STATISTICS~~~~~~~~~~~
+This is Thread #238 to have completed
+This Thread's Gender: Female
+Loop count: 14544
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #345 Completed!
+
+~~~~~~~~~~~~~ THREAD [345] STATISTICS~~~~~~~~~~~
+This is Thread #239 to have completed
+This Thread's Gender: Female
+Loop count: 14455
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #92 Completed!
+
+~~~~~~~~~~~~~ THREAD [92] STATISTICS~~~~~~~~~~~
+This is Thread #240 to have completed
+This Thread's Gender: Female
+Loop count: 14659
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #324 Completed!
+
+~~~~~~~~~~~~~ THREAD [324] STATISTICS~~~~~~~~~~~
+This is Thread #241 to have completed
+This Thread's Gender: Female
+Loop count: 14576
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #265 Completed!
+
+~~~~~~~~~~~~~ THREAD [265] STATISTICS~~~~~~~~~~~
+This is Thread #242 to have completed
+This Thread's Gender: Female
+Loop count: 15298
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #242 Completed!
+
+~~~~~~~~~~~~~ THREAD [242] STATISTICS~~~~~~~~~~~
+This is Thread #243 to have completed
+This Thread's Gender: Female
+Loop count: 15631
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #234 Completed!
+
+~~~~~~~~~~~~~ THREAD [234] STATISTICS~~~~~~~~~~~
+This is Thread #244 to have completed
+This Thread's Gender: Female
+Loop count: 15998
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #266 Completed!
+
+~~~~~~~~~~~~~ THREAD [266] STATISTICS~~~~~~~~~~~
+This is Thread #245 to have completed
+This Thread's Gender: Female
+Loop count: 16139
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #297 Completed!
+
+~~~~~~~~~~~~~ THREAD [297] STATISTICS~~~~~~~~~~~
+This is Thread #246 to have completed
+This Thread's Gender: Female
+Loop count: 16333
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #341 Completed!
+
+~~~~~~~~~~~~~ THREAD [341] STATISTICS~~~~~~~~~~~
+This is Thread #247 to have completed
+This Thread's Gender: Female
+Loop count: 16635
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #351 Completed!
+
+~~~~~~~~~~~~~ THREAD [351] STATISTICS~~~~~~~~~~~
+This is Thread #248 to have completed
+This Thread's Gender: Female
+Loop count: 16573
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #317 Completed!
+
+~~~~~~~~~~~~~ THREAD [317] STATISTICS~~~~~~~~~~~
+This is Thread #249 to have completed
+This Thread's Gender: Female
+Loop count: 16715
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #16 Completed!
+
+~~~~~~~~~~~~~ THREAD [16] STATISTICS~~~~~~~~~~~
+This is Thread #250 to have completed
+This Thread's Gender: Female
+Loop count: 16768
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #104 Completed!
+
+~~~~~~~~~~~~~ THREAD [104] STATISTICS~~~~~~~~~~~
+This is Thread #251 to have completed
+This Thread's Gender: Female
+Loop count: 17244
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #313 Completed!
+
+~~~~~~~~~~~~~ THREAD [313] STATISTICS~~~~~~~~~~~
+This is Thread #252 to have completed
+This Thread's Gender: Female
+Loop count: 17155
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #357 Completed!
+
+~~~~~~~~~~~~~ THREAD [357] STATISTICS~~~~~~~~~~~
+This is Thread #253 to have completed
+This Thread's Gender: Female
+Loop count: 17621
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #295 Completed!
+
+~~~~~~~~~~~~~ THREAD [295] STATISTICS~~~~~~~~~~~
+This is Thread #254 to have completed
+This Thread's Gender: Female
+Loop count: 17610
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #216 Completed!
+
+~~~~~~~~~~~~~ THREAD [216] STATISTICS~~~~~~~~~~~
+This is Thread #255 to have completed
+This Thread's Gender: Female
+Loop count: 17961
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #54 Completed!
+
+~~~~~~~~~~~~~ THREAD [54] STATISTICS~~~~~~~~~~~
+This is Thread #256 to have completed
+This Thread's Gender: Female
+Loop count: 18197
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #321 Completed!
+
+~~~~~~~~~~~~~ THREAD [321] STATISTICS~~~~~~~~~~~
+This is Thread #257 to have completed
+This Thread's Gender: Female
+Loop count: 18208
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #207 Completed!
+
+~~~~~~~~~~~~~ THREAD [207] STATISTICS~~~~~~~~~~~
+This is Thread #258 to have completed
+This Thread's Gender: Female
+Loop count: 18431
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #93 Completed!
+
+~~~~~~~~~~~~~ THREAD [93] STATISTICS~~~~~~~~~~~
+This is Thread #259 to have completed
+This Thread's Gender: Female
+Loop count: 18885
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #22 Completed!
+
+~~~~~~~~~~~~~ THREAD [22] STATISTICS~~~~~~~~~~~
+This is Thread #260 to have completed
+This Thread's Gender: Female
+Loop count: 18495
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #359 Completed!
+
+~~~~~~~~~~~~~ THREAD [359] STATISTICS~~~~~~~~~~~
+This is Thread #261 to have completed
+This Thread's Gender: Female
+Loop count: 18555
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #71 Completed!
+
+~~~~~~~~~~~~~ THREAD [71] STATISTICS~~~~~~~~~~~
+This is Thread #262 to have completed
+This Thread's Gender: Female
+Loop count: 18671
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #63 Completed!
+
+~~~~~~~~~~~~~ THREAD [63] STATISTICS~~~~~~~~~~~
+This is Thread #263 to have completed
+This Thread's Gender: Female
+Loop count: 18784
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #221 Completed!
+
+~~~~~~~~~~~~~ THREAD [221] STATISTICS~~~~~~~~~~~
+This is Thread #264 to have completed
+This Thread's Gender: Female
+Loop count: 18977
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #239 Completed!
+
+~~~~~~~~~~~~~ THREAD [239] STATISTICS~~~~~~~~~~~
+This is Thread #265 to have completed
+This Thread's Gender: Female
+Loop count: 19340
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #114 Completed!
+
+~~~~~~~~~~~~~ THREAD [114] STATISTICS~~~~~~~~~~~
+This is Thread #266 to have completed
+This Thread's Gender: Female
+Loop count: 19238
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #301 Completed!
+
+~~~~~~~~~~~~~ THREAD [301] STATISTICS~~~~~~~~~~~
+This is Thread #267 to have completed
+This Thread's Gender: Female
+Loop count: 19352
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #342 Completed!
+
+~~~~~~~~~~~~~ THREAD [342] STATISTICS~~~~~~~~~~~
+This is Thread #268 to have completed
+This Thread's Gender: Female
+Loop count: 19586
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #362 Completed!
+
+~~~~~~~~~~~~~ THREAD [362] STATISTICS~~~~~~~~~~~
+This is Thread #269 to have completed
+This Thread's Gender: Female
+Loop count: 19576
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #163 Completed!
+
+~~~~~~~~~~~~~ THREAD [163] STATISTICS~~~~~~~~~~~
+This is Thread #270 to have completed
+This Thread's Gender: Female
+Loop count: 19677
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #140 Completed!
+
+~~~~~~~~~~~~~ THREAD [140] STATISTICS~~~~~~~~~~~
+This is Thread #271 to have completed
+This Thread's Gender: Female
+Loop count: 19509
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #314 Completed!
+
+~~~~~~~~~~~~~ THREAD [314] STATISTICS~~~~~~~~~~~
+This is Thread #272 to have completed
+This Thread's Gender: Female
+Loop count: 19584
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #45 Completed!
+
+~~~~~~~~~~~~~ THREAD [45] STATISTICS~~~~~~~~~~~
+This is Thread #273 to have completed
+This Thread's Gender: Female
+Loop count: 19750
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #33 Completed!
+
+~~~~~~~~~~~~~ THREAD [33] STATISTICS~~~~~~~~~~~
+This is Thread #274 to have completed
+This Thread's Gender: Female
+Loop count: 19768
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #255 Completed!
+
+~~~~~~~~~~~~~ THREAD [255] STATISTICS~~~~~~~~~~~
+This is Thread #275 to have completed
+This Thread's Gender: Female
+Loop count: 19899
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #376 Completed!
+
+~~~~~~~~~~~~~ THREAD [376] STATISTICS~~~~~~~~~~~
+This is Thread #276 to have completed
+This Thread's Gender: Female
+Loop count: 20086
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #164 Completed!
+
+~~~~~~~~~~~~~ THREAD [164] STATISTICS~~~~~~~~~~~
+This is Thread #277 to have completed
+This Thread's Gender: Female
+Loop count: 19875
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #361 Completed!
+
+~~~~~~~~~~~~~ THREAD [361] STATISTICS~~~~~~~~~~~
+This is Thread #278 to have completed
+This Thread's Gender: Female
+Loop count: 20106
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #19 Completed!
+
+~~~~~~~~~~~~~ THREAD [19] STATISTICS~~~~~~~~~~~
+This is Thread #279 to have completed
+This Thread's Gender: Female
+Loop count: 20069
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #99 Completed!
+
+~~~~~~~~~~~~~ THREAD [99] STATISTICS~~~~~~~~~~~
+This is Thread #280 to have completed
+This Thread's Gender: Female
+Loop count: 20332
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #347 Completed!
+
+~~~~~~~~~~~~~ THREAD [347] STATISTICS~~~~~~~~~~~
+This is Thread #281 to have completed
+This Thread's Gender: Female
+Loop count: 20205
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #302 Completed!
+
+~~~~~~~~~~~~~ THREAD [302] STATISTICS~~~~~~~~~~~
+This is Thread #282 to have completed
+This Thread's Gender: Female
+Loop count: 20792
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #18 Completed!
+
+~~~~~~~~~~~~~ THREAD [18] STATISTICS~~~~~~~~~~~
+This is Thread #283 to have completed
+This Thread's Gender: Female
+Loop count: 20556
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #75 Completed!
+
+~~~~~~~~~~~~~ THREAD [75] STATISTICS~~~~~~~~~~~
+This is Thread #284 to have completed
+This Thread's Gender: Female
+Loop count: 20549
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #233 Completed!
+
+~~~~~~~~~~~~~ THREAD [233] STATISTICS~~~~~~~~~~~
+This is Thread #285 to have completed
+This Thread's Gender: Female
+Loop count: 20469
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #263 Completed!
+
+~~~~~~~~~~~~~ THREAD [263] STATISTICS~~~~~~~~~~~
+This is Thread #286 to have completed
+This Thread's Gender: Female
+Loop count: 21317
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #230 Completed!
+
+~~~~~~~~~~~~~ THREAD [230] STATISTICS~~~~~~~~~~~
+This is Thread #287 to have completed
+This Thread's Gender: Female
+Loop count: 21923
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #238 Completed!
+
+~~~~~~~~~~~~~ THREAD [238] STATISTICS~~~~~~~~~~~
+This is Thread #288 to have completed
+This Thread's Gender: Female
+Loop count: 22095
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #32 Completed!
+
+~~~~~~~~~~~~~ THREAD [32] STATISTICS~~~~~~~~~~~
+This is Thread #289 to have completed
+This Thread's Gender: Female
+Loop count: 21985
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #298 Completed!
+
+~~~~~~~~~~~~~ THREAD [298] STATISTICS~~~~~~~~~~~
+This is Thread #290 to have completed
+This Thread's Gender: Female
+Loop count: 22063
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #184 Completed!
+
+~~~~~~~~~~~~~ THREAD [184] STATISTICS~~~~~~~~~~~
+This is Thread #291 to have completed
+This Thread's Gender: Female
+Loop count: 22213
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #48 Completed!
+
+~~~~~~~~~~~~~ THREAD [48] STATISTICS~~~~~~~~~~~
+This is Thread #292 to have completed
+This Thread's Gender: Female
+Loop count: 22680
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #84 Completed!
+
+~~~~~~~~~~~~~ THREAD [84] STATISTICS~~~~~~~~~~~
+This is Thread #293 to have completed
+This Thread's Gender: Female
+Loop count: 22402
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #202 Completed!
+
+~~~~~~~~~~~~~ THREAD [202] STATISTICS~~~~~~~~~~~
+This is Thread #294 to have completed
+This Thread's Gender: Female
+Loop count: 22389
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #208 Completed!
+
+~~~~~~~~~~~~~ THREAD [208] STATISTICS~~~~~~~~~~~
+This is Thread #295 to have completed
+This Thread's Gender: Female
+Loop count: 22757
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115194 ms
+Max time spent in queue: 115194 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #121 Completed!
+
+~~~~~~~~~~~~~ THREAD [121] STATISTICS~~~~~~~~~~~
+This is Thread #296 to have completed
+This Thread's Gender: Female
+Loop count: 22915
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #282 Completed!
+
+~~~~~~~~~~~~~ THREAD [282] STATISTICS~~~~~~~~~~~
+This is Thread #297 to have completed
+This Thread's Gender: Female
+Loop count: 22859
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #270 Completed!
+
+~~~~~~~~~~~~~ THREAD [270] STATISTICS~~~~~~~~~~~
+This is Thread #298 to have completed
+This Thread's Gender: Female
+Loop count: 23176
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #330 Completed!
+
+~~~~~~~~~~~~~ THREAD [330] STATISTICS~~~~~~~~~~~
+This is Thread #299 to have completed
+This Thread's Gender: Female
+Loop count: 23221
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #217 Completed!
+
+~~~~~~~~~~~~~ THREAD [217] STATISTICS~~~~~~~~~~~
+This is Thread #300 to have completed
+This Thread's Gender: Female
+Loop count: 23606
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #304 Completed!
+
+~~~~~~~~~~~~~ THREAD [304] STATISTICS~~~~~~~~~~~
+This is Thread #301 to have completed
+This Thread's Gender: Female
+Loop count: 23441
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #248 Completed!
+
+~~~~~~~~~~~~~ THREAD [248] STATISTICS~~~~~~~~~~~
+This is Thread #302 to have completed
+This Thread's Gender: Female
+Loop count: 23792
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #382 Completed!
+
+~~~~~~~~~~~~~ THREAD [382] STATISTICS~~~~~~~~~~~
+This is Thread #303 to have completed
+This Thread's Gender: Female
+Loop count: 23937
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #170 Completed!
+
+~~~~~~~~~~~~~ THREAD [170] STATISTICS~~~~~~~~~~~
+This is Thread #304 to have completed
+This Thread's Gender: Female
+Loop count: 23904
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #65 Completed!
+
+~~~~~~~~~~~~~ THREAD [65] STATISTICS~~~~~~~~~~~
+This is Thread #305 to have completed
+This Thread's Gender: Female
+Loop count: 24051
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #368 Completed!
+
+~~~~~~~~~~~~~ THREAD [368] STATISTICS~~~~~~~~~~~
+This is Thread #306 to have completed
+This Thread's Gender: Female
+Loop count: 24170
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #94 Completed!
+
+~~~~~~~~~~~~~ THREAD [94] STATISTICS~~~~~~~~~~~
+This is Thread #307 to have completed
+This Thread's Gender: Female
+Loop count: 24371
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #181 Completed!
+
+~~~~~~~~~~~~~ THREAD [181] STATISTICS~~~~~~~~~~~
+This is Thread #308 to have completed
+This Thread's Gender: Female
+Loop count: 24402
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #269 Completed!
+
+~~~~~~~~~~~~~ THREAD [269] STATISTICS~~~~~~~~~~~
+This is Thread #309 to have completed
+This Thread's Gender: Female
+Loop count: 24681
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #77 Completed!
+
+~~~~~~~~~~~~~ THREAD [77] STATISTICS~~~~~~~~~~~
+This is Thread #310 to have completed
+This Thread's Gender: Female
+Loop count: 24689
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #350 Completed!
+
+~~~~~~~~~~~~~ THREAD [350] STATISTICS~~~~~~~~~~~
+This is Thread #311 to have completed
+This Thread's Gender: Female
+Loop count: 24977
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #343 Completed!
+
+~~~~~~~~~~~~~ THREAD [343] STATISTICS~~~~~~~~~~~
+This is Thread #312 to have completed
+This Thread's Gender: Female
+Loop count: 25402
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #85 Completed!
+
+~~~~~~~~~~~~~ THREAD [85] STATISTICS~~~~~~~~~~~
+This is Thread #313 to have completed
+This Thread's Gender: Female
+Loop count: 25128
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #80 Completed!
+
+~~~~~~~~~~~~~ THREAD [80] STATISTICS~~~~~~~~~~~
+This is Thread #314 to have completed
+This Thread's Gender: Female
+Loop count: 25673
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #312 Completed!
+
+~~~~~~~~~~~~~ THREAD [312] STATISTICS~~~~~~~~~~~
+This is Thread #315 to have completed
+This Thread's Gender: Female
+Loop count: 25361
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #110 Completed!
+
+~~~~~~~~~~~~~ THREAD [110] STATISTICS~~~~~~~~~~~
+This is Thread #316 to have completed
+This Thread's Gender: Female
+Loop count: 25650
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #17 Completed!
+
+~~~~~~~~~~~~~ THREAD [17] STATISTICS~~~~~~~~~~~
+This is Thread #317 to have completed
+This Thread's Gender: Female
+Loop count: 25677
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #380 Completed!
+
+~~~~~~~~~~~~~ THREAD [380] STATISTICS~~~~~~~~~~~
+This is Thread #318 to have completed
+This Thread's Gender: Female
+Loop count: 25726
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #97 Completed!
+
+~~~~~~~~~~~~~ THREAD [97] STATISTICS~~~~~~~~~~~
+This is Thread #319 to have completed
+This Thread's Gender: Female
+Loop count: 25932
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #102 Completed!
+
+~~~~~~~~~~~~~ THREAD [102] STATISTICS~~~~~~~~~~~
+This is Thread #320 to have completed
+This Thread's Gender: Female
+Loop count: 25788
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #172 Completed!
+
+~~~~~~~~~~~~~ THREAD [172] STATISTICS~~~~~~~~~~~
+This is Thread #321 to have completed
+This Thread's Gender: Female
+Loop count: 25927
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115194 ms
+Max time spent in queue: 115194 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #305 Completed!
+
+~~~~~~~~~~~~~ THREAD [305] STATISTICS~~~~~~~~~~~
+This is Thread #322 to have completed
+This Thread's Gender: Female
+Loop count: 26063
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #277 Completed!
+
+~~~~~~~~~~~~~ THREAD [277] STATISTICS~~~~~~~~~~~
+This is Thread #323 to have completed
+This Thread's Gender: Female
+Loop count: 26372
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #196 Completed!
+
+~~~~~~~~~~~~~ THREAD [196] STATISTICS~~~~~~~~~~~
+This is Thread #324 to have completed
+This Thread's Gender: Female
+Loop count: 26653
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #67 Completed!
+
+~~~~~~~~~~~~~ THREAD [67] STATISTICS~~~~~~~~~~~
+This is Thread #325 to have completed
+This Thread's Gender: Female
+Loop count: 26307
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #73 Completed!
+
+~~~~~~~~~~~~~ THREAD [73] STATISTICS~~~~~~~~~~~
+This is Thread #326 to have completed
+This Thread's Gender: Female
+Loop count: 26630
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #83 Completed!
+
+~~~~~~~~~~~~~ THREAD [83] STATISTICS~~~~~~~~~~~
+This is Thread #327 to have completed
+This Thread's Gender: Female
+Loop count: 27014
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #290 Completed!
+
+~~~~~~~~~~~~~ THREAD [290] STATISTICS~~~~~~~~~~~
+This is Thread #328 to have completed
+This Thread's Gender: Female
+Loop count: 27789
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #223 Completed!
+
+~~~~~~~~~~~~~ THREAD [223] STATISTICS~~~~~~~~~~~
+This is Thread #329 to have completed
+This Thread's Gender: Female
+Loop count: 27769
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #294 Completed!
+
+~~~~~~~~~~~~~ THREAD [294] STATISTICS~~~~~~~~~~~
+This is Thread #330 to have completed
+This Thread's Gender: Female
+Loop count: 27665
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #59 Completed!
+
+~~~~~~~~~~~~~ THREAD [59] STATISTICS~~~~~~~~~~~
+This is Thread #331 to have completed
+This Thread's Gender: Female
+Loop count: 28414
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #57 Completed!
+
+~~~~~~~~~~~~~ THREAD [57] STATISTICS~~~~~~~~~~~
+This is Thread #332 to have completed
+This Thread's Gender: Female
+Loop count: 28777
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #169 Completed!
+
+~~~~~~~~~~~~~ THREAD [169] STATISTICS~~~~~~~~~~~
+This is Thread #333 to have completed
+This Thread's Gender: Female
+Loop count: 28843
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #229 Completed!
+
+~~~~~~~~~~~~~ THREAD [229] STATISTICS~~~~~~~~~~~
+This is Thread #334 to have completed
+This Thread's Gender: Female
+Loop count: 28858
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #219 Completed!
+
+~~~~~~~~~~~~~ THREAD [219] STATISTICS~~~~~~~~~~~
+This is Thread #335 to have completed
+This Thread's Gender: Female
+Loop count: 28785
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #211 Completed!
+
+~~~~~~~~~~~~~ THREAD [211] STATISTICS~~~~~~~~~~~
+This is Thread #336 to have completed
+This Thread's Gender: Female
+Loop count: 29356
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #86 Completed!
+
+~~~~~~~~~~~~~ THREAD [86] STATISTICS~~~~~~~~~~~
+This is Thread #337 to have completed
+This Thread's Gender: Female
+Loop count: 29370
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #336 Completed!
+
+~~~~~~~~~~~~~ THREAD [336] STATISTICS~~~~~~~~~~~
+This is Thread #338 to have completed
+This Thread's Gender: Female
+Loop count: 29453
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #348 Completed!
+
+~~~~~~~~~~~~~ THREAD [348] STATISTICS~~~~~~~~~~~
+This is Thread #339 to have completed
+This Thread's Gender: Female
+Loop count: 29484
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #226 Completed!
+
+~~~~~~~~~~~~~ THREAD [226] STATISTICS~~~~~~~~~~~
+This is Thread #340 to have completed
+This Thread's Gender: Female
+Loop count: 29897
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #50 Completed!
+
+~~~~~~~~~~~~~ THREAD [50] STATISTICS~~~~~~~~~~~
+This is Thread #341 to have completed
+This Thread's Gender: Female
+Loop count: 30787
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #259 Completed!
+
+~~~~~~~~~~~~~ THREAD [259] STATISTICS~~~~~~~~~~~
+This is Thread #342 to have completed
+This Thread's Gender: Female
+Loop count: 30167
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #58 Completed!
+
+~~~~~~~~~~~~~ THREAD [58] STATISTICS~~~~~~~~~~~
+This is Thread #343 to have completed
+This Thread's Gender: Female
+Loop count: 30977
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #212 Completed!
+
+~~~~~~~~~~~~~ THREAD [212] STATISTICS~~~~~~~~~~~
+This is Thread #344 to have completed
+This Thread's Gender: Female
+Loop count: 32007
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #247 Completed!
+
+~~~~~~~~~~~~~ THREAD [247] STATISTICS~~~~~~~~~~~
+This is Thread #345 to have completed
+This Thread's Gender: Female
+Loop count: 31987
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #267 Completed!
+
+~~~~~~~~~~~~~ THREAD [267] STATISTICS~~~~~~~~~~~
+This is Thread #346 to have completed
+This Thread's Gender: Female
+Loop count: 32009
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #162 Completed!
+
+~~~~~~~~~~~~~ THREAD [162] STATISTICS~~~~~~~~~~~
+This is Thread #347 to have completed
+This Thread's Gender: Female
+Loop count: 32120
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115191 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #264 Completed!
+
+~~~~~~~~~~~~~ THREAD [264] STATISTICS~~~~~~~~~~~
+This is Thread #348 to have completed
+This Thread's Gender: Female
+Loop count: 32775
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #276 Completed!
+
+~~~~~~~~~~~~~ THREAD [276] STATISTICS~~~~~~~~~~~
+This is Thread #349 to have completed
+This Thread's Gender: Female
+Loop count: 32909
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115193 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #47 Completed!
+
+~~~~~~~~~~~~~ THREAD [47] STATISTICS~~~~~~~~~~~
+This is Thread #350 to have completed
+This Thread's Gender: Female
+Loop count: 32841
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #339 Completed!
+
+~~~~~~~~~~~~~ THREAD [339] STATISTICS~~~~~~~~~~~
+This is Thread #351 to have completed
+This Thread's Gender: Female
+Loop count: 33237
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #11 Completed!
+
+~~~~~~~~~~~~~ THREAD [11] STATISTICS~~~~~~~~~~~
+This is Thread #352 to have completed
+This Thread's Gender: Female
+Loop count: 32991
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #52 Completed!
+
+~~~~~~~~~~~~~ THREAD [52] STATISTICS~~~~~~~~~~~
+This is Thread #353 to have completed
+This Thread's Gender: Female
+Loop count: 33289
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #358 Completed!
+
+~~~~~~~~~~~~~ THREAD [358] STATISTICS~~~~~~~~~~~
+This is Thread #354 to have completed
+This Thread's Gender: Female
+Loop count: 33481
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115192 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #157 Completed!
+
+~~~~~~~~~~~~~ THREAD [157] STATISTICS~~~~~~~~~~~
+This is Thread #355 to have completed
+This Thread's Gender: Female
+Loop count: 33854
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115195 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #20 Completed!
+
+~~~~~~~~~~~~~ THREAD [20] STATISTICS~~~~~~~~~~~
+This is Thread #356 to have completed
+This Thread's Gender: Female
+Loop count: 33867
+Min time spent in queue: 0 ms
+Ave time spent in queue: 115196 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #142 Completed!
+
+~~~~~~~~~~~~~ THREAD [142] STATISTICS~~~~~~~~~~~
+This is Thread #357 to have completed
+This Thread's Gender: Male
+Loop count: 34475
+Min time spent in queue: 0 ms
+Ave time spent in queue: 116539 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #286 Completed!
+
+~~~~~~~~~~~~~ THREAD [286] STATISTICS~~~~~~~~~~~
+This is Thread #358 to have completed
+This Thread's Gender: Male
+Loop count: 34424
+Min time spent in queue: 0 ms
+Ave time spent in queue: 58270 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #366 Completed!
+
+~~~~~~~~~~~~~ THREAD [366] STATISTICS~~~~~~~~~~~
+This is Thread #359 to have completed
+This Thread's Gender: Male
+Loop count: 34996
+Min time spent in queue: 0 ms
+Ave time spent in queue: 116538 ms
+Max time spent in queue: 116538 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #7 Completed!
+
+~~~~~~~~~~~~~ THREAD [7] STATISTICS~~~~~~~~~~~
+This is Thread #360 to have completed
+This Thread's Gender: Female
+Loop count: 34651
+Min time spent in queue: 0 ms
+Ave time spent in queue: 5332 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #25 Completed!
+
+~~~~~~~~~~~~~ THREAD [25] STATISTICS~~~~~~~~~~~
+This is Thread #361 to have completed
+This Thread's Gender: Female
+Loop count: 34820
+Min time spent in queue: 0 ms
+Ave time spent in queue: 4692 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #111 Completed!
+
+~~~~~~~~~~~~~ THREAD [111] STATISTICS~~~~~~~~~~~
+This is Thread #362 to have completed
+This Thread's Gender: Female
+Loop count: 34569
+Min time spent in queue: 0 ms
+Ave time spent in queue: 5586 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #88 Completed!
+
+~~~~~~~~~~~~~ THREAD [88] STATISTICS~~~~~~~~~~~
+This is Thread #363 to have completed
+This Thread's Gender: Male
+Loop count: 35587
+Min time spent in queue: 0 ms
+Ave time spent in queue: 900 ms
+Max time spent in queue: 116538 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #199 Completed!
+
+~~~~~~~~~~~~~ THREAD [199] STATISTICS~~~~~~~~~~~
+This is Thread #364 to have completed
+This Thread's Gender: Female
+Loop count: 35371
+Min time spent in queue: 0 ms
+Ave time spent in queue: 1156 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #241 Completed!
+
+~~~~~~~~~~~~~ THREAD [241] STATISTICS~~~~~~~~~~~
+This is Thread #365 to have completed
+This Thread's Gender: Female
+Loop count: 35793
+Min time spent in queue: 0 ms
+Ave time spent in queue: 950 ms
+Max time spent in queue: 115191 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #61 Completed!
+
+~~~~~~~~~~~~~ THREAD [61] STATISTICS~~~~~~~~~~~
+This is Thread #366 to have completed
+This Thread's Gender: Male
+Loop count: 37477
+Min time spent in queue: 0 ms
+Ave time spent in queue: 416 ms
+Max time spent in queue: 116538 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #209 Completed!
+
+~~~~~~~~~~~~~ THREAD [209] STATISTICS~~~~~~~~~~~
+This is Thread #367 to have completed
+This Thread's Gender: Female
+Loop count: 36501
+Min time spent in queue: 0 ms
+Ave time spent in queue: 503 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #284 Completed!
+
+~~~~~~~~~~~~~ THREAD [284] STATISTICS~~~~~~~~~~~
+This is Thread #368 to have completed
+This Thread's Gender: Female
+Loop count: 36984
+Min time spent in queue: 0 ms
+Ave time spent in queue: 487 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #53 Completed!
+
+~~~~~~~~~~~~~ THREAD [53] STATISTICS~~~~~~~~~~~
+This is Thread #369 to have completed
+This Thread's Gender: Male
+Loop count: 37118
+Min time spent in queue: 0 ms
+Ave time spent in queue: 422 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #331 Completed!
+
+~~~~~~~~~~~~~ THREAD [331] STATISTICS~~~~~~~~~~~
+This is Thread #370 to have completed
+This Thread's Gender: Male
+Loop count: 37913
+Min time spent in queue: 0 ms
+Ave time spent in queue: 297 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #153 Completed!
+
+~~~~~~~~~~~~~ THREAD [153] STATISTICS~~~~~~~~~~~
+This is Thread #371 to have completed
+This Thread's Gender: Female
+Loop count: 37699
+Min time spent in queue: 0 ms
+Ave time spent in queue: 323 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #49 Completed!
+
+~~~~~~~~~~~~~ THREAD [49] STATISTICS~~~~~~~~~~~
+This is Thread #372 to have completed
+This Thread's Gender: Male
+Loop count: 38100
+Min time spent in queue: 0 ms
+Ave time spent in queue: 250 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #363 Completed!
+
+~~~~~~~~~~~~~ THREAD [363] STATISTICS~~~~~~~~~~~
+This is Thread #373 to have completed
+This Thread's Gender: Female
+Loop count: 39474
+Min time spent in queue: 0 ms
+Ave time spent in queue: 139 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #2 Completed!
+
+~~~~~~~~~~~~~ THREAD [2] STATISTICS~~~~~~~~~~~
+This is Thread #374 to have completed
+This Thread's Gender: Female
+Loop count: 40117
+Min time spent in queue: 0 ms
+Ave time spent in queue: 108 ms
+Max time spent in queue: 115196 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #167 Completed!
+
+~~~~~~~~~~~~~ THREAD [167] STATISTICS~~~~~~~~~~~
+This is Thread #375 to have completed
+This Thread's Gender: Male
+Loop count: 41155
+Min time spent in queue: 0 ms
+Ave time spent in queue: 88 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #87 Completed!
+
+~~~~~~~~~~~~~ THREAD [87] STATISTICS~~~~~~~~~~~
+This is Thread #376 to have completed
+This Thread's Gender: Male
+Loop count: 41078
+Min time spent in queue: 0 ms
+Ave time spent in queue: 92 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #143 Completed!
+
+~~~~~~~~~~~~~ THREAD [143] STATISTICS~~~~~~~~~~~
+This is Thread #377 to have completed
+This Thread's Gender: Female
+Loop count: 40982
+Min time spent in queue: 0 ms
+Ave time spent in queue: 114 ms
+Max time spent in queue: 115195 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #126 Completed!
+
+~~~~~~~~~~~~~ THREAD [126] STATISTICS~~~~~~~~~~~
+This is Thread #378 to have completed
+This Thread's Gender: Male
+Loop count: 42323
+Min time spent in queue: 0 ms
+Ave time spent in queue: 66 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #195 Completed!
+
+~~~~~~~~~~~~~ THREAD [195] STATISTICS~~~~~~~~~~~
+This is Thread #379 to have completed
+This Thread's Gender: Female
+Loop count: 43753
+Min time spent in queue: 0 ms
+Ave time spent in queue: 74 ms
+Max time spent in queue: 115193 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #35 Completed!
+
+~~~~~~~~~~~~~ THREAD [35] STATISTICS~~~~~~~~~~~
+This is Thread #380 to have completed
+This Thread's Gender: Male
+Loop count: 44434
+Min time spent in queue: 0 ms
+Ave time spent in queue: 62 ms
+Max time spent in queue: 116539 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #168 Completed!
+
+~~~~~~~~~~~~~ THREAD [168] STATISTICS~~~~~~~~~~~
+This is Thread #381 to have completed
+This Thread's Gender: Female
+Loop count: 44674
+Min time spent in queue: 0 ms
+Ave time spent in queue: 56 ms
+Max time spent in queue: 115192 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #100 Completed!
+
+~~~~~~~~~~~~~ THREAD [100] STATISTICS~~~~~~~~~~~
+This is Thread #382 to have completed
+This Thread's Gender: Male
+Loop count: 48494
+Min time spent in queue: 0 ms
+Ave time spent in queue: 64 ms
+Max time spent in queue: 116538 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All Threads Completed!
+
+
+************* END OF PROGRAM STATS ************
+
+Total Usages: 7542247
+Vacant Time: 6285 ms
+Occupied Time: 243883 ms
+
+Goodbye, Commander
+What? Too Soon?
