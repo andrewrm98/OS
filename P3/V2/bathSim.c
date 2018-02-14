@@ -31,18 +31,19 @@ struct argstruct
 //use this for loop count, based on mean from command line
 int loopRand(int meanLoopCount)
 {
-  double a = ((rand() % 10000) / 10000.0);
-  double b = ((rand() % 10000) / 10000.0);
+  //double a = ((rand() % 10000) / 10000.0);
+  //double b = ((rand() % 10000) / 10000.0);
+  double drand48();
+  double a = drand48();
+  double b = drand48();
   double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b));
-  //printf("STATS: randNum Val: [%lf]\n", randNum);
-  if ((int)(randNum + meanLoopCount) == 0)
+  if ((int)(randNum + meanLoopCount) <= 0)
   {
   	return 1;
   }
   else
   {
-  	//printf("LOOPRAND: %i\n", (int)randNum+meanLoopCount);
-  	return (int)(randNum + meanLoopCount);
+  	return (int)(randNum *(meanLoopCount/2)+ meanLoopCount);
   }
 }
 
@@ -50,9 +51,10 @@ int loopRand(int meanLoopCount)
 // rng for arrival
 double normalRand(double mean)
 {
-  double a = ((rand() % 10000) / 10000.0);
-  double b = ((rand() % 10000) / 10000.0);
-  double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b))/10;
+  double drand48();
+  double a = drand48();
+  double b = drand48();
+  double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b))/10; //deadlock?
   return randNum * (mean/2) + mean;
 }
 
@@ -69,31 +71,28 @@ void *individual(void* arguments)
 {
 	struct argstruct *args = arguments;
 	long total = 0;
-	long qTime = 0;
+	long qTime;
 	long aveQueue = 0;
 	long maxQueue = 0;
 	long minQueue = 999999999; 
+	int numQ = 0;
 
-	/* Should wait for all threads to be created, is this too slow? (prolly not) */
-	pthread_mutex_lock(&args->lock);
-	int try = 0;
-	god--;
-	while(god>0)
-	{
-		pthread_mutex_lock(&args->lock);
-		sched_yield();
-		pthread_mutex_unlock(&args->lock);
-	}
-	if(try == 0)
-	{
-		try++;
-		/* Assign random variables to the thread */
+			/* Assign random variables to the thread */
 		//printf("INDIVIDUAL: assigning random values...\n");
 		args->lCount = loopRand(args->lCount);
 		args->arrival = normalRand(args->arrival);
 		//printf("random arrival time: %lf\n", args->arrival);
 		args->stay = normalRand(args->stay);
 		//printf("random arrival time: %lf\n", args->stay);
+
+	/* Should wait for all threads to be created, is this too slow? (prolly not) */
+	pthread_mutex_lock(&args->lock);
+	god--;
+	while(god>0)
+	{
+		pthread_mutex_lock(&args->lock);
+		sched_yield();
+		pthread_mutex_unlock(&args->lock);
 	}
 	pthread_mutex_unlock(&args->lock);
 	/* try is so that while the threads are waiting for other threads to be created, 
@@ -102,15 +101,11 @@ void *individual(void* arguments)
 	/* Loop through the lCount times and simulate entering and leaving a bathroom */
 	for(int i = 0; i<args->lCount; i++)
 	{
-		qTime = 0;
 		usleep(1000*args->arrival);
-		//printf("INDIV: Thread[%d] Arrival Time Value: %lf MS\n", args->threadNum+1, args->arrival);
 		qTime = enter(args->gender);
 		//printf("thread %i, %ld\n", args->threadNum+1,qTime);
 		usleep(1000*args->stay);
-		//printf("INDIV: Thread[%d] Stay Time Value: %lf MS\n", args->threadNum+1, args->stay);
 		leave();
-		//printf("INDIV: Thread[%d] After leave\n", args->threadNum+1);
 		if (qTime < minQueue)
 		{
 			minQueue = qTime;
@@ -120,12 +115,20 @@ void *individual(void* arguments)
 			maxQueue = qTime;
 		}
 		total += qTime;
-		//if(qTime>0)
-		//{
-		//	numQ++;
-		//}
+		if(qTime>0)
+		{
+			//printf("update\n");
+			numQ++;
+		}
 	}
-	aveQueue = total/args->lCount;
+	if(numQ > 0)
+	{
+		aveQueue = total/numQ;
+	}
+	else
+	{
+		aveQueue = 0;
+	}
 	/* print statistics (do not want more than one thread printing at once so lock) */
 	pthread_mutex_lock(&args->printLock);
 	printf("Thread #%i Completed!\n", args->threadNum+1);
@@ -140,7 +143,7 @@ void *individual(void* arguments)
 
 int main(int argc, char* argv[])
 {
-  srand(time(NULL));
+  srand48(time(NULL));
   /************************************************************* VARIABLES *********************************************************************/
   /* check if valid inputs */
   assert(argc == 5);

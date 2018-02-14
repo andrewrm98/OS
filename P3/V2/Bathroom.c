@@ -22,10 +22,12 @@ static int brStatus()
 {
 	if(brGlobal->mCount > 0)
 	{
+		assert(brGlobal->fCount == 0);
 		return 1;
 	} 
 	else if(brGlobal->fCount > 0)
 	{
+		assert(brGlobal->mCount == 0);
 		return 0;
 	} 
 	else return -1;
@@ -48,19 +50,21 @@ long enter(int g)
 		case 1: // check if occupied by male
 			if(g == 1)
 			{
+				//printf("going in\n");
 				brGlobal->mCount++;
 				brGlobal->totalUsages++;
 			}
 			else if(g == 0)
 			{
+				//printf("i should wait tho\n");
 				gettimeofday(&startTime, NULL); // start time to show how long it wait
 				//printf("StartTime: %ld\n", startTime.tv_sec*1000 + startTime.tv_usec/1000);
 				while(brStatus() == 1)
 				{
 					//sched_yield();
-				//	printf("waiting\n");
+					//printf("waiting*****************************\n");
+					//brGlobal->mCount--;
 					pthread_cond_wait(&brGlobal->mVacant, &brGlobal->lock);
-					brGlobal->mCount--;
 				}
 				gettimeofday(&endTime, NULL); 
 				//printf("endTime: %ld\n", endTime.tv_sec*1000 + endTime.tv_usec/1000);
@@ -71,21 +75,24 @@ long enter(int g)
 		case 0: // check if occupied by female
 			if(g == 0)
 			{
+				//printf("going in\n");
 				// incrememnt stats if it is
 				brGlobal->fCount++;
 				brGlobal->totalUsages++;
 			}
 			else if(g == 1)
 			{
+				//printf("i should wait tho\n");
 				gettimeofday(&startTime, NULL); // start time to show how long it wait
 				//printf("StartTime: %ld\n", startTime.tv_sec*1000 + startTime.tv_usec/1000);
 				while(brStatus() == 0)
 				{
 					// wait if not
 					//sched_yield();
+					//printf("waiting**************************\n");
+					//brGlobal->fCount--;
 					pthread_cond_wait(&brGlobal->fVacant, &brGlobal->lock);
-					brGlobal->mCount--;
-					//printf("waiting\n");
+
 				}
 				
 				gettimeofday(&endTime, NULL); // timestamp to keep track of when it stops waiting
@@ -97,14 +104,16 @@ long enter(int g)
 			}
 			break;
 		case -1: // empty case
+			//printf("its empty i guess\n");
 			g == 1 ? brGlobal->mCount++ : brGlobal->fCount++;
 			brGlobal->totalUsages++;
 			gettimeofday(&brGlobal->occupiedStartTime, NULL);
 			gettimeofday(&brGlobal->vacantEndTime, NULL);
 			long temp = abs(((1000*brGlobal->vacantEndTime.tv_sec)-(1000*brGlobal->vacantStartTime.tv_sec)) + ((brGlobal->vacantEndTime.tv_usec/1000)-(brGlobal->vacantStartTime.tv_usec/1000)));
-			if(temp>0 && temp <1000000)
+			if(temp>0 && temp <10000)
 				{
 					//printf("temp: %ld", temp);
+					//printf("occupied bathroom\n");
 					brGlobal->vacantTime += temp;
 				}
 			break;
@@ -117,7 +126,7 @@ long enter(int g)
 // lock and unlock the vacant mutex for the leave fn
 void leave()
 {
-	pthread_mutex_lock(&brGlobal->vacant);
+	pthread_mutex_lock(&brGlobal->lock);
 	switch(brStatus())
 	{
 		case 1: // male
@@ -128,11 +137,14 @@ void leave()
 				gettimeofday(&brGlobal->vacantStartTime, NULL);
 				gettimeofday(&brGlobal->occupiedEndTime, NULL);
 				long temp = abs(((1000*brGlobal->occupiedEndTime.tv_sec)-(1000*brGlobal->occupiedStartTime.tv_sec)) + ((brGlobal->occupiedEndTime.tv_usec/1000)-(brGlobal->occupiedStartTime.tv_usec/1000)));
-				if(temp>0 && temp<1000000)
+				if(temp>0 && temp<10000)
 				{
 					//printf("temp: %ld", temp);
+					//printf("empty bathroom\n");
 					brGlobal->occupiedTime += temp;
+					assert(brGlobal->fCount == 0 && brGlobal->mCount == 0);
 				}
+				//sched_yield();
 			}
 			break;
 		case 0: // female
@@ -143,15 +155,18 @@ void leave()
 				gettimeofday(&brGlobal->vacantStartTime, NULL);
 				gettimeofday(&brGlobal->occupiedEndTime, NULL);
 				long temp = abs(((1000*brGlobal->occupiedEndTime.tv_sec)-(1000*brGlobal->occupiedStartTime.tv_sec)) + ((brGlobal->occupiedEndTime.tv_usec/1000)-(brGlobal->occupiedStartTime.tv_usec/1000)));
-				if(temp>0 && temp < 1000000)
+				if(temp>0 && temp < 10000)
 				{
 					//printf("temp: %ld", temp);
+					//printf("empty bathroom\n");
 					brGlobal->occupiedTime += temp;
+					assert(brGlobal->fCount == 0 && brGlobal->mCount == 0);
 				}
+				//sched_yield();
 			}
 			break;
 	}
-	pthread_mutex_unlock(&brGlobal->vacant);
+	pthread_mutex_unlock(&brGlobal->lock);
 }
 
 
@@ -175,7 +190,7 @@ void initialize()
 void finalize()
 {
 	printf("\n************* END OF PROGRAM STATS ************\n");
-	printf("\nTotal Usages: %d\nVacant Time: %ld ms\nOccupied Time: %ld ms\n", brGlobal->totalUsages, brGlobal->vacantTime, brGlobal->occupiedTime);
+	printf("\nTotal Usages: %d\nVacant Time: %ld ms\nOccupied Time: %ld ms\n", brGlobal->totalUsages, brGlobal->vacantTime+1, brGlobal->occupiedTime);
 }
 /* Prints out statistics for each individiaul thread before it exits
  * Will print:
@@ -187,8 +202,8 @@ void printStats(int gender, int threadNum, int lCount, long minTime, long aveTim
 {
   //pthread_mutex_lock(&brGlobal->lock);
   printf("\n~~~~~~~~~~~~~ THREAD [%d] STATISTICS~~~~~~~~~~~\n", threadNum+1);
-  printf("This is the %ith thread to have completed\n", totalCount);
-  gender == 1 ? printf("Gender: Male\n") : printf("Gender: Female\n");
+  printf("This is Thread #%i to have completed\n", totalCount);
+  gender == 1 ? printf("This Thread's Gender: Male\n") : printf("This Thread's Gender: Female\n");
   printf("Loop count: %d\n", lCount);
   printf("Min time spent in queue: %ld ms\n", minTime);
   printf("Ave time spent in queue: %ld ms\n", aveTime);
