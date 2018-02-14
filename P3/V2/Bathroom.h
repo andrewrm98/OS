@@ -40,8 +40,12 @@ struct br
 	int mCount;
 	int fCount;
 	int totalUsages;
+	struct timeval vacantStartTime;
+	struct timeval vacantEndTime;
 	long vacantTime;
 	long occupiedTime;
+	struct timeval occupiedStartTime;
+	struct timeval occupiedEndTime;
 	//int averageQL;
 	//int avePeople;
 	pthread_mutex_t lock;

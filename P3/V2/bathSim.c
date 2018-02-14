@@ -102,11 +102,12 @@ void *individual(void* arguments)
 	/* Loop through the lCount times and simulate entering and leaving a bathroom */
 	for(int i = 0; i<args->lCount; i++)
 	{
-		usleep(args->arrival);
+		qTime = 0;
+		usleep(1000*args->arrival);
 		//printf("INDIV: Thread[%d] Arrival Time Value: %lf MS\n", args->threadNum+1, args->arrival);
 		qTime = enter(args->gender);
-		printf("thread %i, %ld\n", args->threadNum+1,qTime);
-		usleep(args->stay);
+		//printf("thread %i, %ld\n", args->threadNum+1,qTime);
+		usleep(1000*args->stay);
 		//printf("INDIV: Thread[%d] Stay Time Value: %lf MS\n", args->threadNum+1, args->stay);
 		leave();
 		//printf("INDIV: Thread[%d] After leave\n", args->threadNum+1);
@@ -114,11 +115,15 @@ void *individual(void* arguments)
 		{
 			minQueue = qTime;
 		}
-		else if (qTime > maxQueue)
+		if (qTime > maxQueue)
 		{
 			maxQueue = qTime;
 		}
 		total += qTime;
+		//if(qTime>0)
+		//{
+		//	numQ++;
+		//}
 	}
 	aveQueue = total/args->lCount;
 	/* print statistics (do not want more than one thread printing at once so lock) */
