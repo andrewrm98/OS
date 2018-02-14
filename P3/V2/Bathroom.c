@@ -50,24 +50,17 @@ long enter(int g)
 		case 1: // check if occupied by male
 			if(g == 1)
 			{
-				//printf("going in\n");
 				brGlobal->mCount++;
 				brGlobal->totalUsages++;
 			}
 			else if(g == 0)
 			{
-				//printf("i should wait tho\n");
 				gettimeofday(&startTime, NULL); // start time to show how long it wait
-				//printf("StartTime: %ld\n", startTime.tv_sec*1000 + startTime.tv_usec/1000);
 				while(brStatus() == 1)
 				{
-					//sched_yield();
-					//printf("waiting*****************************\n");
-					//brGlobal->mCount--;
 					pthread_cond_wait(&brGlobal->mVacant, &brGlobal->lock);
 				}
 				gettimeofday(&endTime, NULL); 
-				//printf("endTime: %ld\n", endTime.tv_sec*1000 + endTime.tv_usec/1000);
 				brGlobal->fCount++;
 				brGlobal->totalUsages++;
 			}
@@ -75,28 +68,20 @@ long enter(int g)
 		case 0: // check if occupied by female
 			if(g == 0)
 			{
-				//printf("going in\n");
-				// incrememnt stats if it is
 				brGlobal->fCount++;
 				brGlobal->totalUsages++;
 			}
 			else if(g == 1)
 			{
-				//printf("i should wait tho\n");
 				gettimeofday(&startTime, NULL); // start time to show how long it wait
-				//printf("StartTime: %ld\n", startTime.tv_sec*1000 + startTime.tv_usec/1000);
 				while(brStatus() == 0)
 				{
 					// wait if not
-					//sched_yield();
-					//printf("waiting**************************\n");
-					//brGlobal->fCount--;
 					pthread_cond_wait(&brGlobal->fVacant, &brGlobal->lock);
 
 				}
 				
 				gettimeofday(&endTime, NULL); // timestamp to keep track of when it stops waiting
-				//printf("endTime: %ld\n", endTime.tv_sec*1000 + endTime.tv_usec/1000);
 				// became male occupied
 				brGlobal->mCount++;
 				brGlobal->totalUsages++;
@@ -104,7 +89,6 @@ long enter(int g)
 			}
 			break;
 		case -1: // empty case
-			//printf("its empty i guess\n");
 			g == 1 ? brGlobal->mCount++ : brGlobal->fCount++;
 			brGlobal->totalUsages++;
 			gettimeofday(&brGlobal->occupiedStartTime, NULL);
@@ -112,8 +96,6 @@ long enter(int g)
 			long temp = abs(((1000*brGlobal->vacantEndTime.tv_sec)-(1000*brGlobal->vacantStartTime.tv_sec)) + ((brGlobal->vacantEndTime.tv_usec/1000)-(brGlobal->vacantStartTime.tv_usec/1000)));
 			if(temp>0 && temp <10000)
 				{
-					//printf("temp: %ld", temp);
-					//printf("occupied bathroom\n");
 					brGlobal->vacantTime += temp;
 				}
 			break;
@@ -157,12 +139,10 @@ void leave()
 				long temp = abs(((1000*brGlobal->occupiedEndTime.tv_sec)-(1000*brGlobal->occupiedStartTime.tv_sec)) + ((brGlobal->occupiedEndTime.tv_usec/1000)-(brGlobal->occupiedStartTime.tv_usec/1000)));
 				if(temp>0 && temp < 10000)
 				{
-					//printf("temp: %ld", temp);
-					//printf("empty bathroom\n");
+
 					brGlobal->occupiedTime += temp;
 					assert(brGlobal->fCount == 0 && brGlobal->mCount == 0);
 				}
-				//sched_yield();
 			}
 			break;
 	}
@@ -180,7 +160,6 @@ void initialize()
 	brGlobal->vacantTime = 0;
 	brGlobal->occupiedTime = 0;
 	pthread_mutex_init(&brGlobal->lock, NULL); // these two might not be necessary
-	pthread_mutex_init(&brGlobal->vacant, NULL);
 	pthread_cond_init(&brGlobal->fVacant, NULL);
 	pthread_cond_init(&brGlobal->fVacant, NULL);
 }
@@ -189,6 +168,8 @@ void initialize()
  */
 void finalize()
 {
+	printf("All Threads Completed!\n");
+	printf("\n");
 	printf("\n************* END OF PROGRAM STATS ************\n");
 	printf("\nTotal Usages: %d\nVacant Time: %ld ms\nOccupied Time: %ld ms\n", brGlobal->totalUsages, brGlobal->vacantTime+1, brGlobal->occupiedTime);
 }
@@ -200,7 +181,6 @@ void finalize()
  */
 void printStats(int gender, int threadNum, int lCount, long minTime, long aveTime, long maxTime)
 {
-  //pthread_mutex_lock(&brGlobal->lock);
   printf("\n~~~~~~~~~~~~~ THREAD [%d] STATISTICS~~~~~~~~~~~\n", threadNum+1);
   printf("This is Thread #%i to have completed\n", totalCount);
   gender == 1 ? printf("This Thread's Gender: Male\n") : printf("This Thread's Gender: Female\n");
@@ -211,7 +191,6 @@ void printStats(int gender, int threadNum, int lCount, long minTime, long aveTim
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   printf("\n");
   totalCount++;
-  //pthread_mutex_unlock(&brGlobal->lock);
 }
 
 /* returns the gender */

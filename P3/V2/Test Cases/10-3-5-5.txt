@@ -1,0 +1,132 @@
+Threads Initialized!
+Thread #1 Created!
+Thread #2 Created!
+Thread #3 Created!
+Thread #4 Created!
+Thread #5 Created!
+Thread #6 Created!
+Thread #7 Created!
+Thread #8 Created!
+Thread #9 Created!
+Thread #10 Created!
+Thread #4 Completed!
+
+~~~~~~~~~~~~~ THREAD [4] STATISTICS~~~~~~~~~~~
+This is Thread #1 to have completed
+This Thread's Gender: Male
+Loop count: 1
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #6 Completed!
+
+~~~~~~~~~~~~~ THREAD [6] STATISTICS~~~~~~~~~~~
+This is Thread #2 to have completed
+This Thread's Gender: Male
+Loop count: 2
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #9 Completed!
+
+~~~~~~~~~~~~~ THREAD [9] STATISTICS~~~~~~~~~~~
+This is Thread #3 to have completed
+This Thread's Gender: Male
+Loop count: 2
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #8 Completed!
+
+~~~~~~~~~~~~~ THREAD [8] STATISTICS~~~~~~~~~~~
+This is Thread #4 to have completed
+This Thread's Gender: Female
+Loop count: 2
+Min time spent in queue: 0 ms
+Ave time spent in queue: 6 ms
+Max time spent in queue: 6 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #5 Completed!
+
+~~~~~~~~~~~~~ THREAD [5] STATISTICS~~~~~~~~~~~
+This is Thread #5 to have completed
+This Thread's Gender: Male
+Loop count: 3
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #10 Completed!
+
+~~~~~~~~~~~~~ THREAD [10] STATISTICS~~~~~~~~~~~
+This is Thread #6 to have completed
+This Thread's Gender: Male
+Loop count: 3
+Min time spent in queue: 0 ms
+Ave time spent in queue: 1 ms
+Max time spent in queue: 1 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #7 Completed!
+
+~~~~~~~~~~~~~ THREAD [7] STATISTICS~~~~~~~~~~~
+This is Thread #7 to have completed
+This Thread's Gender: Female
+Loop count: 3
+Min time spent in queue: 0 ms
+Ave time spent in queue: 3 ms
+Max time spent in queue: 6 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #2 Completed!
+
+~~~~~~~~~~~~~ THREAD [2] STATISTICS~~~~~~~~~~~
+This is Thread #8 to have completed
+This Thread's Gender: Female
+Loop count: 3
+Min time spent in queue: 0 ms
+Ave time spent in queue: 4 ms
+Max time spent in queue: 7 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #1 Completed!
+
+~~~~~~~~~~~~~ THREAD [1] STATISTICS~~~~~~~~~~~
+This is Thread #9 to have completed
+This Thread's Gender: Male
+Loop count: 4
+Min time spent in queue: 0 ms
+Ave time spent in queue: 1 ms
+Max time spent in queue: 2 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thread #3 Completed!
+
+~~~~~~~~~~~~~ THREAD [3] STATISTICS~~~~~~~~~~~
+This is Thread #10 to have completed
+This Thread's Gender: Male
+Loop count: 4
+Min time spent in queue: 0 ms
+Ave time spent in queue: 0 ms
+Max time spent in queue: 0 ms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All Threads Completed!
+
+
+************* END OF PROGRAM STATS ************
+
+Total Usages: 27
+Vacant Time: 1 ms
+Occupied Time: 167 ms
+
+Goodbye, Commander
+What? Too Soon?

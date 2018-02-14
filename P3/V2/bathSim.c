@@ -31,15 +31,13 @@ struct argstruct
 //use this for loop count, based on mean from command line
 int loopRand(int meanLoopCount)
 {
-  //double a = ((rand() % 10000) / 10000.0);
-  //double b = ((rand() % 10000) / 10000.0);
   double drand48();
   double a = drand48();
   double b = drand48();
   double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b));
-  if ((int)(randNum + meanLoopCount) <= 0)
+  if ((int)(randNum *(meanLoopCount/2) + meanLoopCount) <= 0)
   {
-  	return 1;
+  	return 1; // case to deal with negative loop count
   }
   else
   {
@@ -54,7 +52,7 @@ double normalRand(double mean)
   double drand48();
   double a = drand48();
   double b = drand48();
-  double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b))/10; //deadlock?
+  double randNum = ((sqrt(-2 * log(a))) * cos(2*M_PI*b))/10; //if i dont have '/10' it deadlocks
   return randNum * (mean/2) + mean;
 }
 
@@ -78,12 +76,9 @@ void *individual(void* arguments)
 	int numQ = 0;
 
 			/* Assign random variables to the thread */
-		//printf("INDIVIDUAL: assigning random values...\n");
 		args->lCount = loopRand(args->lCount);
 		args->arrival = normalRand(args->arrival);
-		//printf("random arrival time: %lf\n", args->arrival);
 		args->stay = normalRand(args->stay);
-		//printf("random arrival time: %lf\n", args->stay);
 
 	/* Should wait for all threads to be created, is this too slow? (prolly not) */
 	pthread_mutex_lock(&args->lock);
@@ -103,7 +98,6 @@ void *individual(void* arguments)
 	{
 		usleep(1000*args->arrival);
 		qTime = enter(args->gender);
-		//printf("thread %i, %ld\n", args->threadNum+1,qTime);
 		usleep(1000*args->stay);
 		leave();
 		if (qTime < minQueue)
@@ -117,7 +111,6 @@ void *individual(void* arguments)
 		total += qTime;
 		if(qTime>0)
 		{
-			//printf("update\n");
 			numQ++;
 		}
 	}
@@ -134,7 +127,6 @@ void *individual(void* arguments)
 	printf("Thread #%i Completed!\n", args->threadNum+1);
 	printStats(args->gender, args->threadNum, args->lCount, minQueue, aveQueue, maxQueue);
 	pthread_mutex_unlock(&args->printLock);
-	//free(args);
 
 	return 0;
 }
@@ -154,13 +146,10 @@ int main(int argc, char* argv[])
   double meanStay;
   
   nUsers = atoi(argv[1]);
-  //printf("nUsers:[%i]\n", nUsers);
   meanLoopCount = atoi(argv[2]);
-  //printf("meanLoopCount:[%i]\n", meanLoopCount);
   meanArrival = atof(argv[3]);
-  //printf("meanArrival:[%f]\n", meanArrival);
   meanStay = atof(argv[4]);
-  //printf("meanStay:[%f]\n", meanStay);
+
   
   initialize();
   printf("Threads Initialized!\n");
@@ -184,7 +173,6 @@ int main(int argc, char* argv[])
 
    pthread_mutex_lock(&godLock);
    pthread_t tid[nUsers];
-   //tid[] = (pthread_t *)malloc(sizeof(pthread_t *) * nUsers);
    struct argstruct *args = (struct argstruct *)malloc(nUsers*sizeof(struct argstruct));
  
   /************************************************************ BEGIN SIMULATION *******************************************************************/  
@@ -203,7 +191,6 @@ int main(int argc, char* argv[])
 	//printf("TN; %d\n", args->threadNum);
 
 	/* CREATE THE THREADS */
-	//printf("About to create thread #%i\n", i+1);
 	god++; // increment god (number of threads created)
 	pthread_create(&tid[i], NULL, &individual, (void*) &args[i]);
 	printf("Thread #%i Created!\n", i+1);
