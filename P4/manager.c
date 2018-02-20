@@ -58,18 +58,25 @@ void initialize()
 {
 	for (int i = 0; i<4; i++) { modifyTable(0, 0, 0, -1, i, 0); } // initialize every page entry
 }
+
+int findPage(int address)
+{
+	int page; 
+
+	if (address < 16) { page = 0; }
+ 	else if (address < 32) { page = 1; }
+ 	else if (address < 48) { page = 2; }
+ 	else if (address < 64) { page = 3; }
+ 	return page;
+}
+
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
 
-/* map tells the memory manager to allocate a physical page, i.e., it creates a mapping in the page table
-between a virtual and physical address. The manager must determine the appropriate virtual page
-number using the virtual address. For example, virtual address of 3 corresponds to virtual page
-0. value argument represents the write permission for the page. If value=1 then the page is writeable
-and readable. If value=0, then the page is only readable, i.e., all mapped pages are readable. These
-permissions can be modified by using a second map instruction for the target page. */
 int map (int pid, char* instruction, int address, int value) 
 { 
 	int vacantLoc = -1; // variable to hold value of vacant spot in page table
+	int pnum = findPage(address); // used get page num from address
 	/* loop through first byte of every page to find empty page */
 	for (int i = 0; i < 4; i++) 
 	{ 
@@ -77,9 +84,9 @@ int map (int pid, char* instruction, int address, int value)
 	} 
 	if (vacantLoc != -1)
 	{
-		modifyTable(1, 1, value, vacantLoc, pid, vacantLoc);
+		modifyTable(1, 1, value, vacantLoc, pid, pnum);
         memory[vacantLoc*16] = vacantLoc; //sets vacantLoc to memory
-        printf("Put page table for PID %d into physical frame %d\n\n", pid, vacantLoc);
+        printf("Put page table for PID %d into physical frame %d\n\n", pid, pnum);
 	}
 	else { printf("ERROR: No Empty Space in Page Table!"); return -1;} // swap will go here at some point
 	return 1;
@@ -88,13 +95,13 @@ int map (int pid, char* instruction, int address, int value)
 /* store instructs the memory manager to write the supplied value into the physical memory location
 associated with the provided virtual address, performing translation and page swapping as necessary.
 Note, page swapping is a requirement for part 2 only. */
-int store (int pid, char* instruction, int address, int value) { printf("Oh yeas... the store function doesnt do shit\n"); return 1; }
+int store (int pid, char* instruction, int address, int value) { printf("Oh yea... the store function doesnt do shit\n"); return 1; }
 
 /* load instructs the memory manager to return the byte stored at the memory location specified by
 virtual address. Like the store instruction, it is the memory manager’s responsibility to translate
 and swap pages as needed. Note, the value parameter is not used for this instruction, but a dummy
 value (e.g., 0) should always be provided. */
-int load (int pid, char* instruction, int address, int value) { printf("Oh yeas... the store function doesnt do shit\n"); return 1; }
+int load (int pid, char* instruction, int address, int value) { printf("Oh yea... the load function doesnt do shit\n"); return 1; }
 
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
