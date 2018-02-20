@@ -31,7 +31,8 @@ pageEntry pageTable[5];
 int map (int process, char* instruction, int address, int value);
 int store (int process, char* instruction, int address, int value);
 int load (int process, char* instruction, int address, int value);
-void initialize(); // init the page table
+void modifyTable(int pid, int validBit, int presentBit, int value, int page, int pageNum); // enter info into the page table
+void masterFunction(int process, char* instruction, int address, int value); // runs selected instruction
 
 /******************************************************** HELPER FUNCTIONS *******************************************************************/
 /* runs selected instruction */
@@ -43,16 +44,13 @@ void masterFunction (int process, char* instruction, int address, int value)
 	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
-void initialize()
+void modifyTable(int pid, int validBit, int presentBit, int value, int page, int pageNum)
 {
-	for (int i = 0; i < 4; i++) {
-	        pageTable[i].validBit = 0;
-	        pageTable[i].presentBit = 0;
-	        pageTable[i].value = 0;
-	        pageTable[i].page = -1;
-	        pageTable[i].pageNum = 0;
-	        pageTable[i].processId = i;
-	    }
+	pageTable[pid].validBit = validBit;
+    pageTable[pid].presentBit = presentBit;
+    pageTable[pid].value = value;
+    pageTable[pid].page = page;
+    pageTable[pid].pageNum = pageNum;
 }
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
@@ -63,7 +61,22 @@ number using the virtual address. For example, virtual address of 3 corresponds 
 0. value argument represents the write permission for the page. If value=1 then the page is writeable
 and readable. If value=0, then the page is only readable, i.e., all mapped pages are readable. These
 permissions can be modified by using a second map instruction for the target page. */
-int map (int process, char* instruction, int address, int value) { printf("Oh yea... the map function doesnt do shit\n"); return 1; } 
+int map (int process, char* instruction, int address, int value) 
+{ 
+	int vacantLoc = NULL; // variable to hold value of vacant spot in page table
+	/* loop through first byte of every page to find empty page */
+	for (int i = 0; i < 4; i++)
+	{
+		if (!memory[i*16]) { vacantLoc = i; break; } // return page num if empty
+	} 
+	if (vacantLoc)
+	{
+		vacantLoc == 0? vacantLoc = 1 : 16/vacantLoc; // returns pagenum
+		modifyTable(process, 1, 1, value, i, vacantLoc);
+        memory[i*16] = vacantLoc;
+	}
+	else { printf("ERROR: No Empty Space in Page Table!"); return -1;} // swap will go here at some point
+} 
 
 /* store instructs the memory manager to write the supplied value into the physical memory location
 associated with the provided virtual address, performing translation and page swapping as necessary.
@@ -79,7 +92,6 @@ int load (int process, char* instruction, int address, int value) { printf("Oh y
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
 {
-	initialize(); // initilialize structs
 	char *userInput[4]; 
  	int process; //pid
 	char* instruction; //instruction type
