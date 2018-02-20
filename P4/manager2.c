@@ -17,10 +17,6 @@ typedef struct {
     u_int8_t validBit:1; 	//1 if valid
     u_int8_t value:1; 		//1 if can be written, 0 if read-only
     u_int8_t page:1; 		//page number ie frame
-    //u_int8_t processId:4; 	//PID
-    //u_int8_t offset:4;		// Offset in memory
-    //u_int8_t pageNum:4; 	//Location in memory
-    //u_int8_t instruction:2;
 } pageEntry;
 
 typedef struct {
@@ -34,35 +30,34 @@ typedef struct {
 } page;
 
 unsigned char memory[64]; 	// memory
-struct reg ptRegister[4];	// the page table registers
+reg ptRegister[4];	// the page table registers
 int freeTable[4]; 			// table of free physical frames... 1 for free, 0 for taken
 
 /********************************************************* FUNCTION DECLARATIONS *************************************************************/
 
-int map 	(int pid, int address, int value); //finds a place in memory for a process
-int store 	(int pid, int address, int value);
-int load 	(int pid, int address, int value);
+int map (int pid, int address, int value); //finds a place in memory for a process
+int store (int pid, int address, int value);
+int load (int pid, int address, int value);
 void modifyTable(int presentBit, int validBit, int value, int page, int pid, int pageNum); // enter info into the page table
-void masterFunction(int pid, int address, int value); // runs selected instruction
-void initialize(); // initializes pageTable
+void masterFunction(int pid, char * instruction, int address, int value); // runs selected instruction
+void initialize(pageEntry * currTable); // initializes pageTable
 
 /******************************************************** HELPER FUNCTIONS *******************************************************************/
 /* runs selected instruction */
-void masterFunction (int process, int address, int value) 
+void masterFunction (int process, char * instruction, int address, int value) 
 {
-	if (!(strcmp(instruction, "map")))        { map(process, address, value);   }
-	else if (!(strcmp(instruction, "load")))  { load(process, address, value);  }
-	else if (!(strcmp(instruction, "store"))) { store(process, address, value); }
+	if (!(strcmp(instruction, "map")))        	{ map(process, address, value);   }
+	else if (!(strcmp(instruction, "load")))  	{ load(process, address, value);  }
+	else if (!(strcmp(instruction, "store"))) 	{ store(process, address, value); }
 	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
-void modifyTable(struct pageEntry * currTable, int presentBit, int validBit, int value, int page, int pid); //, int pageNum)
+void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id); //, int pageNum)
 {
-	currTable[pid].presentBit = presentBit;
-	currTable[pid].validBit = validBit;
-    currTable[pid].value = value;
-    currTable[pid].page = page;
-    //pageTable[pid].pageNum = pageNum;
+	currTable[id].presentBit = presentBit;
+	currTable[id].validBit = validBit;
+    currTable[id].value = value;			// not indexing by pid anymore, index by virtualFrame #
+    currTable[id].page = page;
 }
 
 void initialize(struct pageEntry * currTable) 
@@ -81,22 +76,22 @@ and readable. If value=0, then the page is only readable, i.e., all mapped pages
 permissions can be modified by using a second map instruction for the target page. */
 int map (int pid, int address, int value) 
 { 
-	int virtualFrame = address/16; 								// virtual address frame
-	int offset = address%16; 									// virtual address offset
-	struct pageEntry currTable[4];
-	struct page currPage;
+	int virtualFrame = address/16; // virtual address frame
+	printf("virtual frame = %i\n", virtualFrame);
+	pageEntry currTable[4];
+	page currPage;
 	initialize(currTable);
 	int i;
 	for(i = 0; i<4; i++) { currPage.values[i] = -1; }
 	currPage.valid = -1;
 	int physicalFrame;
 
-	/*$$$ Get a Page Table Loaded $$$*/
-	if(ptRegister[pid].valid == 1) 								// if the table has been created
+	/*$$$ Get the Page Table Loaded $$$*/
+	if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) 								// if the table has been created
 	{
 		memcpy(currTable, memory[ptRegister[pid].ptLoc], 16)	// load the table
 	}
-	else if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) // if the table is created but not in memory
+	else if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc == -1) // if the table is created but not in memory
 	{
 		/* Perform swapping */
 		printf("Swapping not implemented yet...\n");
@@ -115,18 +110,16 @@ int map (int pid, int address, int value)
 	}
 
 	/*$$$ Get the page loaded into memory $$$*/
-	for(i=0; i<4; i++) { 
-		if(currTable[i].validBit == 0) { break; }
-		i = -1;
-	}
+	if((i = currTable[virtualFrame].validBit) == -1) { /* do nothing */ }	// if the requested virtual space is not in use
+	else { i = -1; }
 
 	if(i != -1) 												// if there is space in the page table
 	{
-		if((physicalFrame = findFree()) != -1)					// if there is a free spot in memory
+		if((physicalFrame = findFree()) != -1)					// find free spot in physical memory
 		{
-			modifyTable(currTable, 1, 1, value, physicalFrame);	// add the new values for this PTE
+			modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);	// add the new values for this PTE
 			currPage.valid = 1;
-			memory[physicalFrame*16] = currPage;
+			memcpy(memory[physicalFrame*16], currPage, 16);			// store the new page in physical memory
 		}
 		else
 		{
@@ -146,7 +139,7 @@ int map (int pid, int address, int value)
 associated with the provided virtual address, performing translation and page swapping as necessary.
 Note, page swapping is a requirement for part 2 only. */
 int store (int pid, int address, int value) { 
-	struct pageEntry currTable[4];
+	pageEntry currTable[4];
 	int virtualAddress;
 	int offset;
 	int i = 0;
@@ -159,7 +152,7 @@ int store (int pid, int address, int value) {
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$*/
-		currTable = memory[ptRegister[pid].ptLoc];				// load the page table
+		memcpy(currTable, memory[ptRegister[pid].ptLoc], 16);		// load the page table
 		if(currTable == NULL) {
 			printf("ERROR: Invalid load\n");
 			return -1;
@@ -173,7 +166,7 @@ int store (int pid, int address, int value) {
 			if((pg = currTable[virtualAddress].page) == -1) { printf("ERROR: No room in processes [%d] virtual memory\n", pid); }
 			else												// we have a place to store
 			{
-				memcpy(currPage, memory[pg*16]); // go through and change all memcpy ; loads the page
+				memcpy(currPage, memory[pg*16], 16); 				// loads the page
 				if((pg = nextMemLoc(currPage)) -1)
 				{
 					currPage.values[pg] = value;				// load the value
@@ -216,17 +209,10 @@ int findFree()
 	}
 }
 
-int nextMemLoc(struct page currPage)
+int checkLoc(struct page currPage, int i)
 {
-	int i = 0;
-	for(i = 0; i<4; i++)
-	{
-		if(currPage.values[i] != -1)
-		{
-			return i;
-		}
-	}
-	return -1;
+	if(currPage.values[i] == -1) { return i; }			// check if the page is open
+	else { return -1; }									// return -1 if the page is full	
 }
 
 /*********************************************************** MAIN ****************************************************************************/
@@ -275,7 +261,7 @@ int main(int argc, char **argv)
 		instruction = userInput[1];
 		address = atoi(userInput[2]);
 		value = atoi(userInput[3]);
-  		masterFunction(pid, address, value);	
+  		masterFunction(pid, instruction, address, value);	
 	}
 	return 1;
 }
