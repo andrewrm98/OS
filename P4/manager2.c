@@ -43,16 +43,16 @@ int map 	(int pid, int address, int value); //finds a place in memory for a proc
 int store 	(int pid, int address, int value);
 int load 	(int pid, int address, int value);
 void modifyTable(int presentBit, int validBit, int value, int page, int pid, int pageNum); // enter info into the page table
-void masterFunction(int pid, int address, int value); // runs selected instruction
+void masterFunction(int pid, char * instruction, int address, int value); // runs selected instruction
 void initialize(); // initializes pageTable
 
 /******************************************************** HELPER FUNCTIONS *******************************************************************/
 /* runs selected instruction */
-void masterFunction (int process, int address, int value) 
+void masterFunction (int process, char * instruction, int address, int value) 
 {
-	if (!(strcmp(instruction, "map")))        { map(process, address, value);   }
-	else if (!(strcmp(instruction, "load")))  { load(process, address, value);  }
-	else if (!(strcmp(instruction, "store"))) { store(process, address, value); }
+	if (!(strcmp(instruction, "map")))        	{ map(process, address, value);   }
+	else if (!(strcmp(instruction, "load")))  	{ load(process, address, value);  }
+	else if (!(strcmp(instruction, "store"))) 	{ store(process, address, value); }
 	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
@@ -82,7 +82,7 @@ permissions can be modified by using a second map instruction for the target pag
 int map (int pid, int address, int value) 
 { 
 	int virtualFrame = address/16; 								// virtual address frame
-	int offset = address%16; 									// virtual address offset
+	//int offset = address%16; 									// virtual address offset
 	struct pageEntry currTable[4];
 	struct page currPage;
 	initialize(currTable);
@@ -91,7 +91,7 @@ int map (int pid, int address, int value)
 	currPage.valid = -1;
 	int physicalFrame;
 
-	/*$$$ Get a Page Table Loaded $$$*/
+	/*$$$ Get the Page Table Loaded $$$*/
 	if(ptRegister[pid].valid == 1) 								// if the table has been created
 	{
 		memcpy(currTable, memory[ptRegister[pid].ptLoc], 16)	// load the table
@@ -115,18 +115,16 @@ int map (int pid, int address, int value)
 	}
 
 	/*$$$ Get the page loaded into memory $$$*/
-	for(i=0; i<4; i++) { 
-		if(currTable[i].validBit == 0) { break; }
-		i = -1;
-	}
+	if((i = currTable[virtualFrame].validBit) == -1) { return i; }	// if the requested virtual space is not in use
+	else { return -1; }
 
 	if(i != -1) 												// if there is space in the page table
 	{
-		if((physicalFrame = findFree()) != -1)					// if there is a free spot in memory
+		if((physicalFrame = findFree()) != -1)					// find free spot in physical memory
 		{
-			modifyTable(currTable, 1, 1, value, physicalFrame);	// add the new values for this PTE
+			modifyTable(currTable, 1, 1, value, physicalFrame, pid);	// add the new values for this PTE
 			currPage.valid = 1;
-			memory[physicalFrame*16] = currPage;
+			memcpy(memory[physicalFrame*16], currPage, 16);			// store the new page in physical memory
 		}
 		else
 		{
@@ -159,7 +157,7 @@ int store (int pid, int address, int value) {
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$*/
-		currTable = memory[ptRegister[pid].ptLoc];				// load the page table
+		memcpy(currTable, memory[ptRegister[pid].ptLoc], 16);		// load the page table
 		if(currTable == NULL) {
 			printf("ERROR: Invalid load\n");
 			return -1;
@@ -173,7 +171,7 @@ int store (int pid, int address, int value) {
 			if((pg = currTable[virtualAddress].page) == -1) { printf("ERROR: No room in processes [%d] virtual memory\n", pid); }
 			else												// we have a place to store
 			{
-				memcpy(currPage, memory[pg*16]); // go through and change all memcpy ; loads the page
+				memcpy(currPage, memory[pg*16], 16); 				// loads the page
 				if((pg = nextMemLoc(currPage)) -1)
 				{
 					currPage.values[pg] = value;				// load the value
@@ -216,17 +214,10 @@ int findFree()
 	}
 }
 
-int nextMemLoc(struct page currPage)
+int checkLoc(struct page currPage, int i)
 {
-	int i = 0;
-	for(i = 0; i<4; i++)
-	{
-		if(currPage.values[i] != -1)
-		{
-			return i;
-		}
-	}
-	return -1;
+	if(currPage.values[i] == -1) { return i; }			// check if the page is open
+	else { return -1; }									// return -1 if the page is full	
 }
 
 /*********************************************************** MAIN ****************************************************************************/
@@ -275,7 +266,7 @@ int main(int argc, char **argv)
 		instruction = userInput[1];
 		address = atoi(userInput[2]);
 		value = atoi(userInput[3]);
-  		masterFunction(pid, address, value);	
+  		masterFunction(pid, instruction, address, value);	
 	}
 	return 1;
 }
