@@ -48,7 +48,7 @@ void masterFunction (int process, char * instruction, int address, int value)
 {
 	if (!(strcmp(instruction, "map")))        	{ map(process, address, value);   }
 	else if (!(strcmp(instruction, "load")))  	{ load(process, address, value);  }
-	//else if (!(strcmp(instruction, "store"))) 	{ store(process, address, value); }
+	else if (!(strcmp(instruction, "store"))) 	{ store(process, address, value); }
 	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
@@ -56,7 +56,7 @@ void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value,
 {
 	currTable[id].presentBit = presentBit;
 	currTable[id].validBit = validBit;
-    currTable[id].value = value;			// not indexing by pid anymore, index by virtualFrame #
+    currTable[id].value = value;			            // not indexing by pid anymore, index by virtualFrame #
     currTable[id].page = page;
 }
 
@@ -172,7 +172,7 @@ Note, page swapping is a requirement for part 2 only. */
 int store (int pid, int address, int value) { 
 	pageEntry currTable[4];
 	int virtualAddress;
-	int offset;
+	//int offset;
 	int i = 0;
 	page currPage;
 	for(i = 0; i<4; i++) { currPage.values[i] = -1; }
@@ -192,15 +192,18 @@ int store (int pid, int address, int value) {
 		if(i != -1)
 		{
 			virtualAddress = address%16;
-			offset = address%4;									// this assumes the input is an integer
+			//offset = address%4;						      			// this assumes the input is an integer
 
-			if((pg = currTable[virtualAddress].page) == -1) { printf("ERROR: No room in processes [%d] virtual memory\n", pid); }
-			else												// we have a place to store
+			if((pg = currTable[virtualAddress].page) == -1) 
+			{ 
+				printf("ERROR: No room in processes [%d] virtual memory\n", pid); 
+			}
+			else         											// we have a place to store
 			{
 				memcpy(&currPage, &memory[pg*16], 16); 				// loads the page
-				if((pg = nextMemLoc(currPage)) -1)
+				if((pg = checkLoc(currPage, virtualAddress)) -1)
 				{
-					currPage.values[pg] = value;				// load the value
+					currPage.values[pg] = value;			    	// load the value
 				}
 				else
 				{
