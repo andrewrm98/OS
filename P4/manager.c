@@ -77,7 +77,17 @@ value (e.g., 0) should always be provided. */
 int load (int process, char* instruction, int address, int value) 
 { 
 	if (pageTable[process].validBit != 1) { printf("ERROR: Process [%i] not Found\n", process); return -1; } // check validity
-	
+	if (pageTable[process].presentBit == 1) 
+	{
+        int location = pageTable[process].page * 16 + address;
+        int value = -1;
+
+        if (pageTable[process].presentBit == 1) 
+        {
+            value = (int)memory[bitLocation];
+            printf("Value %d is stored at virtual address %d (Physical address %d)\n\n", value, address, pageTable[process].page * 16 + address);
+            return 1;
+        }
 }
 
 /*********************************************************** MAIN ****************************************************************************/
