@@ -53,7 +53,7 @@ void initialize()
 	        pageTable[i].processId = i;
 	    }
 }
-
+  
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
 
 /* map tells the memory manager to allocate a physical page, i.e., it creates a mapping in the page table
