@@ -37,10 +37,10 @@ void initialize(); // init the page table
 /* runs selected instruction */
 void masterFunction (int process, char* instruction, int address, int value) 
 {
-	if (!(strcmp(instruction, "map")))   { map(process, instruction, address, value);   }
-	if (!(strcmp(instruction, "load")))  { load(process, instruction, address, value);  }
-	if (!(strcmp(instruction, "store"))) { store(process, instruction, address, value); }
-	else { printf("ERROR: You Specified an Invalid Instruction"); }
+	if (!(strcmp(instruction, "map")))        { map(process, instruction, address, value);   }
+	else if (!(strcmp(instruction, "load")))  { load(process, instruction, address, value);  }
+	else if (!(strcmp(instruction, "store"))) { store(process, instruction, address, value); }
+	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
 void initialize()
@@ -63,43 +63,28 @@ number using the virtual address. For example, virtual address of 3 corresponds 
 0. value argument represents the write permission for the page. If value=1 then the page is writeable
 and readable. If value=0, then the page is only readable, i.e., all mapped pages are readable. These
 permissions can be modified by using a second map instruction for the target page. */
-int map (int process, char* instruction, int address, int value) { printf("Oh yea... the map function doesnt do shit\n"); return 1;} 
+int map (int process, char* instruction, int address, int value) { printf("Oh yea... the map function doesnt do shit\n"); return 1; } 
 
 /* store instructs the memory manager to write the supplied value into the physical memory location
 associated with the provided virtual address, performing translation and page swapping as necessary.
 Note, page swapping is a requirement for part 2 only. */
-int store (int process, char* instruction, int address, int value) { printf("Oh yeas... the store function doesnt do shit\n"); return 1;}
+int store (int process, char* instruction, int address, int value) { printf("Oh yeas... the store function doesnt do shit\n"); return 1; }
 
 /* load instructs the memory manager to return the byte stored at the memory location specified by
 virtual address. Like the store instruction, it is the memory manager’s responsibility to translate
 and swap pages as needed. Note, the value parameter is not used for this instruction, but a dummy
 value (e.g., 0) should always be provided. */
-int load (int process, char* instruction, int address, int value) 
-{ 
-	if (pageTable[process].validBit != 1) { printf("ERROR: Process [%i] not Found\n", process); return -1; } // check validity
-	if (pageTable[process].presentBit == 1) 
-	{
-        int location = pageTable[process].page * 16 + address;
-        int value = -1;
-
-        if (pageTable[process].presentBit == 1) 
-        {
-            value = (int)memory[bitLocation];
-            printf("Value %d is stored at virtual address %d (Physical address %d)\n\n", value, address, pageTable[process].page * 16 + address);
-            return 1;
-        }
-}
+int load (int process, char* instruction, int address, int value) { printf("Oh yeas... the store function doesnt do shit\n"); return 1; }
 
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
 {
-	pageEntry pageTable;
 	initialize(); // initilialize structs
 	char *userInput[4]; 
- 	int process_id;
-	char* instruction_type;
-	int virtual_address;
-	int value;
+ 	int process; //pid
+	char* instruction; //instruction type
+	int address; // virtual address
+	int value; // value
 
    	while(!feof(stdin))
   	{
@@ -115,7 +100,7 @@ int main(int argc, char **argv)
     	if (!token) { printf("ERROR: Invalid Input\n"); return -1; } // check for null token
     	token = strtok(args, s);
     	userInput[0] = token;
-    	printf("userInput[0]: %s\n", token);
+    	//printf("userInput[0]: %s\n", token);
 
     	/* tokenize rest of inputs */
  		int i = 1;
@@ -124,7 +109,7 @@ int main(int argc, char **argv)
     		token = strtok(NULL, s);
     		if (!token) { printf("ERROR: Invalid Input\n"); return -1; } // check for null token
     		userInput[i] = token;
-    		printf("userInput[%i]: %s\n", i, token);
+    		//printf("userInput[%i]: %s\n", i, token);
     		i++;
     	}
 
@@ -133,8 +118,8 @@ int main(int argc, char **argv)
 		instruction_type = userInput[1];
 		virtual_address = atoi(userInput[2]);
 		value = atoi(userInput[3]);
-		printf("process_id: %i\ninstruction_type: %s\nvirtual_address: %i\nvalue: %i\n", process_id, instruction_type, virtual_address, value);
-  		masterFunction(process_id, instruction_type, virtual_address, value);	
+		//printf("\tprocess: %i\n\tinstruction: %s\n\taddress: %i\n\tvalue: %i\n", process_id, instruction_type, virtual_address, value);
+  		masterFunction(process, instruction, virtual, value);	
 	}
 	return 1;
 }
