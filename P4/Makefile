@@ -3,7 +3,7 @@
 # Andrew Morrison
 CC = gcc
 CFLAGS = -Wall
-#LDFLAGS = -pthread -lm
+OBJS = manager.o
 
 all: manager  
 
