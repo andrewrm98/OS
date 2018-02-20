@@ -74,6 +74,7 @@ int findPage(int address)
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
 
+/* searhces through memory array to allocate a location for an entry. Up to 4 can be made before a swap must be performed */ 
 int map (int pid, char* instruction, int address, int value) 
 { 
 	int vacantLoc = -1; // variable to hold value of vacant spot in page table
