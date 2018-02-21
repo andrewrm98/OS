@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall
 OBJS = manager.o
 
-all: manager  
+all: manager 
 
 manager: $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o manager
