@@ -96,6 +96,7 @@ void printMem()
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
 
+/****** MAP ******/
 int map (int pid, int address, int value) 
 { 
 	printf("\n\n*** Mapping ***\n\n");
@@ -168,7 +169,7 @@ int map (int pid, int address, int value)
 }
 
 
-
+/****** STORE  ******/
 int store (int pid, int address, int value) { 
 	printf("\n\n*** Storing ***\n\n");
 	pageEntry currTable[4];
@@ -233,10 +234,9 @@ int store (int pid, int address, int value) {
 	}
 	return 0;
 }
-/* load instructs the memory manager to return the byte stored at the memory location specified by
-virtual address. Like the store instruction, it is the memory manager’s responsibility to translate
-and swap pages as needed. Note, the value parameter is not used for this instruction, but a dummy
-value (e.g., 0) should always be provided. */
+
+
+/****** LOAD ******/
 int load (int pid, int address, int value) 
 { 
 	printf("\n\n*** Loading ***\n\n");
@@ -307,6 +307,12 @@ int load (int pid, int address, int value)
 
 	return 0;
 }
+
+
+/****** SWAP ******/
+
+void swap() {}
+
 
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
