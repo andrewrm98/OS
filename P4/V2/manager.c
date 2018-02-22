@@ -313,6 +313,9 @@ int load (int pid, int address, int value)
 
 void swap() 
 {
+	// 1 - find a page to evict
+	// 2 - evict that page 
+	// 3 - put the desired page in the page table
 	FILE *swapFile;
 	swapFile = fopen("swapFIle", "a+"); //create and open the file swapFile
 	printf("Swapping Table to Output File\n");
