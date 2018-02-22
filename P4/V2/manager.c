@@ -324,30 +324,30 @@ int main(int argc, char **argv)
    	while(!feof(stdin))
   	{  		
 		// tokenize first input
-   		char argsArr[4]; //store arguments in array
+   		char argsArr[4] = {0,0,0,0}; //store arguments in array
     	char * args = argsArr; // make pointer to array
     	const char s[2] = ","; // token to check for
     	char *token; // token creation
 
    		/* tokenize first input */ 
     	printf("Instruction? ");
-    	fgets(args,32,stdin); 
-    	if (!token) { printf("ERROR: Invalid Input\n"); return -1; } // check for null token
+    	fgets(args,32,stdin);
     	token = strtok(args, s);
+    	if (!token) { printf("ERROR: Invalid Input \n"); continue; } // check for null token
     	userInput[0] = token;
-    	//printf("userInput[0]: %s\n", token);
+    	printf("userInput[0]: %s\n", token);
 
     	/* tokenize rest of inputs */
  		int i = 1;
     	while(i < 4) 
     	{
     		token = strtok(NULL, s);
-    		if (!token) { printf("ERROR: Invalid Input\n"); return -1; } // check for null token
+    		if (!token) { i = 5; } // check for null token
     		userInput[i] = token;
-    		//printf("userInput[%i]: %s\n", i, token);
+    		printf("userInput[%i]: %s\n", i, token);
     		i++;
     	}
-
+    	if (i == 6) { printf("ERROR: Invalid Input\n"); continue; }
     	/* assign tokenized values */
     	pid = atoi(userInput[0]);
 		instruction = userInput[1];
