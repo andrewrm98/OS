@@ -193,6 +193,12 @@ int store (int pid, int address, int value) {
 			return -1;
 		}
 
+		if(currTable[pid].value != 1)
+		{
+			printf("ERROR: This file is not writable\n");
+			return -1;
+		}
+
 		if(i != -1)
 		{
 			virtualFrame = address/16;
