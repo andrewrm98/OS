@@ -196,9 +196,9 @@ int store (int pid, int address, int value) {
 		if(i != -1)
 		{
 			virtualFrame = address/16;
-			offset = (address%16)/4;						      															// this assumes the input is an integer
+			offset = (address%16)/4;						      													// this assumes the input is an integer
 
-			if((pg = currTable[virtualFrame].page) == -1) 														// if no place to load
+			if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
 			{ 
 				printf("ERROR: Nothing to load in processes [%d] virtual memory\n", pid); 
 			}
@@ -207,7 +207,7 @@ int store (int pid, int address, int value) {
 				memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
 				if((check= checkLoc(currPage, offset)) != -1)
 				{
-					memcpy(&currPage.values[pg], &value, 4);		 											   // store the value
+					memcpy(&currPage.values[pg], &value, 4);		 											    // store the value
 					printf("*** Process [%d] ***\n", pid);
 					printf("Virtual frame [%d]\n", virtualFrame);
 					printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[pg]);
@@ -264,7 +264,7 @@ int load (int pid, int address, int value)
 		if(i != -1)
 		{
 			virtualFrame = address/16;
-			offset = (address%16)/4;						      															// this assumes the input is an integer
+			offset = (address%16)/4;						      													// this assumes the input is an integer
 
 			if((pg = currTable[virtualFrame].page) == -1) 															// if no place to load
 			{ 
@@ -311,17 +311,23 @@ int load (int pid, int address, int value)
 
 /****** SWAP ******/
 
-void swap() {}
+void swap() 
+{
+	FILE *swapFile;
+	swapFile = fopen("swapFIle", "a+"); //create and open the file swapFile
+	printf("Swapping Table to Output File\n");
+
+}
 
 
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
 {
 	char *userInput[4]; 
- 	int pid; //pid
-	char* instruction; //instruction type
-	int address; // virtual address
-	int value; // value
+ 	int pid; 															//pid
+	char* instruction; 													//instruction type
+	int address; 														// virtual address
+	int value; 															// value
 	for(int i=0; i<4; i++) { 
 		ptRegister[i].valid=0;
 		ptRegister[i].ptLoc=0;
@@ -329,17 +335,16 @@ int main(int argc, char **argv)
 
    	while(!feof(stdin))
   	{  		
-		// tokenize first input
-   		char argsArr[4] = {0,0,0,0}; //store arguments in array
-    	char * args = argsArr; // make pointer to array
-    	const char s[2] = ","; // token to check for
-    	char *token; // token creation
+   		char argsArr[4] = {0,0,0,0}; 									//store arguments in array
+    	char * args = argsArr; 											// make pointer to array
+    	const char s[2] = ","; 											// token to check for
+    	char *token; 													// token creation
 
    		/* tokenize first input */ 
     	printf("Instruction? ");
     	fgets(args,32,stdin);
     	token = strtok(args, s);
-    	if (!token) { printf("ERROR: Invalid Input \n"); continue; } // check for null token
+    	if (!token) { printf("ERROR: Invalid Input \n"); continue; }   // check for null token
     	userInput[0] = token;
     	printf("userInput[0]: %s\n", token);
 
@@ -348,12 +353,13 @@ int main(int argc, char **argv)
     	while(i < 4) 
     	{
     		token = strtok(NULL, s);
-    		if (!token) { i = 5; } // check for null token
+    		if (!token) { i = 5; } 										// check for null token
     		userInput[i] = token;
     		printf("userInput[%i]: %s\n", i, token);
     		i++;
     	}
     	if (i == 6) { printf("ERROR: Invalid Input\n"); continue; }
+    	
     	/* assign tokenized values */
     	pid = atoi(userInput[0]);
 		instruction = userInput[1];
