@@ -332,6 +332,16 @@ void swap()
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
 {
+	/* Welcome mat */
+	printf("******************************************************\n");
+	printf("****** WELCOME TO VIRTUAL MEMORY SIMULATOR 2.0 	******\n");
+	printf("******      (Please don't touch anything...)	******\n\n");
+	printf("Input format is : pid,instruction,address,value *NO SPACES*\n")
+	printf("					   ***\n");
+	printf("					Have fun!\n\n");
+	printf("					   ***\n");
+
+
 	char *userInput[4]; 
  	int pid; 															//pid
 	char* instruction; 													//instruction type
