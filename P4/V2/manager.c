@@ -34,8 +34,9 @@ typedef struct {
 
 unsigned char memory[64]; 	// memory
 reg ptRegister[4];	        // the page table registers, indexed by pid
-int freeTable[4] = {1,1,1,1};  // table of free physical frames... 1 for free, 0 for taken
+int freeTable[4] = {1,1,1,1};  // table of free physical frames... 1 for free, 0 for taken by page, 2 if taken by page table
 FILE *swapFile; 			// disc
+unsigned char evictor[16];
 
 /********************************************************* FUNCTION DECLARATIONS *************************************************************/
 
@@ -78,7 +79,7 @@ void initialize(pageEntry * currTable)
 int findFree()
 {
 	for(int i = 0; i<4; i++) { 
-		if(freeTable[i] == 1) { freeTable[i] = 0; return i; }
+		if(freeTable[i] == 1) { return i; }
 	}
 	return -1; 
 }
@@ -138,6 +139,7 @@ int map (int pid, int address, int value)
 		{ 
 			memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
 			printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
+			freeTable[ptRegister[pid].ptLoc] = 2;
 		} // store the page table in memory
 		else
 		{
@@ -153,11 +155,12 @@ int map (int pid, int address, int value)
 		if((physicalFrame = findFree()) != -1)																		// find free spot in physical memory
 		{
 			modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);										// add the new values for this PTE
-			//currPage.valid = 1;
+			currPage.valid = 1;
 			memcpy(&memory[physicalFrame*16], &currPage, 16);
 			memcpy(&memory[ptRegister[pid].ptLoc], &currTable, 16);													// store the new page in physical memory
 			printf("Virtual address space updated\n");		
 			printf("New page stored in phyiscal frame [%d] and virtual frame [%d]\n", physicalFrame, virtualFrame);
+			freeTable[physicalFrame] = 0;
 		}
 		else
 		{
@@ -329,7 +332,7 @@ int load (int pid, int address, int value)
 
 /****** SWAP ******/
 
-void swap(int evictorTable, int evictorPage)
+void swap(int virtualFrame, int pid, int ptLoc) // , int target)
 {
 	// 1 - find a page to evict
 	// 2 - evict that page 
@@ -337,6 +340,46 @@ void swap(int evictorTable, int evictorPage)
 
 	int tries = 0;
 	int evictionNotice = 0;
+	pageEntry swapTable [4];
+	page swapPage;
+	unsigned char swap[16];
+	unsigned char swap2[16];
+	ssize_t len = 16;
+	ssize_t read;
+	pageEntry currTable [4];
+	if(ptLoc != -1)
+	{
+		memcpy(&currTable, &memory[ptPID*16], 16);
+	}
+
+	/* Find a page to evict, make sure pages ar evicted before their page tables */
+	while(1)																					
+	{
+		evictionNotice = findPageToEvict();
+		if(freeTable[evictionNotice] == 2)
+		{
+			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the page table
+			if(swapTable.presentBit == 0 && evictionNotice != evictorTable && evictionNotice) { 
+				memcpy(&swap, &swapTable, 16); 
+				ptRegister[pid].valid = -1;
+				break; }
+		}
+		else
+		{
+			memcpy(&swapPage, &memory[evictionNotice*16], 16);
+			if(evictionNotice != evictorPage) { 
+				memcpy(&swap, &swappage, 16); 
+				currTable[virtualFrame].validBit = -1;
+				break; }
+		}
+	}
+
+	/* Write swap to file, and write evictor to memory */
+
+	fwrite(swap, 1, sizeof(char), swapFile);
+
+	return 1;
+
 
 }
 
