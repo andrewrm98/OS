@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 
 /********************************************************* STRUCTS/ARRAYS ********************************************************************/
 
@@ -328,7 +329,7 @@ int load (int pid, int address, int value)
 
 /****** SWAP ******/
 
-void swap(int evictorTable, int evictorPage); 
+void swap(int evictorTable, int evictorPage)
 {
 	// 1 - find a page to evict
 	// 2 - evict that page 
@@ -336,7 +337,7 @@ void swap(int evictorTable, int evictorPage);
 
 	int tries = 0;
 	int evictionNotice = 0;
-	
+
 }
 
 
@@ -349,9 +350,10 @@ int main(int argc, char **argv)
 	printf("****** WELCOME TO VIRTUAL MEMORY SIMULATOR 2.0 	******\n");
 	printf("******      (Please don't touch anything...)	******\n");
 	printf("******************************************************\n\n");
-	printf("Input format is : pid,instruction,address,value \n");
-	printf("Special Instruction: 'print' will print physical memory\n");
-	printf("Each page can store in offset 0-12\n\n");
+	printf("Helpful Stuff:\n");
+	printf("  1. Input format is : pid,instruction,address,value \n");
+	printf("  2. Special Instruction: 'print' will print physical memory\n");
+	printf("  3. Each page can store in offset 0-12\n\n");
 	printf("                  *************\n");
 	printf("                  * Have fun! *\n");
 	printf("                  *************\n\n");
