@@ -19,19 +19,22 @@ typedef struct {
     u_int8_t page:1; 		//page number ie frame
 } pageEntry;
 
+// page tables are indexed by their virtual frame
+
 typedef struct {
 	int valid;
 	int ptLoc;
 } reg;
 
 typedef struct {
-	int valid;
-	int values[4];
+	//unsigned char valid;
+	unsigned char values[16];
 } page;
 
 unsigned char memory[64]; 	// memory
-reg ptRegister[4];	        // the page table registers
+reg ptRegister[4];	        // the page table registers, indexed by pid
 int freeTable[4] = {1,1,1,1};  // table of free physical frames... 1 for free, 0 for taken
+FILE *swapFile; 			// disc
 
 /********************************************************* FUNCTION DECLARATIONS *************************************************************/
 
@@ -51,6 +54,7 @@ void masterFunction (int process, char * instruction, int address, int value)
 	if (!(strcmp(instruction, "map")))        	{ map(process, address, value);   }
 	else if (!(strcmp(instruction, "load")))  	{ load(process, address, value);  }
 	else if (!(strcmp(instruction, "store"))) 	{ store(process, address, value); }
+	else if (!(strcmp(instruction, "print"))) 	{ printMem(); }
 	else { printf("ERROR: You Specified an Invalid Instruction\n"); }
 }
 
@@ -81,7 +85,7 @@ int findFree()
 /* checks the location at the offset (i) within the given page */
 int checkLoc(page currPage, int i)
 {
-	if(currPage.values[i] == -1) { return i; }								// check if the page is open
+	if(currPage.values[i] == '0') { return i; }								// check if the page is open
 	else { return -1; }														// return -1 if the page is full	
 }
 
@@ -93,6 +97,9 @@ void printMem()
 		if (memory[i]) { printf("Value at memory[%i]: %c\n", i, memory[i]); }
 	}
 }
+
+/* Returns a physical frame to evict using a random strategy */
+int findPageToEvict() { int evictionNotice = rand() %4 - 1; return evictionNotice; }
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
 
@@ -105,15 +112,15 @@ int map (int pid, int address, int value)
 	page currPage;
 	initialize(currTable);
 	int i;
-	for(i = 0; i<4; i++) { currPage.values[i] = -1; }
-	currPage.valid = -1;
+	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	//currPage.valid = -1;
 	int physicalFrame;
 
 	/*$$$ Get the Page Table Loaded $$$*/
 	if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) 													// if the table has been created
 	{
 		memcpy(&currTable, &memory[ptRegister[pid].ptLoc], 16);														// load the page table
-		printf("Got page table for PID [%d] from physical address [%d]\n\n", pid, memory[ptRegister[pid].ptLoc]);
+		printf("Got page table for PID [%d] from physical address [%d]\n\n", pid, memory[ptRegister[pid].ptLoc%16]);
 	}
 	else if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc == -1) 												// if the table is created but not in memory
 	{
@@ -145,7 +152,7 @@ int map (int pid, int address, int value)
 		if((physicalFrame = findFree()) != -1)																		// find free spot in physical memory
 		{
 			modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);										// add the new values for this PTE
-			currPage.valid = 1;
+			//currPage.valid = 1;
 			memcpy(&memory[physicalFrame*16], &currPage, 16);
 			memcpy(&memory[ptRegister[pid].ptLoc], &currTable, 16);													// store the new page in physical memory
 			printf("Virtual address space updated\n");		
@@ -164,7 +171,7 @@ int map (int pid, int address, int value)
 		// printMem();
 		return 1;
 	} 
-	printMem();
+	//printMem();
 	return 0;
 }
 
@@ -178,8 +185,8 @@ int store (int pid, int address, int value) {
 	int check;
 	int i = 0;
 	page currPage;
-	for(i = 0; i<4; i++) { currPage.values[i] = -1; }
-	currPage.valid = -1;
+	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	//currPage.valid = -1;
 	int pg = 0;
 
 	/* Check if the address is valid */
@@ -192,17 +199,17 @@ int store (int pid, int address, int value) {
 			printf("ERROR: Invalid load\n");
 			return -1;
 		}
-
-		if(currTable[pid].value != 1)
-		{
-			printf("ERROR: This file is not writable\n");
-			return -1;
-		}
-
 		if(i != -1)
 		{
 			virtualFrame = address/16;
-			offset = (address%16)/4;						      													// this assumes the input is an integer
+			offset = address%16;																				// this assumes the input is an integer
+			if(currTable[virtualFrame].value != 1)
+			{
+				printf("ERROR: This file is not writable\n");
+				return -1;
+			}
+			printf("Offset: %d\n", offset);
+			printf("Value before store: %d\n", currPage.values[offset]);
 
 			if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
 			{ 
@@ -213,17 +220,20 @@ int store (int pid, int address, int value) {
 				memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
 				if((check= checkLoc(currPage, offset)) != -1)
 				{
-					memcpy(&currPage.values[pg], &value, 4);		 											    // store the value
+					currPage.values[offset] = value;		 											    // store the value
 					printf("*** Process [%d] ***\n", pid);
 					printf("Virtual frame [%d]\n", virtualFrame);
-					printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[pg]);
+					printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
 					memcpy(&memory[ptRegister[pid].ptLoc], &currTable, 16);
+					printf("ptLoc: %d\n", ptRegister[pid].ptLoc);
 					memcpy(&memory[pg*16], &currPage, 16);
+					printf("pg*16: %d\n", pg*16);
 					printf("Updated the page in physical memory\n");
 				}
 				else
 				{
 					printf("ERROR: No more memory available\n");
+					// update page?
 				}
 			}
 		}
@@ -252,8 +262,8 @@ int load (int pid, int address, int value)
 	int check;
 	int i = 0;
 	page currPage;
-	for(i = 0; i<4; i++) { currPage.values[i] = -1; }
-	currPage.valid = -1;
+	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	//currPage.valid = -1;
 	int pg = 0;
 
 	/* Check if the address is valid */
@@ -270,31 +280,32 @@ int load (int pid, int address, int value)
 		if(i != -1)
 		{
 			virtualFrame = address/16;
-			offset = (address%16)/4;						      													// this assumes the input is an integer
+			offset = address%16;
+			printf("Offset: %d\n", offset);
+			printf("Value before load: %d\n", currPage.values[offset]);						      													// this assumes the input is an integer
 
 			if((pg = currTable[virtualFrame].page) == -1) 															// if no place to load
 			{ 
 					printf("*** Process [%d] ***\n", pid);
-					printf("404: page not found\n");
+					printf("404: page not found (1)\n");
 					printf("Virtual frame [%d]\n", virtualFrame);
-					printf("Value NOT loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[pg]);
+					printf("Value NOT loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
 			}
 			else         																							// we have a place to load
 			{
-				memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
-				if((check = checkLoc(currPage, offset)) != -1)
+				if((check = checkLoc(currPage, offset)) == -1)
 				{
-					value = currPage.values[pg];
+					//value = currPage.values[offset];
 					printf("*** Process [%d] ***\n", pid);
 					printf("Virtual frame [%d]\n", virtualFrame);
-					printf("Value loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[pg]);
+					printf("Value loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
 				}
 				else
 				{
 					printf("*** Process [%d] ***\n", pid);
-					printf("404: page not found\n");
+					printf("404: page not found(2)\n");
 					printf("Virtual frame [%d]\n", virtualFrame);
-					printf("Value NOT loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[pg]);
+					printf("Value NOT loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
 
 				}
 			}
@@ -317,55 +328,60 @@ int load (int pid, int address, int value)
 
 /****** SWAP ******/
 
-void swap() 
+void swap(int evictorTable, int evictorPage); 
 {
 	// 1 - find a page to evict
 	// 2 - evict that page 
 	// 3 - put the desired page in the page table
-	FILE *swapFile;
-	swapFile = fopen("swapFIle", "a+"); //create and open the file swapFile
-	printf("Swapping Table to Output File\n");
 
+	int tries = 0;
+	int evictionNotice = 0;
+	
 }
 
 
 /*********************************************************** MAIN ****************************************************************************/
 int main(int argc, char **argv)
 {
+	srand(time(NULL));
 	/* Welcome mat */
 	printf("******************************************************\n");
 	printf("****** WELCOME TO VIRTUAL MEMORY SIMULATOR 2.0 	******\n");
-	printf("******      (Please don't touch anything...)	******\n\n");
-	printf("Input format is : pid,instruction,address,value *NO SPACES*\n")
-	printf("					   ***\n");
-	printf("					Have fun!\n\n");
-	printf("					   ***\n");
-
-
+	printf("******      (Please don't touch anything...)	******\n");
+	printf("******************************************************\n\n");
+	printf("Input format is : pid,instruction,address,value \n");
+	printf("Special Instruction: 'print' will print physical memory\n");
+	printf("Each page can store in offset 0-12\n\n");
+	printf("                  *************\n");
+	printf("                  * Have fun! *\n");
+	printf("                  *************\n\n");
 	char *userInput[4]; 
  	int pid; 															//pid
 	char* instruction; 													//instruction type
 	int address; 														// virtual address
-	int value; 															// value
+	int value;															// value
+	swapFile = fopen("swapFIle", "a+"); //create and open the file swapFile
+	printf("Swapping Table to Output File\n");
+
 	for(int i=0; i<4; i++) { 
 		ptRegister[i].valid=0;
 		ptRegister[i].ptLoc=0;
 	}
 
-   	while(!feof(stdin))
-  	{  		
+   	while(1)
+  	{
    		char argsArr[4] = {0,0,0,0}; 									//store arguments in array
     	char * args = argsArr; 											// make pointer to array
     	const char s[2] = ","; 											// token to check for
     	char *token; 													// token creation
 
    		/* tokenize first input */ 
-    	printf("Instruction? ");
-    	fgets(args,32,stdin);
+    	printf("\nInstruction? ");
+    	if (fgets(args,32,stdin) == NULL) { printf("\nEnd of File Reached\n"); exit(1); }
     	token = strtok(args, s);
     	if (!token) { printf("ERROR: Invalid Input \n"); continue; }   // check for null token
     	userInput[0] = token;
-    	printf("userInput[0]: %s\n", token);
+    	//printf("userInput[0]: %s\n", token);
 
     	/* tokenize rest of inputs */
  		int i = 1;
@@ -374,7 +390,7 @@ int main(int argc, char **argv)
     		token = strtok(NULL, s);
     		if (!token) { i = 5; } 										// check for null token
     		userInput[i] = token;
-    		printf("userInput[%i]: %s\n", i, token);
+    		//printf("userInput[%i]: %s\n", i, token);
     		i++;
     	}
     	if (i == 6) { printf("ERROR: Invalid Input\n"); continue; }
@@ -384,7 +400,8 @@ int main(int argc, char **argv)
 		instruction = userInput[1];
 		address = atoi(userInput[2]);
 		value = atoi(userInput[3]);
-  		masterFunction(pid, instruction, address, value);	
+		printf("\nYou Entered: PID: [%i], Instruction: '%s', address: [%i], value: [%i] \n", pid, instruction, address, value);
+  		masterFunction(pid, instruction, address, value);
 	}
 	return 0;
 }
