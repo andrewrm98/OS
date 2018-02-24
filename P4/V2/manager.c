@@ -35,7 +35,7 @@ typedef struct {
 unsigned char memory[64]; 	// memory
 reg ptRegister[4];	        // the page table registers, indexed by pid
 int freeTable[4] = {1,1,1,1};  // table of free physical frames... 1 for free, 0 for taken by page, 2 if taken by page table
-FILE *swapFile; 			// disc
+//FILE *swapFile; 			// disc
 unsigned char evictor[16];
 unsigned char processLord[4];
 
@@ -261,11 +261,14 @@ int swapOut() // , int target)
 				freeTable[evictionNotice] = 1;
 				printf("Eviction notice: %d\n", evictionNotice);
 				/* Write swap to file*/
-				for(int i = 0; i<16; i++)
-				{
-					printf("doing it\n");
-					fprintf(swapFile, " %d ", swap[i]);
+				FILE* hdd;
+				hdd = fopen("swapFile.txt", "a");
+				fprintf(hdd, "%d", memory[(evictionNotice*16)]);
+				for(int i = 1; i < 16; i++){
+					fprintf(hdd, " %d", memory[(evictionNotice*16) + i]);
 				}
+				fprintf(hdd, "\n");
+				fclose(hdd);
 				processLord[evictionNotice] = -1;
 				return evictionNotice;
 			}
@@ -285,11 +288,14 @@ int swapOut() // , int target)
 			memcpy(&memory[ptRegister[thisId].ptLoc*16], &evictedTable, 16);
 			freeTable[evictionNotice] = 1;
 			/* Write swap to file*/
-			for(int i = 0; i<16; i++)
-			{
-				printf("doing it\n");
-				fprintf(swapFile, " %d ", swap[i]);
+			FILE* hdd;
+			hdd = fopen("swapFile.txt", "a");
+			fprintf(hdd, "%d", memory[(evictionNotice*16)]);
+			for(int i = 1; i < 16; i++){
+				fprintf(hdd, " %d", memory[(evictionNotice*16) + i]);
 			}
+			fprintf(hdd, "\n");
+			fclose(hdd);
 			processLord[evictionNotice] = -1;
 			return evictionNotice; 
 			tries++;
@@ -627,7 +633,7 @@ int main(int argc, char **argv)
 	char* instruction; 													//instruction type
 	int address; 														// virtual address
 	int value;															// value
-	swapFile = fopen("swapFile", "a+"); //create and open the file swapFile
+	//swapFile = fopen("swapFile", "a+"); //create and open the file swapFile
 	printf("Swapping Table to Output File\n");
 
 	for(int i=0; i<4; i++) { 
