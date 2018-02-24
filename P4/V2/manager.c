@@ -381,7 +381,7 @@ int map (int pid, int address, int value)
 		}
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
-		currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);
+		&currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);
 		/*
 		currTable[virtualFrame].page = 3;										// add the new values for this PTE
 		currTable[virtualFrame].presentBit = 1;
