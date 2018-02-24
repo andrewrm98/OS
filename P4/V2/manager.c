@@ -14,10 +14,10 @@
 
 /* struct to assign bit size of each */
 typedef struct {
-    u_int8_t presentBit:1; 	//1 if present, 0 if on disk
-    u_int8_t validBit:1; 	//1 if valid
-    u_int8_t value:1; 		//1 if can be written, 0 if read-only
-    u_int8_t page:1; 		//page number ie frame
+    unsigned char presentBit; 	//1 if present, 0 if on disk
+    unsigned char validBit; 	//1 if valid
+    unsigned char value; 		//1 if can be written, 0 if read-only
+    unsigned char page; 		//page number ie frame
 } pageEntry;
 
 // page tables are indexed by their virtual frame
