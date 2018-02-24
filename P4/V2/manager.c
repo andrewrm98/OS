@@ -74,11 +74,11 @@ pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int
 		editedTable[i].page = currTable[i].page;
 		editedTable[i].pid = currTable[i].pid;
 	}
-	currTable[id].presentBit = presentBit;
-	currTable[id].validBit = validBit;
-    currTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
-    currTable[id].page = page;
-    currTable[id].pid = pid;
+	editedTable[id].presentBit = presentBit;
+	editedTable[id].validBit = validBit;
+    editedTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
+    editedTable[id].page = page;
+    editedTable[id].pid = pid;
     return editedTable;
 }
 
