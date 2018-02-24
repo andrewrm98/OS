@@ -187,7 +187,7 @@ int findPageToEvict() {
  	return evictionNotice; 
 }
 
-int checkPresentBits(pageEntry *pageTable)
+/*int checkPresentBits(pageEntry *pageTable)
 {
 	for(int i = 0; i<4; i++)
 	{
@@ -198,7 +198,7 @@ int checkPresentBits(pageEntry *pageTable)
 		printf("presentBit: %d\n", pageTable[i].presentBit);
 	}
 	return 1;
-}
+}*/
 
 int findVirtualFrame(pageEntry *pageTable, int physicalFrame)
 {
@@ -229,6 +229,7 @@ int swapOut() // , int target)
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
+	int i = 0;
 	pageEntry evictedTable[4];
 	int evictedVirtualFrame;			
 
@@ -244,7 +245,15 @@ int swapOut() // , int target)
 		{
 			printf("Free table: %d\n", freeTable[evictionNotice]);
 			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
-			if(checkPresentBits(swapTable)) { 
+			for(i = 0; i<4; i++)
+			{
+				if(swapTable[i].validBit==1)
+				{
+					i = -1;
+					break;
+				}
+			}
+			if(i!=-1) { 
 				printf("got inside tho\n");
 				memcpy(&swap, &swapTable, 16); 
 				//printf("Getpid swaptable: %d\n", getPID(swapTable));
