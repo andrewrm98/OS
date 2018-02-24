@@ -336,7 +336,7 @@ int map (int pid, int address, int value)
 	initialize(currTable);
 	int i;
 	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
-	//currPage.pid = pid;
+	currPage.pid = pid;
 	//currPage.valid = -1;
 	int physicalFrame;
 	printf("Pid: %d\n", pid);
