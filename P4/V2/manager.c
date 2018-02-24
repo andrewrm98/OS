@@ -76,7 +76,7 @@ pageEntry * modifyTable(int presentBit, int validBit, int value, int page, int i
 /* initializes the given table */
 void initialize(pageEntry * currTable, int pid) 
 {
-	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i, pid); } // initialize every page entry
+	for (int i = 0; i<4; i++) { modifyTable(0, 0, -1, -1, i, pid); } // initialize every page entry
 }
 
 /* finds a free page in physical memory */
