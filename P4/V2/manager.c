@@ -45,7 +45,7 @@ int store (int pid, int address, int value);
 int load (int pid, int address, int value);
 pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id); // enter in  the page table
 void masterFunction(int pid, char * instruction, int address, int value);                           // runs selected instruction
-void initialize(pageEntry * currTable, int pid);                                                             // initializes pageTable
+void initialize(pageEntry * currTable);                                                             // initializes pageTable
 int findFree();                                                                                     // finds free loc in mem
 int checkLoc();                                                                                     // checks if page location is open
 void printMem();																					// prints non-null values in memory array
@@ -80,7 +80,7 @@ pageEntry* modifyTable(pageEntry * currTable, int presentBit, int validBit, int 
 }
 
 /* initializes the given table */
-void initialize(pageEntry * currTable, int pid) 
+void initialize(pageEntry * currTable) 
 {
 	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i); } // initialize every page entry
 }
@@ -143,7 +143,7 @@ void printPage(page currPage)
 void printMem()
 {
 	pageEntry currTable[4];
-	//initialize(currTable);
+	initialize(currTable);
 	//int pid = 0;
 	page currPage;
 	for(int i = 0; i<15; i++) { currPage.values[i] = '0'; }
