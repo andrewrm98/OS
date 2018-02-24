@@ -83,7 +83,7 @@ pageEntry* modifyTable(pageEntry * currTable, int presentBit, int validBit, int 
 /* initializes the given table */
 void initialize(pageEntry * currTable) 
 {
-	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, 0, 0, i); } // initialize every page entry
+	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i); } // initialize every page entry
 }
 
 /* finds a free page in physical memory */
@@ -453,7 +453,7 @@ int store (int pid, int address, int value) {
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$ */
-		memcpy(&currTable, &memory[ptRegister[pid].ptLoc], 16);														// load the page table
+		memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);														// load the page table
 		printf("Page table loaded at location: %d\n", ptRegister[pid].ptLoc);
 		if(currTable == NULL) {
 			printf("ERROR: Invalid load\n");
@@ -492,7 +492,7 @@ int store (int pid, int address, int value) {
 					printf("*** Process [%d] ***\n", pid);
 					printf("Virtual frame [%d]\n", virtualFrame);
 					printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
-					memcpy(&memory[ptRegister[pid].ptLoc], &currTable, 16);
+					memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);
 					printf("ptLoc: %d\n", ptRegister[pid].ptLoc);
 					memcpy(&memory[pg*16], &currPage, 16);
 					printf("pg*16: %d\n", pg*16);
