@@ -61,7 +61,7 @@ void masterFunction (int process, char * instruction, int address, int value)
 }
 
 /* modifies the given table with the given information */
-pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id)
+pageEntry* modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id)
 {
 	pageEntry * editedTable = malloc(4*sizeof(pageEntry));
 
@@ -326,7 +326,7 @@ int map (int pid, int address, int value)
 	int virtualFrame = address/16; 																					// virtual address frame
 	pageEntry currTable[4];
 	page currPage;
-	//initialize(currTable, pid);
+	initialize(currTable, pid);
 	int i;
 	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
 	//currPage.pid = pid;
@@ -381,12 +381,10 @@ int map (int pid, int address, int value)
 		}
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
-		&currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);
-		/*
 		currTable[virtualFrame].page = 3;										// add the new values for this PTE
 		currTable[virtualFrame].presentBit = 1;
 		currTable[virtualFrame].validBit = 1;
-    	currTable[virtualFrame].value = value;*/			          						 // not indexing by pid anymore, index by virtualFrame #
+    	currTable[virtualFrame].value = value;		          						 // not indexing by pid anymore, index by virtualFrame #
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);
 		//currPage.valid = 1;	
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
