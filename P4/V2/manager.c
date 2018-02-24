@@ -393,7 +393,7 @@ int map (int pid, int address, int value)
 		currTable[virtualFrame].validBit = 1;
     	currTable[virtualFrame].value = value;		          						 // not indexing by pid anymore, index by virtualFrame #
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);
-		printf("&&&&&&&&&&&&&&Currpage pid: %d\n", currPage.pid;
+		printf("&&&&&&&&&&&&&&Currpage pid: %d\n", currPage.pid);
 		//currPage.valid = 1;	
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);													// store the new page in physical memory
