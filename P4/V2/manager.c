@@ -198,7 +198,7 @@ int swapOut(int pid) // , int target)
 	// 1 - find a page to evict
 	// 2 - evict that page 
 	// 3 - put the desired page in the page table
-
+	printf("***SWAPPING OUT***\n");
 	int tries = 0;
 	int evictionNotice = 0;
 	pageEntry swapTable[4];
@@ -294,6 +294,7 @@ int swapOut(int pid) // , int target)
 
 void swapIn(int pid, int virtualFrame)
 {
+	printf("***SWAPPING IN***\n");
 	pageEntry currTable[4];
 	unsigned char swap2[16];
 	FILE * hdd;
