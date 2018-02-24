@@ -218,26 +218,26 @@ int swapOut() // , int target)
 		}
 		if(freeTable[evictionNotice] == 2)
 		{
-			printf("Free table: %d\n", freeTable[evictionNotice]);
+			//printf("Free table: %d\n", freeTable[evictionNotice]);
 			memcpy(&swapTable, &memory[evictionNotice*16], 16);					// load the evicted page table or
-			printf("Hello\n");
+			//printf("Hello\n");
 			for(i = 0; i<4; i++)
 			{
-				printf("Hello2\n");
+				//printf("Hello2\n");
 				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice)
 				{
-					printf("found a page\n");
+					//printf("found a page\n");
 					i = -1;
 					break;
 				}
-				printf("Not this page\n");
+				//printf("Not this page\n");
 			}
 			if(i!=-1) { 
-				printf("got inside tho\n");
+				//printf("got inside tho\n");
 				memcpy(&swap, &swapTable, 16); 
 				ptRegister[processLord[evictionNotice]].ptLoc = -1;
 				freeTable[evictionNotice] = 1;
-				printf("Eviction notice: %d\n", evictionNotice);
+				//printf("Eviction notice: %d\n", evictionNotice);
 
 				/* Write swap to file*/
 				FILE* hdd;
