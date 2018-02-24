@@ -307,7 +307,7 @@ void swapIn(int pid, int virtualFrame)
 {
 	pageEntry currTable[4];
 	unsigned char swap2[16];
-	FILE * swapFile;
+	FILE * hdd;
 	hdd = fopen("swapFile.txt", "a");
 	memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);
 	int evictionNotice = 0;
