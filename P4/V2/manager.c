@@ -224,9 +224,11 @@ int swapOut() // , int target)
 			{
 				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice])
 				{
+					printf("found a page\n");
 					i = -1;
 					break;
 				}
+				printf("Not this page\n");
 			}
 			if(i!=-1) { 
 				printf("got inside tho\n");
