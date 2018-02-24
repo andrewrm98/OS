@@ -463,7 +463,7 @@ int store (int pid, int address, int value) {
 		{
 			virtualFrame = address/16;
 			offset = address%16;																				// this assumes the input is an integer
-			if(currTable[virtualFrame].value >= 1)
+			if(currTable[virtualFrame].value < 1)
 			{
 				printf("ERROR: This file is not writable\n");
 				printf("permissions: %d\n", currTable[virtualFrame].value);
