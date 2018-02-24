@@ -248,7 +248,7 @@ int swapOut() // , int target)
 				printf("got inside tho\n");
 				memcpy(&swap, &swapTable, 16); 
 				//printf("Getpid swaptable: %d\n", getPID(swapTable));
-				ptRegister[getPID(swapTable)].ptLoc = -1;
+				ptRegister[processLord[evictionNotice]].ptLoc = -1;
 				freeTable[evictionNotice] = 1;
 				printf("Eviction notice: %d\n", evictionNotice);
 				/* Write swap to file*/
