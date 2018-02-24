@@ -18,7 +18,6 @@ typedef struct {
     u_int8_t validBit:1; 	//1 if valid
     u_int8_t value:1; 		//1 if can be written, 0 if read-only
     u_int8_t page:1; 		//page number ie frame
-    u_int8_t pid:1;			//pid
 } pageEntry;
 
 // page tables are indexed by their virtual frame
