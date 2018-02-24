@@ -220,8 +220,10 @@ int swapOut() // , int target)
 		{
 			printf("Free table: %d\n", freeTable[evictionNotice]);
 			memcpy(&swapTable, &memory[evictionNotice*16], 16);					// load the evicted page table or
+			printf("Hello\n");
 			for(i = 0; i<4; i++)
 			{
+				printf("Hello2\n");
 				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice])
 				{
 					printf("found a page\n");
