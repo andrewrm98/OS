@@ -247,7 +247,7 @@ int swapOut() // , int target)
 			if(checkPresentBits(swapTable)) { 
 				printf("got inside tho\n");
 				memcpy(&swap, &swapTable, 16); 
-				printf("Getpid swaptable: %d\n", getPID(swapTable));
+				//printf("Getpid swaptable: %d\n", getPID(swapTable));
 				ptRegister[getPID(swapTable)].ptLoc = -1;
 				freeTable[evictionNotice] = 1;
 				printf("Eviction notice: %d\n", evictionNotice);
