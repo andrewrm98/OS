@@ -466,6 +466,7 @@ int store (int pid, int address, int value) {
 			if(currTable[virtualFrame].value != 1)
 			{
 				printf("ERROR: This file is not writable\n");
+				printf("permissions: %d\n", currTable[virtualFrame].value);
 				return -1;
 			}
 			printf("Offset: %d\n", offset);
