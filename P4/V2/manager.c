@@ -95,7 +95,7 @@ int getPID(pageEntry* pageTable)
 /* checks the location at the offset (i) within the given page */
 int checkLoc(page* currPage, int i)
 {
-	if(currPage.values[i] == '\0') { return i; }								// check if the page is open
+	if(currPage->values[i] == '\0') { return i; }								// check if the page is open
 	else { return -1; }														// return -1 if the page is full	
 }
 
@@ -134,7 +134,7 @@ void printPage(page currPage)
 /* prints out the memory array */
 void printMem()
 {
-	pageEntry *currTablee = malloc(4*sizeof(pageEntry));;
+	pageEntry *currTable = malloc(4*sizeof(pageEntry));;
 	//initialize(currTable);
 	//int pid = 0;
 	page currPage;
