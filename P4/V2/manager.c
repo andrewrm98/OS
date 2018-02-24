@@ -450,7 +450,7 @@ int store (int pid, int address, int value) {
 			else         																							// we have a place to load
 			{
 				memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
-				if((check= checkLoc(currPage, offset)) != -1)
+				if((check= checkLoc(&currPage, offset)) != -1)
 				{
 					currPage.values[offset] = value;		 											    // store the value
 					printf("*** Process [%d] ***\n", pid);
@@ -540,7 +540,7 @@ int load (int pid, int address, int value)
 			}
 			else         																							// we have a place to load
 			{
-				if((check = checkLoc(currPage, offset)) == -1)
+				if((check = checkLoc(&currPage, offset)) == -1)
 				{
 					//value = currPage.values[offset];
 					printf("*** Process [%d] ***\n", pid);
