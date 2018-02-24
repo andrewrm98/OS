@@ -44,7 +44,7 @@ unsigned char evictor[16];
 int map (int pid, int address, int value);                                                          //finds a spot in mem for a process
 int store (int pid, int address, int value);
 int load (int pid, int address, int value);
-pageEntry * modifyTable(int presentBit, int validBit, int value, int page, int id, int pid); // enter in  the page table
+pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid); // enter in  the page table
 void masterFunction(int pid, char * instruction, int address, int value);                           // runs selected instruction
 void initialize(pageEntry * currTable, int pid);                                                             // initializes pageTable
 int findFree();                                                                                     // finds free loc in mem
@@ -62,9 +62,18 @@ void masterFunction (int process, char * instruction, int address, int value)
 }
 
 /* modifies the given table with the given information */
-pageEntry * modifyTable(int presentBit, int validBit, int value, int page, int id, int pid)
+pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid)
 {
-	pageEntry * currTable = malloc(4*sizeof(pageEntry));
+	pageEntry * editedTable = malloc(4*sizeof(pageEntry));
+
+	for(int i=0; i<4; i++)
+	{
+		editedTable[i].presentBit = currTable[i].presentBit;
+		editedTable[i].validBit = currTable[i].validBit;
+		editedTable[i].value = currTable[i].value;
+		editedTable[i].page = currTable[i].page;
+		editedTable[i].pid = currTable[i].pid;
+	}
 	currTable[id].presentBit = presentBit;
 	currTable[id].validBit = validBit;
     currTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
@@ -76,7 +85,7 @@ pageEntry * modifyTable(int presentBit, int validBit, int value, int page, int i
 /* initializes the given table */
 void initialize(pageEntry * currTable, int pid) 
 {
-	for (int i = 0; i<4; i++) { modifyTable(0, 0, -1, -1, i, pid); } // initialize every page entry
+	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i, pid); } // initialize every page entry
 }
 
 /* finds a free page in physical memory */
