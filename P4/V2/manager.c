@@ -18,37 +18,37 @@ typedef struct {
     unsigned char validBit; 	//1 if valid
     unsigned char value; 		//1 if can be written, 0 if read-only
     unsigned char page; 		//page number ie frame
-} pageEntry;
+} pageEntry;					// page tables are indexed by their virtual frame
 
-// page tables are indexed by their virtual frame
-
-typedef struct {
-	int valid;
-	int ptLoc;
+typedef struct {				// Holds a resgister to point to a page table
+	int valid;					// Is the page table valid
+	int ptLoc;					// Where is the page table.. -1 for on disc
 } reg;
 
-typedef struct {
-	unsigned char pid;
-	unsigned char values[15];
+typedef struct {				// holds a page of 16 unsigned chars
+	unsigned char pid;			// pid of the calling process
+	unsigned char values[15];	// each array element is like an "offset" within the page
 } page;
 
-unsigned char memory[64]; 	// memory
-reg ptRegister[4];	        // the page table registers, indexed by pid
-int freeTable[4] = {1,1,1,1};  // table of free physical frames... 1 for free, 0 for taken by page, 2 if taken by page table
-//FILE *swapFile; 			// disc
-unsigned char evictor[16];
-unsigned char processLord[4];
+unsigned char memory[64]; 		// memory
+reg ptRegister[4];	       		// the page table registers, indexed by pid
+int freeTable[4] = {1,1,1,1};  	// table of free physical frames... 1 for free, 0 for taken by page, 2 if taken by page table
+unsigned char processLord[4];	// Keeps track of pids in physical memory for reference
+
+static const char filename[] = "swapFile.txt";
 
 /********************************************************* FUNCTION DECLARATIONS *************************************************************/
 
 int map (int pid, int address, int value);                                                          //finds a spot in mem for a process
-int store (int pid, int address, int value);
-int load (int pid, int address, int value);
+int store (int pid, int address, int value);														// stores given value at address in a page with pid.
+int load (int pid, int address, int value);															// loads a value at address in a page with pid (value is meaningless)
 pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id); // enter in  the page table
 void masterFunction(int pid, char * instruction, int address, int value);                           // runs selected instruction
 void initialize(pageEntry * currTable);                                                             // initializes pageTable
 int findFree();                                                                                     // finds free loc in mem
 int checkLoc();                                                                                     // checks if page location is open
+void printTable(pageEntry* pageTable, int i);
+void printPage(page currPage);
 void printMem();																					// prints non-null values in memory array
 /******************************************************** HELPER FUNCTIONS *******************************************************************/
 /* runs selected instruction */
@@ -94,18 +94,6 @@ int findFree()
 	}
 	return -1; 
 }
-
-/* Gets the pid of a pagetable */
-/*int getPID(pageEntry* pageTable)
-{
-	for(int i = 0; i<4; i++)
-	{
-		if(pageTable[i].pid >=0)
-		{
-			return pageTable[i].pid;
-		}
-	}
-}*/
 
 /* checks the location at the offset (i) within the given page */
 int checkLoc(page* currPage, int i)
@@ -163,7 +151,6 @@ void printMem()
 			if(freeTable[i] == 2)
 			{	
 				memcpy(&currTable, &memory[i*16], 16);
-				//pid = getPID(currTable);
 				printTable(currTable, i);
 			}
 			else if (freeTable[i] == 0)
@@ -187,19 +174,7 @@ int findPageToEvict() {
  	return evictionNotice; 
 }
 
-/*int checkPresentBits(pageEntry *pageTable)
-{
-	for(int i = 0; i<4; i++)
-	{
-		if (pageTable[i].presentBit > 0)
-		{
-			return 0;
-		}
-		printf("presentBit: %d\n", pageTable[i].presentBit);
-	}
-	return 1;
-}*/
-
+/* finds the virtual frame that macthes the physicalFrame */
 int findVirtualFrame(pageEntry *pageTable, int physicalFrame)
 {
 	for(int i = 0; i<4; i++)
@@ -213,7 +188,7 @@ int findVirtualFrame(pageEntry *pageTable, int physicalFrame)
 }
 
   
-/*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
+/*************************************************** MAJOR INSTRUCTIONS *******************************************************************/
 
 /****** SWAP ******/
 
@@ -244,7 +219,7 @@ int swapOut() // , int target)
 		if(freeTable[evictionNotice] == 2)
 		{
 			printf("Free table: %d\n", freeTable[evictionNotice]);
-			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
+			memcpy(&swapTable, &memory[evictionNotice*16], 16);					// load the evicted page table or
 			for(i = 0; i<4; i++)
 			{
 				if(swapTable[i].validBit!=1)
@@ -256,14 +231,15 @@ int swapOut() // , int target)
 			if(i!=-1) { 
 				printf("got inside tho\n");
 				memcpy(&swap, &swapTable, 16); 
-				//printf("Getpid swaptable: %d\n", getPID(swapTable));
 				ptRegister[processLord[evictionNotice]].ptLoc = -1;
 				freeTable[evictionNotice] = 1;
 				printf("Eviction notice: %d\n", evictionNotice);
+
 				/* Write swap to file*/
 				FILE* hdd;
-				hdd = fopen("swapFile.txt", "a");
+				hdd = fopen(filename, "a");
 				fprintf(hdd, "%d", memory[(evictionNotice*16)]);
+
 				for(int i = 1; i < 16; i++){
 					fprintf(hdd, " %d", memory[(evictionNotice*16) + i]);
 				}
@@ -274,22 +250,26 @@ int swapOut() // , int target)
 			}
 			tries++;
 		}
-		else																						// load the evicted page
+		else																// load the evicted page
 		{
 			printf("Free table: %d\n", freeTable[evictionNotice]);
-			//printf("Eviction notice: %d\n", evictionNotice);
+			/* Copy the page to evict into swapPage */
 			memcpy(&swapPage, &memory[evictionNotice*16], 16);
 			thisId = swapPage.pid;
-			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);									// page table is guaranteed to be in memory
+			printf("PID&&&&&: %d\n", thisId);
+			/* Copy the page table to evict into evictedTable */
+			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);					// page table is guaranteed to be in memory
 			evictedVirtualFrame = findVirtualFrame(evictedTable, evictionNotice);
+			/* Copy swapPage into swap */
 			memcpy(&swap, &swapPage, 16); 
 			evictedTable[evictedVirtualFrame].presentBit = 0;
 			evictedTable[evictedVirtualFrame].page = -1;
+			/* Updating evicted page's table */
 			memcpy(&memory[ptRegister[thisId].ptLoc*16], &evictedTable, 16);
 			freeTable[evictionNotice] = 1;
 			/* Write swap to file*/
 			FILE* hdd;
-			hdd = fopen("swapFile.txt", "a");
+			hdd = fopen(filename, "a");
 			fprintf(hdd, "%d", memory[(evictionNotice*16)]);
 			for(int i = 1; i < 16; i++){
 				fprintf(hdd, " %d", memory[(evictionNotice*16) + i]);
@@ -308,39 +288,25 @@ void swapIn(int pid, int virtualFrame)
 	pageEntry currTable[4];
 	unsigned char swap2[16];
 	FILE * hdd;
-	hdd = fopen("swapFile.txt", "a");
+	hdd = fopen(filename, "a");
 	memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);
 	int evictionNotice = 0;
 	for(int i = 0; i<4; i++) { if(freeTable[i]==1) evictionNotice = i; }
-	//freeTable[evictionNotice] = 0;
-	/* Write evictor to memory */
-	while(1)
-	{
-		fread(swap2, sizeof(swap2), 1, hdd);
-		{
-			for(int i = 0; i<16; i++)
-			{
-				if(swap2[i] != evictor[i])
-				{
-					break;
-				}
-				else
-				{
-					memcpy(&memory[evictionNotice*16], &evictor, 16);
-					if(virtualFrame != -1)
-					{
-						currTable[virtualFrame].presentBit = 1;
-						freeTable[evictionNotice] = 0;
-					}
-					else
-					{
-						ptRegister[pid].ptLoc = -1;
-						freeTable[evictionNotice] = 2;
-					}
-				}
-			}
-		}
-	}
+
+    FILE *swapFile = fopen ( filename, "r" );
+    if (swapFile != NULL) {
+       unsigned char line [32];
+       while (fgets(line, sizeof line, swapFile) != NULL)
+       {
+          fputs (line, stdout);
+          if(line.)
+       }
+       fclose (swapFile);
+    }
+    else
+    {
+       perror (filename); 
+    }
 }
 
 
@@ -348,7 +314,7 @@ void swapIn(int pid, int virtualFrame)
 int map (int pid, int address, int value) 
 { 
 	printf("\n\n*** Mapping ***\n\n");
-	int virtualFrame = address/16; 																					// virtual address frame
+	int virtualFrame = address/16; 							// virtual address frame
 	pageEntry currTable[4];
 	page currPage;
 	int evictionNotice;
@@ -356,11 +322,11 @@ int map (int pid, int address, int value)
 	int i;
 	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
 	currPage.pid = pid;
-	//currPage.valid = -1;
 	int physicalFrame;
 	printf("Pid: %d\n", pid);
+
 	/*$$$ Get the Page Table Loaded $$$*/
-	if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) 													// if the table has been created
+	if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) 	// if the table has been created
 	{
 		memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);														// load the page table
 		printf("Got page table for PID [%d] from physical address [%d]\n\n", pid, memory[ptRegister[pid].ptLoc%16]);
@@ -373,10 +339,10 @@ int map (int pid, int address, int value)
 		processLord[evictionNotice] = pid;
 		swapIn(pid, -1);
 	}	
-	else																											// create a new page table for the new process
+	else															// create a new page table for the new process
 	{
-		ptRegister[pid].valid = 1;																					// this process now has a page table
-		ptRegister[pid].ptLoc = findFree();																			// set to its location in physical memory
+		ptRegister[pid].valid = 1;									// this process now has a page table
+		ptRegister[pid].ptLoc = findFree();							// set to its location in physical memory
 		printf("value: %i\n", ptRegister[pid].ptLoc);
 		printf("Pid: %d\n", pid);
 		if(ptRegister[pid].ptLoc == -1)
@@ -391,30 +357,27 @@ int map (int pid, int address, int value)
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
 		printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
 		freeTable[ptRegister[pid].ptLoc] = 2;
-		 // store the page table in memory
 		printf("Pid: %d\n", pid);
 	}
 
 	/*$$$ Get the page loaded into memory $$$*/
-	if((i = currTable[virtualFrame].validBit) != -1)																// if the requested virtual space is not in use 																												// if there is space in the page table
+	if((i = currTable[virtualFrame].validBit) != -1)			// if the requested virtual space is not in use 																												// if there is space in the page table
 	{
 		printf("There is space in the page table\n");
 
-		while((physicalFrame = findFree()) == -1 && ptRegister[pid].ptLoc != physicalFrame)																	// find free spot in physical memory
+		while((physicalFrame = findFree()) == -1 && ptRegister[pid].ptLoc != physicalFrame)		// find free spot in physical memory
 		{
 			printf("Swapping (map3)\n");
 			swapOut();
 			physicalFrame = findFree();
 		}
 		printf("PF: %d\n", physicalFrame);													
-		//initialize(currTable, pid);
 		currTable[virtualFrame].page = physicalFrame;										// add the new values for this PTE
 		currTable[virtualFrame].presentBit = 1;
 		currTable[virtualFrame].validBit = 1;
     	currTable[virtualFrame].value = value;		          						 // not indexing by pid anymore, index by virtualFrame #
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);
 		printf("&&&&&&&&&&&&&&Currpage pid: %d\n", currPage.pid);
-		//currPage.valid = 1;	
 		processLord[physicalFrame] = pid;
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);													// store the new page in physical memory
@@ -423,7 +386,7 @@ int map (int pid, int address, int value)
 		freeTable[physicalFrame] = 0;
 
 	}
-	else 																											// no space in virtual memory for this process
+	else 					// no space in virtual memory for this process
 	{ 
 		printf("No room in virtual memory for process %d\n", pid); 
 		// printMem();
@@ -448,7 +411,6 @@ int store (int pid, int address, int value) {
 	page currPage;
 	for(i = 0; i<15; i++) { currPage.values[i] = '0'; }
 	currPage.pid = pid;
-	//currPage.valid = -1;
 	int pg = 0;
 
 	/* Check if the address is valid */
@@ -462,14 +424,14 @@ int store (int pid, int address, int value) {
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$ */
-		memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);														// load the page table
+		memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);				// load the page table
 		printf("Page table loaded at location: %d\n", ptRegister[pid].ptLoc);
 		if(currTable == NULL) {
 			printf("ERROR: Invalid load\n");
 			return -1;
 		}
 		virtualFrame = address/16;
-		offset = address%16;																				// this assumes the input is an integer
+		offset = address%16;													// this assumes the input is an integer
 		/*if(currTable[virtualFrame].value < 1)
 		{
 			printf("ERROR: This file is not writable\n");
@@ -479,7 +441,7 @@ int store (int pid, int address, int value) {
 		printf("Offset: %d\n", offset);
 		printf("Value before store: %d\n", currPage.values[offset]);
 
-		if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
+		if((pg = currTable[virtualFrame].page) == -1) 							// if no place to load
 		{ 
 			printf("ERROR: Nothing to load in processes [%d] virtual memory\n", pid); 
 		}
@@ -490,12 +452,12 @@ int store (int pid, int address, int value) {
 			processLord[evictionNotice] = pid;
 			swapIn(pid, virtualFrame);
 		}
-		else         																							// we have a place to load
+		else         															// we have a place to load
 		{
-			memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
+			memcpy(&currPage, &memory[pg*16], 16); 								// loads the page
 			if((check= checkLoc(&currPage, offset)) != -1)
 			{
-				currPage.values[offset] = value;		 											    // store the value
+				currPage.values[offset] = value;		 						// store the value
 				printf("*** Process [%d] ***\n", pid);
 				printf("Virtual frame [%d]\n", virtualFrame);
 				printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
@@ -535,7 +497,6 @@ int load (int pid, int address, int value)
 	page currPage;
 	for(i = 0; i<15; i++) { currPage.values[i] = '0'; }
 	currPage.pid = pid;
-	//currPage.valid = -1;
 	int pg = 0;
 	
 	if(ptRegister[pid].ptLoc == -1)
@@ -550,7 +511,7 @@ int load (int pid, int address, int value)
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$ */
-		memcpy(&currTable, &memory[ptRegister[pid].ptLoc], 16);														// load the page table
+		memcpy(&currTable, &memory[ptRegister[pid].ptLoc], 16);							// load the page table
 		printf("Page table loaded at location: %d\n", ptRegister[pid].ptLoc);
 		if(currTable == NULL) {
 			printf("ERROR: Invalid load\n");
@@ -562,9 +523,9 @@ int load (int pid, int address, int value)
 			virtualFrame = address/16;
 			offset = address%16;
 			printf("Offset: %d\n", offset);
-			printf("Value before load: %d\n", currPage.values[offset]);						      													// this assumes the input is an integer
+			printf("Value before load: %d\n", currPage.values[offset]);						    
 
-			if((pg = currTable[virtualFrame].page) == -1) 															// if no place to load
+			if((pg = currTable[virtualFrame].page) == -1) 					// if no place to load
 			{ 
 					printf("*** Process [%d] ***\n", pid);
 					printf("404: page not found (1)\n");
@@ -578,7 +539,7 @@ int load (int pid, int address, int value)
 				processLord[evictionNotice] = pid;
 				swapIn(pid, virtualFrame);
 			}
-			else         																							// we have a place to load
+			else         												// we have a place to load
 			{
 				if((check = checkLoc(&currPage, offset)) == -1)
 				{
@@ -635,7 +596,6 @@ int main(int argc, char **argv)
 	char* instruction; 													//instruction type
 	int address; 														// virtual address
 	int value;															// value
-	//swapFile = fopen("swapFile", "a+"); //create and open the file swapFile
 	printf("Swapping Table to Output File\n");
 
 	for(int i=0; i<4; i++) { 
