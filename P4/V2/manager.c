@@ -267,22 +267,14 @@ int swapOut() // , int target)
 			printf("Free table: %d\n", freeTable[evictionNotice]);
 			//printf("Eviction notice: %d\n", evictionNotice);
 			memcpy(&swapPage, &memory[evictionNotice*16], 16);
-			printf("Hi1\n");
 			thisId = swapPage.pid;
-			printf("pid: %d\n", thisId);
-			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);
-			printf("Hi2\n");									// page table is guaranteed to be in memory
+			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);									// page table is guaranteed to be in memory
 			evictedVirtualFrame = findVirtualFrame(evictedTable, evictionNotice);
-			printf("Hi33\n");
 			memcpy(&swap, &swapPage, 16); 
-			printf("Hi3\n");
 			evictedTable[evictedVirtualFrame].presentBit = 0;
 			evictedTable[evictedVirtualFrame].page = -1;
 			memcpy(&memory[ptRegister[thisId].ptLoc*16], &evictedTable, 16);
-			printf("Hi4\n");
 			freeTable[evictionNotice] = 1;
-			printf("Eviction notice: %d\n", evictionNotice);
-			printf("Hi5\n");
 			/* Write swap to file*/
 			for(int i = 0; i<16; i++)
 			{
@@ -459,56 +451,48 @@ int store (int pid, int address, int value) {
 			printf("ERROR: Invalid load\n");
 			return -1;
 		}
-		if(i != -1)
+		virtualFrame = address/16;
+		offset = address%16;																				// this assumes the input is an integer
+		/*if(currTable[virtualFrame].value < 1)
 		{
-			virtualFrame = address/16;
-			offset = address%16;																				// this assumes the input is an integer
-			if(currTable[virtualFrame].value < 1)
-			{
-				printf("ERROR: This file is not writable\n");
-				printf("permissions: %d\n", currTable[virtualFrame].value);
-				return -1;
-			}
-			printf("Offset: %d\n", offset);
-			printf("Value before store: %d\n", currPage.values[offset]);
-
-			if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
-			{ 
-				printf("ERROR: Nothing to load in processes [%d] virtual memory\n", pid); 
-			}
-			else if (currTable[virtualFrame].presentBit == 0)
-			{
-				printf("Swapping (store2)\n");
-				evictionNotice = swapOut();
-				processLord[evictionNotice] = pid;
-				swapIn(pid, virtualFrame);
-			}
-			else         																							// we have a place to load
-			{
-				memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
-				if((check= checkLoc(&currPage, offset)) != -1)
-				{
-					currPage.values[offset] = value;		 											    // store the value
-					printf("*** Process [%d] ***\n", pid);
-					printf("Virtual frame [%d]\n", virtualFrame);
-					printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
-					memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);
-					printf("ptLoc: %d\n", ptRegister[pid].ptLoc);
-					memcpy(&memory[pg*16], &currPage, 16);
-					printf("pg*16: %d\n", pg*16);
-					printf("Updated the page in physical memory\n");
-				}
-				else
-				{
-					printf("ERROR: No more memory available\n");
-					// update page?
-				}
-			}
-		}
-		else
-		{
-			printf("ERROR: MAXIMUM PROCESSES EXCEEDED\n");
+			printf("ERROR: This file is not writable\n");
+			printf("permissions: %d\n", currTable[virtualFrame].value);
 			return -1;
+		}*/
+		printf("Offset: %d\n", offset);
+		printf("Value before store: %d\n", currPage.values[offset]);
+
+		if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
+		{ 
+			printf("ERROR: Nothing to load in processes [%d] virtual memory\n", pid); 
+		}
+		else if (currTable[virtualFrame].presentBit == 0)
+		{
+			printf("Swapping (store2)\n");
+			evictionNotice = swapOut();
+			processLord[evictionNotice] = pid;
+			swapIn(pid, virtualFrame);
+		}
+		else         																							// we have a place to load
+		{
+			memcpy(&currPage, &memory[pg*16], 16); 																// loads the page
+			if((check= checkLoc(&currPage, offset)) != -1)
+			{
+				currPage.values[offset] = value;		 											    // store the value
+				printf("*** Process [%d] ***\n", pid);
+				printf("Virtual frame [%d]\n", virtualFrame);
+				printf("Value stored at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
+				memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);
+				printf("ptLoc: %d\n", ptRegister[pid].ptLoc);
+				memcpy(&memory[pg*16], &currPage, 16);
+				printf("pg*16: %d\n", pg*16);
+				printf("Updated the page in physical memory\n");
+			}
+			else
+			{
+				printf("ERROR: No more memory available\n");
+				// update page?
+			}
 		}
 	}
 	else
