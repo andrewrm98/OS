@@ -247,7 +247,7 @@ int swapOut() // , int target)
 			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
 			for(i = 0; i<4; i++)
 			{
-				if(swapTable[i].presentBit==1)
+				if(swapTable[i].validBit!=1)
 				{
 					i = -1;
 					break;
