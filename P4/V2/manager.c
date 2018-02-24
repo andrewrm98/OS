@@ -224,7 +224,7 @@ int swapOut() // , int target)
 			for(i = 0; i<4; i++)
 			{
 				printf("Hello2\n");
-				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice])
+				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice)
 				{
 					printf("found a page\n");
 					i = -1;
