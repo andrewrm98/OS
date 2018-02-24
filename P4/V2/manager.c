@@ -142,8 +142,8 @@ void printPage(page currPage)
 /* prints out the memory array */
 void printMem()
 {
-	pageEntry *currTable = malloc(4*sizeof(pageEntry));;
-	//initialize(currTable);
+	pageEntry currTable[4];
+	initialize(currTable);
 	//int pid = 0;
 	page currPage;
 	for(int i = 0; i<15; i++) { currPage.values[i] = '0'; }
@@ -218,7 +218,7 @@ int swapOut() // , int target)
 
 	int tries = 0;
 	int evictionNotice = 0;
-	pageEntry * swapTable = malloc(4*sizeof(pageEntry));
+	pageEntry currTable[4];
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
@@ -282,7 +282,7 @@ int swapOut() // , int target)
 
 void swapIn(int pid, int virtualFrame)
 {
-	pageEntry *currTable = malloc(4*sizeof(pageEntry));
+	pageEntry currTable[4];
 	unsigned char swap2[16];
 	memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);
 	int evictionNotice = 0;
