@@ -184,7 +184,7 @@ int checkPresentBits(pageEntry *pageTable)
 {
 	for(int i = 0; i<4; i++)
 	{
-		if (pageTable[i].presentBit == 1)
+		if (pageTable[i].presentBit > 0)
 		{
 			return 0;
 		}
