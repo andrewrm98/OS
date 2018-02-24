@@ -163,7 +163,7 @@ void printMem()
 			if(freeTable[i] == 2)
 			{	
 				memcpy(&currTable, &memory[i*16], 16);
-				pid = getPID(currTable);
+				//pid = getPID(currTable);
 				printTable(currTable, i);
 			}
 			else if (freeTable[i] == 0)
@@ -342,6 +342,7 @@ int map (int pid, int address, int value)
 	int virtualFrame = address/16; 																					// virtual address frame
 	pageEntry currTable[4];
 	page currPage;
+	int evictionNotice;
 	initialize(currTable);
 	int i;
 	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
@@ -525,6 +526,7 @@ int load (int pid, int address, int value)
 	printf("\n\n*** Loading ***\n\n");
 	pageEntry* currTable = malloc(4*sizeof(pageEntry));
 	int virtualFrame;
+	int evictionNotice;
 	int offset;
 	int check;
 	int i = 0;
