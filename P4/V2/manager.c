@@ -227,7 +227,7 @@ int swapOut(int pid) // , int target)
 				//printf("Hello2\n");
 				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice &&  processLord[i] != pid)
 				{
-					printf("processLord : %d\n", processLord[evictionNotice]);
+					printf("processLord [%d]: %d\n", i, processLord[evictionNotice]);
 					printf("pid : %d\n", pid);
 					i = -1;
 					break;
