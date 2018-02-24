@@ -247,7 +247,7 @@ int swapOut() // , int target)
 			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
 			for(i = 0; i<4; i++)
 			{
-				if(swapTable[i].validBit==1)
+				if(swapTable[i].presentBit==1)
 				{
 					i = -1;
 					break;
@@ -392,7 +392,7 @@ int map (int pid, int address, int value)
 	{
 		printf("There is space in the page table\n");
 
-		if((physicalFrame = findFree()) == -1)																	// find free spot in physical memory
+		while((physicalFrame = findFree()) == -1 && ptRegister[pid].ptLoc != physicalFrame)																	// find free spot in physical memory
 		{
 			printf("Swapping (map3)\n");
 			swapOut();
