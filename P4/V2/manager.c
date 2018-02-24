@@ -360,7 +360,7 @@ int map (int pid, int address, int value)
 			ptRegister[pid].ptLoc = findFree();
 		}
 		printf("ptLoc: %d\n\n\n", ptRegister[pid].ptLoc);
-		initialize(currTable,pid);
+		initialize(currTable);
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
 		printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
 		freeTable[ptRegister[pid].ptLoc] = 2;
