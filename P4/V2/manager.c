@@ -259,20 +259,20 @@ int swapOut() // , int target)
 			printf("Free table: %d\n", freeTable[evictionNotice]);
 			//printf("Eviction notice: %d\n", evictionNotice);
 			memcpy(&swapPage, &memory[evictionNotice*16], 16);
-			printf(__LINE__);
+			printf("Hi1\n");
 			thisId = swapPage.pid;
 			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);
-			printf(__LINE__);										// page table is guaranteed to be in memory
+			printf("Hi2\n");									// page table is guaranteed to be in memory
 			evictedVirtualFrame = findVirtualFrame(evictedTable, evictionNotice);
 			memcpy(&swap, &swapPage, 16); 
-			printf(__LINE__);
+			printf("Hi3\n");
 			evictedTable[evictedVirtualFrame].presentBit = 0;
 			evictedTable[evictedVirtualFrame].page = -1;
 			memcpy(&memory[ptRegister[thisId].ptLoc*16], &evictedTable, 16);
-			printf(__LINE__);
+			printf("Hi4\n");
 			freeTable[evictionNotice] = 1;
 			printf("Eviction notice: %d\n", evictionNotice);
-			printf(__LINE__);
+			printf("Hi5\n");
 			/* Write swap to file*/
 			for(int i = 0; i<16; i++)
 			{
