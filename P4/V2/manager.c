@@ -324,7 +324,7 @@ int map (int pid, int address, int value)
 { 
 	printf("\n\n*** Mapping ***\n\n");
 	int virtualFrame = address/16; 																					// virtual address frame
-	pageEntry* currTable = malloc(4*sizeof(pageEntry));
+	pageEntry currTable[4];
 	page currPage;
 	//initialize(currTable, pid);
 	int i;
