@@ -61,7 +61,7 @@ void masterFunction (int process, char * instruction, int address, int value)
 }
 
 /* modifies the given table with the given information */
-pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid)
+pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id)
 {
 	pageEntry * editedTable = malloc(4*sizeof(pageEntry));
 
@@ -71,13 +71,11 @@ pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int
 		editedTable[i].validBit = currTable[i].validBit;
 		editedTable[i].value = currTable[i].value;
 		editedTable[i].page = currTable[i].page;
-		editedTable[i].pid = currTable[i].pid;
 	}
 	editedTable[id].presentBit = presentBit;
 	editedTable[id].validBit = validBit;
     editedTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
     editedTable[id].page = page;
-    editedTable[id].pid = pid;
     return editedTable;
 }
 
@@ -99,7 +97,7 @@ int findFree()
 /* Gets the pid of a pagetable */
 int getPID(pageEntry* pageTable)
 {
-	return pageTable[0].pid;
+	return 0;
 }
 
 /* checks the location at the offset (i) within the given page */
