@@ -256,6 +256,7 @@ int swapOut() // , int target)
 			/* Copy the page to evict into swapPage */
 			memcpy(&swapPage, &memory[evictionNotice*16], 16);
 			thisId = processLord[evictionNotice];
+			printf("Eviction notice: %d\n", evictionNotice);
 			printf("PID&&&&&: %d\n", thisId);
 			/* Copy the page table to evict into evictedTable */
 			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);					// page table is guaranteed to be in memory
