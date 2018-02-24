@@ -261,7 +261,7 @@ int swapOut() // , int target)
 			memcpy(&swapPage, &memory[evictionNotice*16], 16);
 			printf("Hi1\n");
 			thisId = swapPage.pid;
-			printf("pid: %d\n", thidId);
+			printf("pid: %d\n", thisId);
 			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);
 			printf("Hi2\n");									// page table is guaranteed to be in memory
 			evictedVirtualFrame = findVirtualFrame(evictedTable, evictionNotice);
