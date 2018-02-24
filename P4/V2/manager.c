@@ -79,7 +79,7 @@ pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int
     currTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
     currTable[id].page = page;
     currTable[id].pid = pid;
-    return currTable;
+    return editedTable;
 }
 
 /* initializes the given table */
