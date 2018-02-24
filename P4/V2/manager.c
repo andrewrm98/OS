@@ -219,7 +219,7 @@ int swapOut() // , int target)
 		if(freeTable[evictionNotice] == 2)
 		{
 			printf("Free table: %d\n", freeTable[evictionNotice]);
-			//memcpy(&swapTable, &memory[evictionNotice*16], 16);					// load the evicted page table or
+			memcpy(&swapTable, &memory[evictionNotice*16], 16);					// load the evicted page table or
 			printf("Hello\n");
 			for(i = 0; i<4; i++)
 			{
