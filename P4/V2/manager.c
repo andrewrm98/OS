@@ -82,7 +82,7 @@ pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int
 /* initializes the given table */
 void initialize(pageEntry * currTable, int pid) 
 {
-	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i, pid); } // initialize every page entry
+	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i); } // initialize every page entry
 }
 
 /* finds a free page in physical memory */
@@ -110,7 +110,7 @@ int checkLoc(page* currPage, int i)
 /* prints out a page table */
 void printTable(pageEntry* pageTable)
 {
-	printf("\tPage Table for process [%d]\n", pageTable[0].pid);
+	printf("\tPage Table for process [%d]\n", 6);
 	for(int i = 0; i< 4; i++)
 	{
 		if(pageTable[i].validBit == 1)
@@ -381,7 +381,7 @@ int map (int pid, int address, int value)
 		}
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
-		currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame, pid);
+		currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);
 		//currTable[virtualFrame].page = physicalFrame;										// add the new values for this PTE
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);
 		//currPage.valid = 1;	
