@@ -93,14 +93,14 @@ int getPID(pageEntry* pageTable)
 }
 
 /* checks the location at the offset (i) within the given page */
-int checkLoc(page currPage, int i)
+int checkLoc(page* currPage, int i)
 {
 	if(currPage.values[i] == '\0') { return i; }								// check if the page is open
 	else { return -1; }														// return -1 if the page is full	
 }
 
 /* prints out a page table */
-void printTable(pageEntry pageTable[4])
+void printTable(pageEntry* pageTable)
 {
 	printf("\tPage Table for process [%d]\n", pageTable[0].pid);
 	for(int i = 0; i< 4; i++)
@@ -134,7 +134,7 @@ void printPage(page currPage)
 /* prints out the memory array */
 void printMem()
 {
-	pageEntry currTable[4];
+	pageEntry *currTablee = malloc(4*sizeof(pageEntry));;
 	//initialize(currTable);
 	//int pid = 0;
 	page currPage;
@@ -210,7 +210,7 @@ int swapOut() // , int target)
 
 	int tries = 0;
 	int evictionNotice = 0;
-	pageEntry swapTable [4];
+	pageEntry * swapTablee = malloc(4*sizeof(pageEntry));
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
@@ -274,7 +274,7 @@ int swapOut() // , int target)
 
 void swapIn(int pid, int virtualFrame)
 {
-	pageEntry *currTable;
+	pageEntry *currTable = malloc(4*sizeof(pageEntry));
 	unsigned char swap2[16];
 	memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);
 	int evictionNotice = 0;
@@ -316,7 +316,7 @@ int map (int pid, int address, int value)
 { 
 	printf("\n\n*** Mapping ***\n\n");
 	int virtualFrame = address/16; 																					// virtual address frame
-	pageEntry* currTable;
+	pageEntry* currTablee = malloc(4*sizeof(pageEntry));
 	page currPage;
 	initialize(currTable, pid);
 	int i;
@@ -398,7 +398,7 @@ int map (int pid, int address, int value)
 /****** STORE  ******/
 int store (int pid, int address, int value) { 
 	printf("\n\n*** Storing ***\n\n");
-	pageEntry *currTable;
+	pageEntry *currTablee = malloc(4*sizeof(pageEntry));
 	int virtualFrame;
 	int offset;
 	int check;
@@ -489,7 +489,7 @@ int store (int pid, int address, int value) {
 int load (int pid, int address, int value) 
 { 
 	printf("\n\n*** Loading ***\n\n");
-	pageEntry* currTable;
+	pageEntry* currTablee = malloc(4*sizeof(pageEntry));
 	int virtualFrame;
 	int offset;
 	int check;
