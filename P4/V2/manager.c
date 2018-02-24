@@ -316,7 +316,7 @@ void swapIn(int pid, int virtualFrame)
 	/* Write evictor to memory */
 	while(1)
 	{
-		fread(swap2, sizeof(swap2), 1, swapFile);
+		fread(swap2, sizeof(swap2), 1, hdd);
 		{
 			for(int i = 0; i<16; i++)
 			{
