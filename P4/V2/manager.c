@@ -222,7 +222,7 @@ int swapOut() // , int target)
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
-	pageEntry *evictedTable;
+	pageEntry evictedTable[4];
 	int evictedVirtualFrame;			
 
 	/* Find a page to evict, make sure pages are evicted before their page tables */
