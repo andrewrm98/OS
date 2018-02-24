@@ -373,7 +373,7 @@ int map (int pid, int address, int value)
 		}
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
-		modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame, pid);
+		//modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame, pid);
 		currTable[virtualFrame].page = physicalFrame;										// add the new values for this PTE
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);	
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
