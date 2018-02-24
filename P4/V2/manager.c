@@ -299,7 +299,7 @@ void swapIn(int pid, int virtualFrame)
        while (fgets(line, sizeof line, swapFile) != NULL)
        {
           fputs (line, stdout);
-          if(line.)
+          //if(line.)
        }
        fclose (swapFile);
     }
