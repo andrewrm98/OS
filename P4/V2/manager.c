@@ -326,7 +326,7 @@ int map (int pid, int address, int value)
 	int virtualFrame = address/16; 																					// virtual address frame
 	pageEntry currTable[4];
 	page currPage;
-	initialize(currTable, pid);
+	initialize(currTable);
 	int i;
 	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
 	//currPage.pid = pid;
@@ -409,7 +409,8 @@ int map (int pid, int address, int value)
 /****** STORE  ******/
 int store (int pid, int address, int value) { 
 	printf("\n\n*** Storing ***\n\n");
-	pageEntry *currTable = malloc(4*sizeof(pageEntry));
+	pageEntry currTable[4];
+	initialize(currTable);
 	int virtualFrame;
 	int offset;
 	int check;
