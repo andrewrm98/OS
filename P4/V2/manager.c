@@ -170,7 +170,7 @@ void printMem()
 /* Returns a physical frame to evict using a random strategy */
 int findPageToEvict() {
  	int evictionNotice = rand() %4; 
- 	printf("Eviction notice in evict: %d\n", evictionNotice);
+ 	//printf("Eviction notice in evict: %d\n", evictionNotice);
  	return evictionNotice; 
 }
 
