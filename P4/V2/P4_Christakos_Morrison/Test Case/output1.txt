@@ -1,0 +1,103 @@
+******************************************************
+****** WELCOME TO VIRTUAL MEMORY SIMULATOR 2.0 	******
+******      (Please don't touch anything...)	******
+******************************************************
+
+Input format is : pid,instruction,address,value 
+
+                  *************
+                  * Have fun! *
+                  *************
+
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'map', address: [0], value: [0] 
+Put page table for PID 0 into physical frame 0
+Process 0's address 0's table is at: 0
+Mapped virtual address 0 into physical frame 1!!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'map', address: [18], value: [1] 
+Process 0's address 18's table is at: 0
+Mapped virtual address 18 into physical frame 2!!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'map', address: [34], value: [1] 
+Process 0's address 34's table is at: 0
+Mapped virtual address 34 into physical frame 3!!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [12], value: [24] 
+Process 0's address 12's table is at: 0
+ERROR: You can't write to this page
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'map', address: [0], value: [1] 
+Updating permissions for virtual page 0
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [20], value: [180] 
+Process 0's address 20's table is at: 0
+Stored value 180 at virtual address 20 (physical frame: 2)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [32], value: [21] 
+Process 0's address 32's table is at: 0
+Stored value 21 at virtual address 32 (physical frame: 3)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [5], value: [11] 
+Process 0's address 5's table is at: 0
+Stored value 11 at virtual address 5 (physical frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [12], value: [24] 
+Process 0's address 12's table is at: 0
+Stored value 24 at virtual address 12 (physical frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [5], value: [0] 
+Process 0's address 5's table is at: 0
+The value 11 is stored at virtual address 5 (physcial frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [32], value: [0] 
+Process 0's address 32's table is at: 0
+The value 21 is stored at virtual address 32 (physcial frame: 3)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [20], value: [0] 
+Process 0's address 20's table is at: 0
+The value 180 is stored at virtual address 20 (physcial frame: 2)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [12], value: [0] 
+Process 0's address 12's table is at: 0
+The value 24 is stored at virtual address 12 (physcial frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'map', address: [48], value: [1] 
+Process 0's address 48's table is at: 0
+Swapped out page 1 to swapFile line: 1
+Mapped virtual address 48 into physical frame 1!!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'store', address: [50], value: [51] 
+Process 0's address 50's table is at: 0
+Stored value 51 at virtual address 50 (physical frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [50], value: [0] 
+Process 0's address 50's table is at: 0
+The value 51 is stored at virtual address 50 (physcial frame: 1)!
+
+Instruction? 
+You Entered: PID: [0], Instruction: 'load', address: [5], value: [0] 
+Process 0's address 5's table is at: 0
+Swapped out page 2 to swapFile line: 2
+
+Swapped into page 2 from swapFile line: 1
+The value 11 is stored at virtual address 5 (physcial frame: 2)!
+
+Instruction? 
+End of File Reached
