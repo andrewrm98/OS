@@ -96,7 +96,7 @@ int findFree()
 }
 
 /* Gets the pid of a pagetable */
-int getPID(pageEntry* pageTable)
+/*int getPID(pageEntry* pageTable)
 {
 	for(int i = 0; i<4; i++)
 	{
@@ -105,7 +105,7 @@ int getPID(pageEntry* pageTable)
 			return pageTable[i].pid;
 		}
 	}
-}
+}*/
 
 /* checks the location at the offset (i) within the given page */
 int checkLoc(page* currPage, int i)
@@ -115,9 +115,9 @@ int checkLoc(page* currPage, int i)
 }
 
 /* prints out a page table */
-void printTable(pageEntry* pageTable)
+void printTable(pageEntry* pageTable, int i)
 {
-	printf("\tPage Table for process [%d]\n", 6);
+	printf("\tPage Table for process [%d]\n", processLord[i]);
 	for(int i = 0; i< 4; i++)
 	{
 		if(pageTable[i].validBit == 1)
@@ -164,7 +164,7 @@ void printMem()
 			{	
 				memcpy(&currTable, &memory[i*16], 16);
 				pid = getPID(currTable);
-				printTable(currTable);
+				printTable(currTable, i);
 			}
 			else if (freeTable[i] == 0)
 			{
