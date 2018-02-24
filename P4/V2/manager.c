@@ -143,7 +143,7 @@ void printPage(page currPage)
 void printMem()
 {
 	pageEntry currTable[4];
-	initialize(currTable);
+	//initialize(currTable);
 	//int pid = 0;
 	page currPage;
 	for(int i = 0; i<15; i++) { currPage.values[i] = '0'; }
@@ -218,7 +218,7 @@ int swapOut() // , int target)
 
 	int tries = 0;
 	int evictionNotice = 0;
-	pageEntry currTable[4];
+	pageEntry swapTable[4];
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
