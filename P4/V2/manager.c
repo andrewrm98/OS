@@ -352,7 +352,7 @@ int map (int pid, int address, int value)
 			ptRegister[pid].ptLoc = findFree();
 		}
 		printf("ptLoc: %d\n\n\n", ptRegister[pid].ptLoc);
-		modifyTable(currTable, 1, 1, value, ptRegister[pid].ptLoc, virtualFrame, pid);
+		//modifyTable(currTable, 1, 1, value, ptRegister[pid].ptLoc, virtualFrame, pid);
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
 		printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
 		freeTable[ptRegister[pid].ptLoc] = 2;
@@ -373,7 +373,7 @@ int map (int pid, int address, int value)
 		}
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
-		//modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame, pid);
+		modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame, pid);
 		currTable[virtualFrame].page = physicalFrame;										// add the new values for this PTE
 		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);	
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
