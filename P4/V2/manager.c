@@ -38,7 +38,8 @@ unsigned char processLord[4];	// Keeps track of pids in physical memory for refe
 static const char filename[] = "swapFile.txt";
 
 /********************************************************* FUNCTION DECLARATIONS *************************************************************/
-
+int swapOut(int pid);
+void swapIn(int pid, int virtualFrame);
 int map (int pid, int address, int value);                                                          //finds a spot in mem for a process
 int store (int pid, int address, int value);														// stores given value at address in a page with pid.
 int load (int pid, int address, int value);															// loads a value at address in a page with pid (value is meaningless)
@@ -192,7 +193,7 @@ int findVirtualFrame(pageEntry *pageTable, int physicalFrame)
 
 /****** SWAP ******/
 
-int swapOut() // , int target)
+int swapOut(int pid) // , int target)
 {
 	// 1 - find a page to evict
 	// 2 - evict that page 
@@ -224,7 +225,7 @@ int swapOut() // , int target)
 			for(i = 0; i<4; i++)
 			{
 				//printf("Hello2\n");
-				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice)
+				if(processLord[i] == processLord[evictionNotice] && i != evictionNotice &&  processLord[i] != pid)
 				{
 					//printf("found a page\n");
 					i = -1;
@@ -345,7 +346,7 @@ int map (int pid, int address, int value)
 	{
 		/* Perform swapping */
 		//printf("Swapping (map1)\n");
-		evictionNotice = swapOut();
+		evictionNotice = swapOut(pid);
 		processLord[evictionNotice] = pid;
 		swapIn(pid, -1);
 	}	
@@ -358,14 +359,14 @@ int map (int pid, int address, int value)
 		if(ptRegister[pid].ptLoc == -1)
 		{
 			//printf("Swapping (map2)\n");
-			swapOut();
+			swapOut(pid);
 			ptRegister[pid].ptLoc = findFree();
 		}
 		//printf("ptLoc: %d\n\n\n", ptRegister[pid].ptLoc);
 		initialize(currTable);
 		processLord[ptRegister[pid].ptLoc] = pid;
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
-		printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
+		printf("New page table created and stored at physical frame [%d]\n", ptRegister[pid].ptLoc);
 		freeTable[ptRegister[pid].ptLoc] = 2;
 		//printf("Pid: %d\n", pid);
 	}
@@ -378,7 +379,7 @@ int map (int pid, int address, int value)
 		while((physicalFrame = findFree()) == -1 && ptRegister[pid].ptLoc != physicalFrame)		// find free spot in physical memory
 		{
 			//printf("Swapping (map3)\n");
-			swapOut();
+			swapOut(pid);
 			physicalFrame = findFree();
 		}
 		//printf("PF: %d\n", physicalFrame);													
@@ -427,7 +428,7 @@ int store (int pid, int address, int value) {
 	if(ptRegister[pid].ptLoc == -1)
 	{
 		//printf("Swapping (store1)\n");
-		evictionNotice = swapOut();
+		evictionNotice = swapOut(pid);
 		processLord[evictionNotice] = pid;
 		swapIn(pid, -1);
 	}
@@ -458,7 +459,7 @@ int store (int pid, int address, int value) {
 		else if (currTable[virtualFrame].presentBit == 0)
 		{
 			//printf("Swapping (store2)\n");
-			evictionNotice = swapOut();
+			evictionNotice = swapOut(pid);
 			processLord[evictionNotice] = pid;
 			swapIn(pid, virtualFrame);
 		}
@@ -512,7 +513,7 @@ int load (int pid, int address, int value)
 	if(ptRegister[pid].ptLoc == -1)
 	{
 		//printf("Swapping (load1)\n");
-		evictionNotice = swapOut();
+		evictionNotice = swapOut(pid);
 		processLord[evictionNotice] = pid;
 		swapIn(pid, -1);
 	}
@@ -545,7 +546,7 @@ int load (int pid, int address, int value)
 			else if (currTable[virtualFrame].presentBit == 0)
 			{
 				//printf("Swapping (load2)\n");
-				evictionNotice = swapOut();
+				evictionNotice = swapOut(pid);
 				processLord[evictionNotice] = pid;
 				swapIn(pid, virtualFrame);
 			}
