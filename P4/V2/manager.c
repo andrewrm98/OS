@@ -210,7 +210,7 @@ int swapOut() // , int target)
 
 	int tries = 0;
 	int evictionNotice = 0;
-	pageEntry * swapTablee = malloc(4*sizeof(pageEntry));
+	pageEntry * swapTable = malloc(4*sizeof(pageEntry));
 	page swapPage;
 	unsigned char swap[16];
 	int thisId;
@@ -316,7 +316,7 @@ int map (int pid, int address, int value)
 { 
 	printf("\n\n*** Mapping ***\n\n");
 	int virtualFrame = address/16; 																					// virtual address frame
-	pageEntry* currTablee = malloc(4*sizeof(pageEntry));
+	pageEntry* currTable = malloc(4*sizeof(pageEntry));
 	page currPage;
 	initialize(currTable, pid);
 	int i;
@@ -398,7 +398,7 @@ int map (int pid, int address, int value)
 /****** STORE  ******/
 int store (int pid, int address, int value) { 
 	printf("\n\n*** Storing ***\n\n");
-	pageEntry *currTablee = malloc(4*sizeof(pageEntry));
+	pageEntry *currTable = malloc(4*sizeof(pageEntry));
 	int virtualFrame;
 	int offset;
 	int check;
@@ -489,7 +489,7 @@ int store (int pid, int address, int value) {
 int load (int pid, int address, int value) 
 { 
 	printf("\n\n*** Loading ***\n\n");
-	pageEntry* currTablee = malloc(4*sizeof(pageEntry));
+	pageEntry* currTable = malloc(4*sizeof(pageEntry));
 	int virtualFrame;
 	int offset;
 	int check;
