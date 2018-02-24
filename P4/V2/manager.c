@@ -18,6 +18,7 @@ typedef struct {
     u_int8_t validBit:1; 	//1 if valid
     u_int8_t value:1; 		//1 if can be written, 0 if read-only
     u_int8_t page:1; 		//page number ie frame
+    u_int8_t pid:1;			//pid
 } pageEntry;
 
 // page tables are indexed by their virtual frame
@@ -28,7 +29,8 @@ typedef struct {
 } reg;
 
 typedef struct {
-	unsigned char values[16];
+	unsigned char pid;
+	unsigned char values[15];
 } page;
 
 unsigned char memory[64]; 	// memory
@@ -42,9 +44,9 @@ unsigned char evictor[16];
 int map (int pid, int address, int value);                                                          //finds a spot in mem for a process
 int store (int pid, int address, int value);
 int load (int pid, int address, int value);
-void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id); // enter in  the page table
+void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid); // enter in  the page table
 void masterFunction(int pid, char * instruction, int address, int value);                           // runs selected instruction
-void initialize(pageEntry * currTable);                                                             // initializes pageTable
+void initialize(pageEntry * currTable, int pid);                                                             // initializes pageTable
 int findFree();                                                                                     // finds free loc in mem
 int checkLoc();                                                                                     // checks if page location is open
 void printMem();																					// prints non-null values in memory array
@@ -60,18 +62,19 @@ void masterFunction (int process, char * instruction, int address, int value)
 }
 
 /* modifies the given table with the given information */
-void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id)
+void modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid)
 {
-	currTable[id].presentBit = presentBit;
-	currTable[id].validBit = validBit;
-    currTable[id].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
-    currTable[id].page = page;
+	currTable[id]->presentBit = presentBit;
+	currTable[id]->validBit = validBit;
+    currTable[id]->value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
+    currTable[id]->page = page;
+    currTable[id]->pid = pid;
 }
 
 /* initializes the given table */
-void initialize(pageEntry * currTable) 
+void initialize(pageEntry * currTable, int pid) 
 {
-	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i); } // initialize every page entry
+	for (int i = 0; i<4; i++) { modifyTable(currTable, 0, 0, -1, -1, i, pid); } // initialize every page entry
 }
 
 /* finds a free page in physical memory */
@@ -83,88 +86,300 @@ int findFree()
 	return -1; 
 }
 
+/* Gets the pid of a pagetable */
+int getPID(pageEntry* pageTable)
+{
+	return pageTable[0].pid;
+}
+
 /* checks the location at the offset (i) within the given page */
 int checkLoc(page currPage, int i)
 {
-	if(currPage.values[i] == '0') { return i; }								// check if the page is open
+	if(currPage.values[i] == '\0') { return i; }								// check if the page is open
 	else { return -1; }														// return -1 if the page is full	
+}
+
+/* prints out a page table */
+void printTable(pageEntry pageTable[4])
+{
+	printf("\tPage Table for process [%d]\n", pageTable[0].pid);
+	for(int i = 0; i< 4; i++)
+	{
+		if(pageTable[i].validBit == 1)
+		{
+			printf("\tPage [%d]\n", i);
+			printf("\t\tPresent: %d\n", pageTable[i].presentBit);
+			printf("\t\tValid: %d\n", pageTable[i].validBit);
+			printf("\t\tValue: %d\n", pageTable[i].value);
+			printf("\t\tPage: %d\n", pageTable[i].page);
+		}
+		else
+		{
+			printf("\tPage entry [%d] not valid\n", i);
+		}
+	}
+}
+
+/* prints out a page */
+void printPage(page currPage)
+{
+	printf("\tPage for process: %d\n", currPage.pid);
+	for(int i = 0; i<11; i++)
+	{
+		if(currPage.values[i] != '0')
+			printf("\t\tPage value [%d]: %d\n", i, currPage.values[i]);
+	}
 }
 
 /* prints out the memory array */
 void printMem()
 {
-	for (int i = 0; i < 64; i++)
+	pageEntry currTable[4];
+	//initialize(currTable);
+	//int pid = 0;
+	page currPage;
+	for(int i = 0; i<15; i++) { currPage.values[i] = '0'; }
+
+	for (int i = 0; i < 4; i++)
 	{
-		if (memory[i]) { printf("Value at memory[%i]: %c\n", i, memory[i]); }
+		printf("[%d]\n", i);
+		if(freeTable[i] != 1)
+		{
+			if(freeTable[i] == 2)
+			{	
+				memcpy(&currTable, &memory[i*16], 16);
+				//pid = getPID(currTable);
+				printTable(currTable);
+			}
+			else if (freeTable[i] == 0)
+			{
+				memcpy(&currPage, &memory[i*16], 16);
+				printPage(currPage);
+			}
+		}
+		else
+		{
+			printf("\tEmpty page\n");
+		}
+
 	}
 }
 
 /* Returns a physical frame to evict using a random strategy */
-int findPageToEvict() { int evictionNotice = rand() %4 - 1; return evictionNotice; }
+int findPageToEvict() {
+ 	int evictionNotice = rand() %4; 
+ 	printf("Eviction notice in evict: %d\n", evictionNotice);
+ 	return evictionNotice; 
+}
+
+int checkPresentBits(pageEntry *pageTable)
+{
+	for(int i = 0; i<4; i++)
+	{
+		if (pageTable[i].presentBit == 1)
+		{
+			return 0;
+		}
+		printf("presentBit: %d\n", pageTable[i].presentBit);
+	}
+	return 1;
+}
+
+int findVirtualFrame(pageEntry *pageTable, int physicalFrame)
+{
+	for(int i = 0; i<4; i++)
+	{
+		if (pageTable[i].page == physicalFrame)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
   
 /*************************************************** INSTRUCTION FUNCTIONS *******************************************************************/
+
+/****** SWAP ******/
+
+int swapOut() // , int target)
+{
+	// 1 - find a page to evict
+	// 2 - evict that page 
+	// 3 - put the desired page in the page table
+
+	int tries = 0;
+	int evictionNotice = 0;
+	pageEntry swapTable [4];
+	page swapPage;
+	unsigned char swap[16];
+	int thisId;
+	pageEntry *evictedTable;
+	int evictedVirtualFrame;			
+
+	/* Find a page to evict, make sure pages are evicted before their page tables */
+	while(1)																					
+	{
+		evictionNotice = findPageToEvict();
+		if(evictionNotice < 0)
+		{
+			continue;
+		}
+		if(freeTable[evictionNotice] == 2)
+		{
+			printf("Free table: %d\n", freeTable[evictionNotice]);
+			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
+			if(checkPresentBits(swapTable)) { 
+				printf("got inside tho\n");
+				memcpy(&swap, &swapTable, 16); 
+				printf("Getpid swaptable: %d\n", getPID(swapTable));
+				ptRegister[getPID(swapTable)].ptLoc = -1;
+				freeTable[evictionNotice] = 1;
+				printf("Eviction notice: %d\n", evictionNotice);
+				/* Write swap to file*/
+				for(int i = 0; i<16; i++)
+				{
+					printf("doing it\n");
+					fprintf(swapFile, " %d ", swap[i]);
+				}
+				return evictionNotice;
+			}
+			tries++;
+		}
+		else																						// load the evicted page
+		{
+			printf("Free table: %d\n", freeTable[evictionNotice]);
+			//printf("Eviction notice: %d\n", evictionNotice);
+			memcpy(&swapPage, &memory[evictionNotice*16], 16);
+			thisId = swapPage.pid;
+			memcpy(&evictedTable, &ptRegister[thisId].ptLoc, 16);										// page table is guaranteed to be in memory
+			evictedVirtualFrame = findVirtualFrame(evictedTable, evictionNotice);
+			memcpy(&swap, &swapPage, 16); 
+			evictedTable[evictedVirtualFrame].presentBit = 0;
+			evictedTable[evictedVirtualFrame].page = -1;
+			memcpy(&memory[ptRegister[thisId].ptLoc*16], &evictedTable, 16);
+			freeTable[evictionNotice] = 1;
+			printf("Eviction notice: %d\n", evictionNotice);
+			/* Write swap to file*/
+			for(int i = 0; i<16; i++)
+			{
+				printf("doing it\n");
+				fprintf(swapFile, " %d ", swap[i]);
+			}
+			return evictionNotice; 
+			tries++;
+		}
+	}
+}
+
+void swapIn(int pid, int virtualFrame)
+{
+	pageEntry *currTable;
+	unsigned char swap2[16];
+	memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);
+	int evictionNotice = 0;
+	for(int i = 0; i<4; i++) { if(freeTable[i]==1) evictionNotice = i; }
+	//freeTable[evictionNotice] = 0;
+	/* Write evictor to memory */
+	while(1)
+	{
+		fread(swap2, sizeof(swap2), 1, swapFile);
+		{
+			for(int i = 0; i<16; i++)
+			{
+				if(swap2[i] != evictor[i])
+				{
+					break;
+				}
+				else
+				{
+					memcpy(&memory[evictionNotice*16], &evictor, 16);
+					if(virtualFrame != -1)
+					{
+						currTable[virtualFrame].presentBit = 1;
+						freeTable[evictionNotice] = 0;
+					}
+					else
+					{
+						ptRegister[pid].ptLoc = -1;
+						freeTable[evictionNotice] = 2;
+					}
+				}
+			}
+		}
+	}
+}
+
 
 /****** MAP ******/
 int map (int pid, int address, int value) 
 { 
 	printf("\n\n*** Mapping ***\n\n");
 	int virtualFrame = address/16; 																					// virtual address frame
-	pageEntry currTable[4];
+	pageEntry* currTable;
 	page currPage;
-	initialize(currTable);
+	initialize(&currTable, pid);
 	int i;
-	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	for(i = 0; i<11; i++) { currPage.values[i] = '\0'; }
+	//currPage.pid = pid;
 	//currPage.valid = -1;
 	int physicalFrame;
-
+	printf("Pid: %d\n", pid);
 	/*$$$ Get the Page Table Loaded $$$*/
 	if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc != -1) 													// if the table has been created
 	{
-		memcpy(&currTable, &memory[ptRegister[pid].ptLoc], 16);														// load the page table
+		memcpy(&currTable, &memory[ptRegister[pid].ptLoc*16], 16);														// load the page table
 		printf("Got page table for PID [%d] from physical address [%d]\n\n", pid, memory[ptRegister[pid].ptLoc%16]);
 	}
 	else if(ptRegister[pid].valid == 1 && ptRegister[pid].ptLoc == -1) 												// if the table is created but not in memory
 	{
 		/* Perform swapping */
-		printf("Swapping not implemented yet...1\n");
+		printf("Swapping (map1)\n");
+		swapOut();
+		//memcpy(&evictor,)
+		swapIn(pid, -1);
 	}	
 	else																											// create a new page table for the new process
 	{
 		ptRegister[pid].valid = 1;																					// this process now has a page table
 		ptRegister[pid].ptLoc = findFree();																			// set to its location in physical memory
 		printf("value: %i\n", ptRegister[pid].ptLoc);
-
-		if(ptRegister[pid].ptLoc != -1) 
-		{ 
-			memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
-			printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
-			freeTable[ptRegister[pid].ptLoc] = 2;
-		} // store the page table in memory
-		else
+		printf("Pid: %d\n", pid);
+		if(ptRegister[pid].ptLoc == -1)
 		{
-			/* Perform swapping */
-			printf("This space is full...I should run the swap fn\n");
+			printf("Swapping (map2)\n");
+			swapOut();
+			ptRegister[pid].ptLoc = findFree();
 		}
+		printf("ptLoc: %d\n\n\n", ptRegister[pid].ptLoc);
+		//modifyTable(currTable, 1, 1, value, ptRegister[pid].ptLoc, virtualFrame, pid);
+		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16); 
+		printf("New page table created and stored at memory location [%d]\n", ptRegister[pid].ptLoc*16);
+		freeTable[ptRegister[pid].ptLoc] = 2;
+		 // store the page table in memory
+		printf("Pid: %d\n", pid);
 	}
 
 	/*$$$ Get the page loaded into memory $$$*/
 	if((i = currTable[virtualFrame].validBit) != -1)																// if the requested virtual space is not in use 																												// if there is space in the page table
 	{
 		printf("There is space in the page table\n");
-		if((physicalFrame = findFree()) != -1)																		// find free spot in physical memory
+
+		if((physicalFrame = findFree()) == -1)																	// find free spot in physical memory
 		{
-			modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);										// add the new values for this PTE	
-			memcpy(&memory[physicalFrame*16], &currPage, 16);
-			memcpy(&memory[ptRegister[pid].ptLoc], &currTable, 16);													// store the new page in physical memory
-			printf("Virtual address space updated\n");		
-			printf("New page stored in phyiscal frame [%d] and virtual frame [%d]\n", physicalFrame, virtualFrame);
-			freeTable[physicalFrame] = 0;
+			printf("Swapping (map3)\n");
+			swapOut();
+			physicalFrame = findFree();
 		}
-		else
-		{
-			/* Perform swapping */
-			printf("Swapping not implemented yet...3\n");
-		}
+		printf("PF: %d\n", physicalFrame);													
+		//initialize(currTable, pid);
+		modifyTable(&currTable, 1, 1, value, physicalFrame, virtualFrame, pid);										// add the new values for this PTE
+		printf("&&&&&&&&&&&&&&Currtable pf: %d\n", currTable[virtualFrame].page);	
+		memcpy(&memory[physicalFrame*16], &currPage, 16);
+		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);													// store the new page in physical memory
+		printf("Virtual address space updated\n");		
+		printf("New page stored in phyiscal frame [%d] and virtual frame [%d]\n", physicalFrame, virtualFrame);
+		freeTable[physicalFrame] = 0;
 
 	}
 	else 																											// no space in virtual memory for this process
@@ -173,6 +388,7 @@ int map (int pid, int address, int value)
 		// printMem();
 		return 1;
 	} 
+	printf("done\n");
 	//printMem();
 	return 0;
 }
@@ -181,17 +397,24 @@ int map (int pid, int address, int value)
 /****** STORE  ******/
 int store (int pid, int address, int value) { 
 	printf("\n\n*** Storing ***\n\n");
-	pageEntry currTable[4];
+	pageEntry *currTable;
 	int virtualFrame;
 	int offset;
 	int check;
 	int i = 0;
 	page currPage;
-	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	for(i = 0; i<15; i++) { currPage.values[i] = '0'; }
+	currPage.pid = pid;
 	//currPage.valid = -1;
 	int pg = 0;
 
 	/* Check if the address is valid */
+	if(ptRegister[pid].ptLoc == -1)
+	{
+		printf("Swapping (store1)\n");
+		swapOut();
+		swapIn(pid, -1);
+	}
 	if (ptRegister[pid].valid == 1)
 	{
 		/*$$$ Get a Page Table Loaded $$$ */
@@ -216,6 +439,12 @@ int store (int pid, int address, int value) {
 			if((pg = currTable[virtualFrame].page) == -1) 														    // if no place to load
 			{ 
 				printf("ERROR: Nothing to load in processes [%d] virtual memory\n", pid); 
+			}
+			else if (currTable[virtualFrame].presentBit == 0)
+			{
+				printf("Swapping (store2)\n");
+				swapOut();
+				swapIn(pid, virtualFrame);
 			}
 			else         																							// we have a place to load
 			{
@@ -247,8 +476,9 @@ int store (int pid, int address, int value) {
 	}
 	else
 	{
-		/* Perform swapping */
-		printf("Swapping not implemented yet...\n");
+		// not created
+		printf("ERROR: Page not created\n");
+		return -1;
 	}
 	return 0;
 }
@@ -258,15 +488,23 @@ int store (int pid, int address, int value) {
 int load (int pid, int address, int value) 
 { 
 	printf("\n\n*** Loading ***\n\n");
-	pageEntry currTable[4];
+	pageEntry* currTable;
 	int virtualFrame;
 	int offset;
 	int check;
 	int i = 0;
 	page currPage;
-	for(i = 0; i<16; i++) { currPage.values[i] = '0'; }
+	for(i = 0; i<15; i++) { currPage.values[i] = '0'; }
+	currPage.pid = pid;
 	//currPage.valid = -1;
 	int pg = 0;
+	
+	if(ptRegister[pid].ptLoc == -1)
+	{
+		printf("Swapping (load1)\n");
+		swapOut();
+		swapIn(pid, -1);
+	}
 
 	/* Check if the address is valid */
 	if (ptRegister[pid].valid == 1)
@@ -292,6 +530,12 @@ int load (int pid, int address, int value)
 					printf("404: page not found (1)\n");
 					printf("Virtual frame [%d]\n", virtualFrame);
 					printf("Value NOT loaded at physical memLoc [%d] with value: %d\n", pg, currPage.values[offset]);
+			}
+			else if (currTable[virtualFrame].presentBit == 0)
+			{
+				printf("Swapping (load2)\n");
+				swapOut();
+				swapIn(pid, virtualFrame);
 			}
 			else         																							// we have a place to load
 			{
@@ -320,84 +564,12 @@ int load (int pid, int address, int value)
 	}
 	else
 	{
-		/* Perform swapping */
-		printf("Swapping not implemented yet...\n");
+		// not created
+		printf("ERROR: Page not created\n");
+		return -1;
 	}
 
 	return 0;
-}
-
-
-/****** SWAP ******/
-
-void swap(int pid, int virtualFrame) // , int target)
-{
-	// 1 - find a page to evict
-	// 2 - evict that page 
-	// 3 - put the desired page in the page table
-
-	int tries = 0;
-	int evictionNotice = 0;
-	pageEntry swapTable [4];
-	page swapPage;
-	unsigned char swap[16];
-	unsigned char swap2[16];
-	ssize_t len = 16;
-	ssize_t read;
-	pageEntry currTable [4];
-	memcpy(&currTable, &memory[ptRegister[pid].page*16], 16);										// load the page table for the evictor
-
-	/* Find a page to evict, make sure pages are evicted before their page tables */
-	while(1)																					
-	{
-		evictionNotice = findPageToEvict();
-		if(freeTable[evictionNotice] == 2)
-		{
-			memcpy(&swapTable, &memory[evictionNotice*16], 16);										// load the evicted page table or
-			if(swapTable.presentBit == 0 && evictionNotice != evictorTable && evictionNotice && tries < 10) { 
-				memcpy(&swap, &swapTable, 16); 
-				ptRegister[pid].valid = -1;
-				break; 
-			}
-			tries++;
-		}
-		else																						// load the evicted page
-		{
-			evictionTable = ptRegister[pid].ptLoc;
-			memcpy(&swapPage, &memory[evictionNotice*16], 16);
-			memcpy(&swapTable, &memory[evictionTable*16], 16);
-			if(evictionNotice != evictorPage && tries < 10) { 
-				memcpy(&swap, &swapPage, 16); 
-				//swapTable[ptRegister[pid]].validBit = -1; ????????? find its table and update it
-				break; 
-			}
-			tries++;
-		}
-	}
-
-	/* Write evictor to memory */
-	while(1)
-	{
-		fread(swap2, sizeof(swap2), 1, swapFile)
-		{
-			for(int i = 0; i<16; i++)
-			{
-				if(swap2[i] != evictor[i])
-				{
-					break;
-				}
-				else
-				{
-					memcpy(&memory[evictionNotice*16], &evictor, 16);
-					currTable[virtualFrame].presentBit = 0;
-				}
-			}
-		}
-	}
-
-	/* Write swap to file*/
-	fwrite(swap, 1, 16, swapFile);
-	return 1;
 }
 
 
@@ -432,6 +604,7 @@ int main(int argc, char **argv)
 
    	while(1)
   	{
+  		printf("back at it again\n");
    		char argsArr[4] = {0,0,0,0}; 									//store arguments in array
     	char * args = argsArr; 											// make pointer to array
     	const char s[2] = ","; 											// token to check for
@@ -443,7 +616,7 @@ int main(int argc, char **argv)
     	token = strtok(args, s);
     	if (!token) { printf("ERROR: Invalid Input \n"); continue; }   // check for null token
     	userInput[0] = token;
-    	//printf("userInput[0]: %s\n", token);
+    	printf("userInput[0]: %s\n", token);
 
     	/* tokenize rest of inputs */
  		int i = 1;
@@ -452,7 +625,7 @@ int main(int argc, char **argv)
     		token = strtok(NULL, s);
     		if (!token) { i = 5; } 										// check for null token
     		userInput[i] = token;
-    		//printf("userInput[%i]: %s\n", i, token);
+    		printf("userInput[%i]: %s\n", i, token);
     		i++;
     	}
     	if (i == 6) { printf("ERROR: Invalid Input\n"); continue; }
@@ -464,6 +637,7 @@ int main(int argc, char **argv)
 		value = atoi(userInput[3]);
 		printf("\nYou Entered: PID: [%i], Instruction: '%s', address: [%i], value: [%i] \n", pid, instruction, address, value);
   		masterFunction(pid, instruction, address, value);
+  		printf("yo\n");
 	}
 	return 0;
 }
