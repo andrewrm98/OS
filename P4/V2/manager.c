@@ -382,7 +382,7 @@ int map (int pid, int address, int value)
 		printf("PF: %d\n", physicalFrame);													
 		//initialize(currTable, pid);
 		//currTable = modifyTable(currTable, 1, 1, value, physicalFrame, virtualFrame);
-		currTable[virtualFrame].page = physicalFrame;										// add the new values for this PTE
+		currTable[virtualFrame].page = 3;										// add the new values for this PTE
 		currTable[virtualFrame].presentBit = 1;
 		currTable[virtualFrame].validBit = 1;
     	currTable[virtualFrame].value = value;			          						 // not indexing by pid anymore, index by virtualFrame #
@@ -391,7 +391,7 @@ int map (int pid, int address, int value)
 		memcpy(&memory[physicalFrame*16], &currPage, 16);
 		memcpy(&memory[ptRegister[pid].ptLoc*16], &currTable, 16);													// store the new page in physical memory
 		printf("Virtual address space updated\n");		
-		printf("New page stored in phyiscal frame [%d] and virtual frame [%d]\n", physicalFrame, virtualFrame);
+		printf("New page stored in physical frame [%d] and virtual frame [%d]\n", physicalFrame, virtualFrame);
 		freeTable[physicalFrame] = 0;
 
 	}
