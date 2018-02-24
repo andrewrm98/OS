@@ -43,7 +43,7 @@ unsigned char evictor[16];
 int map (int pid, int address, int value);                                                          //finds a spot in mem for a process
 int store (int pid, int address, int value);
 int load (int pid, int address, int value);
-pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id, int pid); // enter in  the page table
+pageEntry * modifyTable(pageEntry * currTable, int presentBit, int validBit, int value, int page, int id); // enter in  the page table
 void masterFunction(int pid, char * instruction, int address, int value);                           // runs selected instruction
 void initialize(pageEntry * currTable, int pid);                                                             // initializes pageTable
 int findFree();                                                                                     // finds free loc in mem
