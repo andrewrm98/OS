@@ -1,0 +1,10 @@
+TO-DO List Project 4
+
+✅ give option for readable/rw files
+✅ implement load
+✅ swapping
+swapIn
+✅ swapOut
+✅ Better way to track whether all pages have been swapped out for a page table
+Fix weird printing of values
+Use first number in file to check PIDS and see if virtual frame is findable

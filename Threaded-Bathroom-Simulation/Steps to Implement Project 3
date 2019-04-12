@@ -1,0 +1,84 @@
+Steps to Implement Project 3
+
+Hints:
+
+	COMPILE WITH -Wall and -pthread for gcc
+	Mutex lock for managing data structures
+	Semaphore or condition variable for waiting for access to the bathroom
+	pthread_join
+	assert that at least one of the man/woman counters is 0
+
+
+Files needed:
+	module "bathroom.o" - defines the bathroom
+	interface file "bathroom.h" - must define interface to bathroom; Initialize, Finalize, Enter(), Leave()
+	main() - bathroomSim
+	Individual() - set the thread information
+	Enter() and Leave()
+
+Bathroom.h file:
+
+	Enter(gender G) 
+		- check for gender flag
+		- enter if vacant or same gender
+		- increment people in bathroom
+		- wait if not
+
+	Leave(void)
+		- decrement the people in bathroom
+		- set flag to vacant if last person
+
+	Global bathroom object (PROTECT FROM RACE CONDITIONS)
+		- counter for people in bathroom (both men and women)
+		- gender flag or vacant
+		- use synchronization primitives
+		- holds poeple in bathroom
+		- holds bathroom flag
+		- # of usages of bathroom
+		- total time bathroom vacant
+		- total time occupied
+		- average queue length
+		- Average # of people in the bathroom at the same time
+
+	Initialize(...)
+		- called by master thread only
+
+	Finalize(...)
+		- after all threads have been called
+		- print out statistics gathered by global bathroom object
+
+bathroomSim - Main() - master thread:
+
+	takes in - bathroomSim nUsers meanLoopCount meanArrival meanStay
+	use Box-Muller transform to create random numvers with a normal distribution
+	
+	Calls Initialize
+	Uses pthread_create to create all threads
+	Waits until all threads have finished
+	Calls finalized
+
+	Individual(Gender, arrival time, time to stay, loop count) - used to implement the threads
+		Gender - defined by random variable
+		loop count - random based on the mean specified by the command line
+		arrival and stay - random
+			sleeps until arrival time
+			invoke enter() - may have to wait a long time
+			sleeps stay amount of time
+			invokes leave
+			repeat loop time amount of times
+			each thread keeps track of how long it is in the bathroom
+			after exiting thread prints:
+				Its own thread number
+				Its gender and number of loops
+				The min average and max time spent in the queue
+
+Problems:
+	How do the threads inform the master they have finished
+	How do user threads and master thread exit cleanly?
+	Protect against threads printing out at the same time
+
+
+
+
+
+
